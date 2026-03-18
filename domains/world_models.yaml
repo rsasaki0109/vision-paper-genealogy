@@ -1,0 +1,271 @@
+name: World Models for Robotics & Embodied AI
+description: >
+  From Ha & Schmidhuber's original World Models through latent dynamics
+  learning (Dreamer series), model-based planning (MuZero, TD-MPC),
+  transformer world models (IRIS), to large-scale generative video
+  world simulators (Cosmos, Genie, SORA) — the evolution of learned
+  world models for embodied intelligence.
+source_awesome_lists:
+  - https://github.com/danijar/dreamerv3
+  - https://github.com/opendilab/awesome-model-based-RL
+
+methods:
+  # ===========================
+  # Classical Foundations
+  # ===========================
+  - name: "World Models"
+    paper: "World Models"
+    arxiv: "1803.10122"
+    year: 2018
+    code: "hardmaru/WorldModelsExperiments"
+    stars: 2200
+    tags: [vae, rnn, latent-dynamics, imagination]
+    parents: []
+    description: "Seminal work learning a compressed spatial-temporal model of the environment for planning in latent space"
+
+  # ===========================
+  # Dreamer Series
+  # ===========================
+  - name: "Dreamer"
+    paper: "Dream to Control: Learning Behaviors by Latent Imagination"
+    arxiv: "1912.01603"
+    year: 2020
+    code: "danijar/dreamer"
+    stars: 1000
+    tags: [latent-dynamics, imagination, model-based-rl, rssm]
+    parents:
+      - name: "World Models"
+        relation: extends
+    description: "Learns long-horizon behaviors purely from latent imagination using a recurrent state-space model"
+
+  - name: "DreamerV2"
+    paper: "Mastering Atari with Discrete World Models"
+    arxiv: "2010.02193"
+    year: 2021
+    code: "danijar/dreamerv2"
+    stars: 900
+    tags: [discrete-latents, atari, model-based-rl, rssm]
+    parents:
+      - name: "Dreamer"
+        relation: extends
+    description: "Discrete latent world model achieving human-level Atari performance via categorical representations"
+
+  - name: "DreamerV3"
+    paper: "Mastering Diverse Domains through World Models"
+    arxiv: "2301.04104"
+    year: 2023
+    code: "danijar/dreamerv3"
+    stars: 1800
+    tags: [general-purpose, symlog, model-based-rl, diverse-domains]
+    parents:
+      - name: "DreamerV2"
+        relation: extends
+    description: "General-purpose world model agent mastering diverse domains with fixed hyperparameters via symlog predictions"
+
+  # ===========================
+  # Model-Based Planning
+  # ===========================
+  - name: "MuZero"
+    paper: "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model"
+    arxiv: "1911.08265"
+    year: 2020
+    code: "google-deepmind/mctx"
+    stars: 2300
+    tags: [mcts, planning, learned-dynamics, game-ai]
+    parents:
+      - name: "World Models"
+        relation: inspires
+    description: "Learns a dynamics model for MCTS planning without access to environment rules, mastering board and Atari games"
+
+  - name: "TD-MPC"
+    paper: "Temporal Difference Learning for Model Predictive Control"
+    arxiv: "2203.04955"
+    year: 2023
+    code: "nicklashansen/tdmpc"
+    stars: 400
+    tags: [model-predictive-control, td-learning, latent-dynamics, continuous-control]
+    parents:
+      - name: "Dreamer"
+        relation: inspires
+      - name: "MuZero"
+        relation: inspires
+    description: "Combines temporal difference learning with model predictive control in a learned latent space"
+
+  - name: "TD-MPC2"
+    paper: "TD-MPC2: Scalable, Robust World Models for Continuous Control"
+    arxiv: "2310.16828"
+    year: 2024
+    code: "nicklashansen/tdmpc2"
+    stars: 600
+    tags: [model-predictive-control, scalable, multi-task, continuous-control]
+    parents:
+      - name: "TD-MPC"
+        relation: extends
+    description: "Scaled successor achieving single-model multi-task control across 104 diverse continuous control tasks"
+
+  # ===========================
+  # Transformer World Models
+  # ===========================
+  - name: "IRIS"
+    paper: "Transformers are Sample-Efficient World Models"
+    arxiv: "2209.00588"
+    year: 2023
+    code: "eloialonso/iris"
+    stars: 800
+    tags: [transformer, discrete-tokens, sample-efficient, atari]
+    parents:
+      - name: "DreamerV2"
+        relation: inspires
+    description: "Transformer-based world model using discrete tokens achieving strong Atari results with 100k interactions"
+
+  - name: "DIAMOND"
+    paper: "DIAMOND: Diffusion for World Modeling"
+    arxiv: "2405.12399"
+    year: 2024
+    code: "eloialonso/diamond"
+    stars: 1100
+    tags: [diffusion, world-model, atari, pixel-prediction]
+    parents:
+      - name: "IRIS"
+        relation: extends
+      - name: "DreamerV3"
+        relation: inspires
+    description: "Diffusion-based world model achieving state-of-the-art Atari results by directly generating future frames"
+
+  # ===========================
+  # Video World Simulators
+  # ===========================
+  - name: "SORA"
+    paper: "Sora: A Review on Background, Technology, Limitations, and Opportunities of Large Vision Models"
+    arxiv: "2402.17177"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [video-generation, visual-world-simulator, large-scale, openai]
+    parents:
+      - name: "World Models"
+        relation: inspires
+    description: "OpenAI's large-scale video generation model framed as a world simulator with emergent physical understanding"
+
+  - name: "UniSim"
+    paper: "UniSim: Learning Interactive Real-World Simulators"
+    arxiv: "2310.06114"
+    year: 2023
+    code: ""
+    stars: 0
+    tags: [interactive-simulation, video-prediction, real-world, google]
+    parents:
+      - name: "World Models"
+        relation: extends
+    description: "Google's universal simulator learning interactive real-world dynamics from video for embodied agents"
+
+  - name: "Genie"
+    paper: "Genie: Generative Interactive Environments"
+    arxiv: "2402.15391"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [interactive, generative-environment, action-controllable, deepmind]
+    parents:
+      - name: "UniSim"
+        relation: inspires
+      - name: "World Models"
+        relation: extends
+    description: "Google DeepMind's foundation world model generating diverse playable interactive 2D environments from images"
+
+  - name: "Genie 2"
+    paper: "Genie 2: A Large-Scale Foundation World Model"
+    arxiv: ""
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [interactive, 3d-environments, foundation-world-model, deepmind]
+    parents:
+      - name: "Genie"
+        relation: extends
+    description: "Scaled successor generating rich 3D interactive environments with consistent geometry and physics"
+
+  - name: "GameGen"
+    paper: "GameGen-X: Interactive Open-world Game Video Generation"
+    arxiv: "2411.00769"
+    year: 2024
+    code: "GameGen-X/GameGen-X"
+    stars: 500
+    tags: [game-generation, interactive, video-generation, open-world]
+    parents:
+      - name: "Genie"
+        relation: inspires
+      - name: "SORA"
+        relation: inspires
+    description: "Interactive open-world game video generation with character control and scene interaction"
+
+  - name: "Pandora"
+    paper: "Pandora: Towards General World Model with Natural Language Actions and Video States"
+    arxiv: "2406.09455"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [video-world-model, language-actions, general-purpose, simulation]
+    parents:
+      - name: "UniSim"
+        relation: inspires
+      - name: "SORA"
+        relation: inspires
+    description: "General world model generating video states conditioned on natural language action descriptions"
+
+  # ===========================
+  # Physics Engines & 3D World Models
+  # ===========================
+  - name: "Genesis"
+    paper: "Genesis: A Generative and Universal Physics Engine for Robotics and Beyond"
+    arxiv: "2409.18964"
+    year: 2024
+    code: "Genesis-Embodied-AI/Genesis"
+    stars: 20000
+    tags: [physics-engine, generative, differentiable, gpu-accelerated]
+    parents:
+      - name: "World Models"
+        relation: inspires
+    description: "Generative and universal physics engine combining differentiable simulation with generative world modeling"
+
+  - name: "Cosmos"
+    paper: "Cosmos World Foundation Model Platform for Physical AI"
+    arxiv: "2501.03575"
+    year: 2025
+    code: "NVIDIA/Cosmos"
+    stars: 5000
+    tags: [foundation-model, physical-ai, video-generation, nvidia]
+    parents:
+      - name: "SORA"
+        relation: inspires
+      - name: "World Models"
+        relation: extends
+    description: "NVIDIA's world foundation model platform generating physically grounded videos for robotics and driving"
+
+  - name: "Aether"
+    paper: "Aether: Geometric-Aware Unified World Model"
+    arxiv: "2503.18945"
+    year: 2025
+    code: "AetherWorldModel/Aether"
+    stars: 800
+    tags: [3d-world-model, geometric-aware, unified, embodied-ai]
+    parents:
+      - name: "Cosmos"
+        relation: inspires
+      - name: "Genie 2"
+        relation: inspires
+    description: "Geometry-aware unified world model bridging 3D understanding with generative video prediction for embodied AI"
+
+  - name: "AVID"
+    paper: "AVID: Adapting Video Diffusion Models to World Models"
+    arxiv: "2410.12822"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [video-diffusion, adaptation, world-model, action-conditioned]
+    parents:
+      - name: "SORA"
+        relation: inspires
+      - name: "DIAMOND"
+        relation: inspires
+    description: "Adapts pre-trained video diffusion models into action-conditioned world models for embodied decision-making"

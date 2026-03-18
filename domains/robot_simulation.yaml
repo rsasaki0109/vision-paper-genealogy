@@ -1,0 +1,252 @@
+name: Robot Simulation
+description: >
+  From classical physics engines like Gazebo and MuJoCo to GPU-accelerated
+  simulators and large-scale embodied AI environments — the evolution of
+  robot simulation platforms for manipulation, locomotion, navigation, and driving.
+source_awesome_lists:
+  - https://github.com/jslee02/awesome-robotics-libraries
+  - https://github.com/mit-acl/Awesome-Robot-Simulators
+  - https://github.com/haosulab/ManiSkill
+
+methods:
+  # ===========================
+  # Classical Physics Engines
+  # ===========================
+  - name: "Gazebo"
+    paper: "Design and Use Paradigms for Gazebo, An Open-Source Multi-Robot Simulator"
+    arxiv: ""
+    year: 2004
+    code: "gazebosim/gz-sim"
+    stars: 1300
+    tags: [simulator, physics-engine, ros, open-source, multi-robot]
+    parents: []
+    description: "Open-source multi-robot simulator tightly integrated with ROS for robotics research"
+
+  - name: "MuJoCo"
+    paper: "MuJoCo: A Physics Engine for Model-Based Control"
+    arxiv: ""
+    year: 2012
+    code: "google-deepmind/mujoco"
+    stars: 8500
+    tags: [physics-engine, contact-dynamics, model-based, open-source]
+    parents: []
+    description: "Fast and accurate physics engine designed for model-based control and reinforcement learning"
+
+  - name: "PyBullet"
+    paper: "Bullet Physics SDK"
+    arxiv: ""
+    year: 2016
+    code: "bulletphysics/bullet3"
+    stars: 12500
+    tags: [physics-engine, python, open-source, robotics, manipulation]
+    parents:
+      - name: "MuJoCo"
+        relation: inspires
+    description: "Python wrapper for Bullet physics enabling easy robot simulation for RL and planning"
+
+  # ===========================
+  # Embodied AI Environments
+  # ===========================
+  - name: "AI2-THOR"
+    paper: "AI2-THOR: An Interactive 3D Environment for Visual AI"
+    arxiv: "1712.05474"
+    year: 2017
+    code: "allenai/ai2thor"
+    stars: 1100
+    tags: [embodied-ai, indoor, interactive, visual-navigation]
+    parents:
+      - name: "Gazebo"
+        relation: inspires
+    description: "Interactive 3D household environment for embodied visual AI research"
+
+  - name: "CARLA"
+    paper: "CARLA: An Open Urban Driving Simulator"
+    arxiv: "1711.03938"
+    year: 2017
+    code: "carla-simulator/carla"
+    stars: 11500
+    tags: [autonomous-driving, urban, open-source, sensor-simulation]
+    parents:
+      - name: "Gazebo"
+        relation: inspires
+    description: "Open-source high-fidelity urban driving simulator for autonomous driving research"
+
+  - name: "Habitat"
+    paper: "Habitat: A Platform for Embodied AI Research"
+    arxiv: "1904.01201"
+    year: 2019
+    code: "facebookresearch/habitat-sim"
+    stars: 2700
+    tags: [embodied-ai, navigation, indoor, photorealistic]
+    parents:
+      - name: "AI2-THOR"
+        relation: inspires
+    description: "High-performance 3D simulator for embodied AI with photorealistic indoor environments"
+
+  - name: "SAPIEN"
+    paper: "SAPIEN: A SimulAted Part-based Interactive ENvironment"
+    arxiv: "2003.08515"
+    year: 2020
+    code: "haosulab/SAPIEN"
+    stars: 500
+    tags: [manipulation, articulated-objects, interactive, part-based]
+    parents:
+      - name: "MuJoCo"
+        relation: inspires
+      - name: "PyBullet"
+        relation: inspires
+    description: "Simulation environment for robotic interaction with articulated and part-based objects"
+
+  - name: "LGSVL Simulator"
+    paper: "LGSVL Simulator: A High Fidelity Simulator for Autonomous Driving"
+    arxiv: "2005.03778"
+    year: 2020
+    code: ""
+    stars: 0
+    tags: [autonomous-driving, high-fidelity, sensor-simulation, digital-twin]
+    parents:
+      - name: "CARLA"
+        relation: inspires
+    description: "High-fidelity autonomous driving simulator with digital twin and sensor simulation"
+
+  # ===========================
+  # GPU-Accelerated Simulators
+  # ===========================
+  - name: "Isaac Gym"
+    paper: "Isaac Gym: High Performance GPU-Based Physics Simulation for Robot Learning"
+    arxiv: "2108.10470"
+    year: 2021
+    code: ""
+    stars: 0
+    tags: [gpu, parallel-simulation, reinforcement-learning, nvidia]
+    parents:
+      - name: "MuJoCo"
+        relation: inspires
+      - name: "PyBullet"
+        relation: replaces
+    description: "GPU-accelerated massively parallel physics simulation for end-to-end robot learning"
+
+  - name: "ManiSkill"
+    paper: "ManiSkill: Generalizable Manipulation Skill Benchmarks with Large-Scale Demonstrations"
+    arxiv: "2107.14483"
+    year: 2022
+    code: "haosulab/ManiSkill"
+    stars: 1100
+    tags: [manipulation, benchmark, demonstrations, generalization]
+    parents:
+      - name: "SAPIEN"
+        relation: extends
+    description: "Large-scale manipulation skill benchmark with diverse demonstrations built on SAPIEN"
+
+  - name: "BEHAVIOR-1K"
+    paper: "BEHAVIOR-1K: A Human-Centered, Embodied AI Benchmark with 1,000 Everyday Activities in Realistic Simulation"
+    arxiv: "2403.09227"
+    year: 2023
+    code: "StanfordVL/OmniGibson"
+    stars: 700
+    tags: [embodied-ai, benchmark, household, activity, large-scale]
+    parents:
+      - name: "AI2-THOR"
+        relation: extends
+      - name: "Habitat"
+        relation: inspires
+    description: "1000 everyday household activity benchmark in realistic simulation for embodied AI"
+
+  - name: "RFUniverse"
+    paper: "RFUniverse: A Multiphysics Simulation Platform for Embodied AI"
+    arxiv: "2202.00199"
+    year: 2023
+    code: "mvig-robotflow/rfuniverse"
+    stars: 400
+    tags: [multiphysics, embodied-ai, unity, manipulation, deformable]
+    parents:
+      - name: "PyBullet"
+        relation: extends
+      - name: "SAPIEN"
+        relation: inspires
+    description: "Unity-based multiphysics simulation platform supporting rigid, soft, and fluid simulation"
+
+  - name: "Isaac Lab"
+    paper: "Isaac Lab: A Unified and Modular Framework for Robot Learning"
+    arxiv: ""
+    year: 2024
+    code: "isaac-sim/IsaacLab"
+    stars: 3000
+    tags: [gpu, modular, reinforcement-learning, nvidia, framework]
+    parents:
+      - name: "Isaac Gym"
+        relation: extends
+    description: "Unified modular framework built on Isaac Sim for scalable robot learning workflows"
+
+  - name: "ManiSkill3"
+    paper: "ManiSkill3: GPU Parallelized Robotics Simulation and Benchmarking at Scale"
+    arxiv: "2410.00425"
+    year: 2024
+    code: "haosulab/ManiSkill"
+    stars: 1100
+    tags: [gpu, manipulation, benchmark, parallel-simulation, large-scale]
+    parents:
+      - name: "ManiSkill"
+        relation: extends
+      - name: "Isaac Gym"
+        relation: inspires
+    description: "GPU-parallelized manipulation benchmark with massively scaled simulation and rendering"
+
+  - name: "RoboCasa"
+    paper: "RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots"
+    arxiv: "2406.02523"
+    year: 2024
+    code: "robocasa/robocasa"
+    stars: 800
+    tags: [household, manipulation, large-scale, generalist, simulation]
+    parents:
+      - name: "AI2-THOR"
+        relation: extends
+      - name: "BEHAVIOR-1K"
+        relation: inspires
+    description: "Large-scale household task simulation for training generalist manipulation robots"
+
+  - name: "Genesis"
+    paper: "Genesis: A Universal and Generative Physics Engine for Robotics and Beyond"
+    arxiv: "2409.18964"
+    year: 2024
+    code: "Genesis-Embodied-AI/Genesis"
+    stars: 20000
+    tags: [physics-engine, generative, gpu, differentiable, universal]
+    parents:
+      - name: "MuJoCo"
+        relation: extends
+      - name: "Isaac Gym"
+        relation: inspires
+    description: "Universal generative physics engine combining multiple solvers with GPU acceleration and differentiability"
+
+  - name: "AWSIM"
+    paper: "AWSIM: Autonomous Driving Simulator for Autoware"
+    arxiv: ""
+    year: 2024
+    code: "autowarefoundation/AWSIM"
+    stars: 500
+    tags: [autonomous-driving, autoware, unity, digital-twin, open-source]
+    parents:
+      - name: "CARLA"
+        relation: inspires
+      - name: "LGSVL Simulator"
+        relation: replaces
+    description: "Open-source Unity-based autonomous driving simulator designed for Autoware integration"
+
+  # ===========================
+  # 2025 and Beyond
+  # ===========================
+  - name: "MuJoCo MJX"
+    paper: "MuJoCo XLA: GPU-Accelerated Differentiable Physics"
+    arxiv: ""
+    year: 2025
+    code: "google-deepmind/mujoco"
+    stars: 8500
+    tags: [gpu, differentiable, jax, physics-engine, parallel-simulation]
+    parents:
+      - name: "MuJoCo"
+        relation: extends
+      - name: "Isaac Gym"
+        relation: inspires
+    description: "JAX-based GPU-accelerated differentiable port of MuJoCo for massively parallel simulation"

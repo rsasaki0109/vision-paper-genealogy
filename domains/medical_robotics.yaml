@@ -1,0 +1,192 @@
+name: Medical & Surgical Robotics
+description: >
+  From the da Vinci surgical system to AI-powered autonomous surgery —
+  covering surgical robot platforms, learning from demonstration,
+  surgical scene understanding, and foundation models for surgical AI.
+source_awesome_lists:
+  - https://github.com/CosmicSurgworker/awesome-surgical-robot-learning
+  - https://github.com/haonan16/Awesome-Surgical-Video-Understanding
+  - https://github.com/topics/surgical-robotics
+
+methods:
+  # ===========================
+  # Classical Surgical Platforms
+  # ===========================
+  - name: "da Vinci System"
+    paper: "The da Vinci Surgical System"
+    arxiv: ""
+    year: 2000
+    code: ""
+    stars: 0
+    tags: [surgical-robot, teleoperation, minimally-invasive, commercial]
+    parents: []
+    description: "Pioneering commercial teleoperated surgical robot enabling minimally invasive procedures"
+
+  - name: "RAVEN"
+    paper: "RAVEN: Developing Robotic Surgery from the Laboratory to the Bedside"
+    arxiv: ""
+    year: 2012
+    code: "uw-biorobotics/raven2"
+    stars: 50
+    tags: [surgical-robot, open-source, teleoperation, research-platform]
+    parents:
+      - name: "da Vinci System"
+        relation: inspires
+    description: "Open-source surgical robot platform for research in teleoperated and autonomous surgery"
+
+  - name: "dVRK"
+    paper: "An Open-Source Research Kit for the da Vinci Surgical System"
+    arxiv: ""
+    year: 2014
+    code: "jhu-dvrk/sawIntuitiveResearchKit"
+    stars: 350
+    tags: [surgical-robot, open-source, da-vinci, research-kit, ros]
+    parents:
+      - name: "da Vinci System"
+        relation: extends
+      - name: "RAVEN"
+        relation: inspires
+    description: "Open-source research kit repurposing retired da Vinci hardware for surgical robotics research"
+
+  # ===========================
+  # Autonomous Surgical Tasks
+  # ===========================
+  - name: "Autonomous Suturing"
+    paper: "Autonomous Multilateral Surgical Suturing with a da Vinci Surgical System"
+    arxiv: ""
+    year: 2016
+    code: ""
+    stars: 0
+    tags: [autonomous-surgery, suturing, motion-planning, dvrk]
+    parents:
+      - name: "dVRK"
+        relation: extends
+    description: "First supervised autonomous suturing on porcine tissue using the da Vinci robot"
+
+  - name: "LfD for Surgery"
+    paper: "Learning from Demonstrations for Surgical Subtask Automation"
+    arxiv: ""
+    year: 2017
+    code: ""
+    stars: 0
+    tags: [learning-from-demonstration, imitation-learning, surgical-subtask]
+    parents:
+      - name: "dVRK"
+        relation: extends
+      - name: "Autonomous Suturing"
+        relation: inspires
+    description: "Learning surgical subtask policies from expert demonstrations for task automation"
+
+  - name: "SurRoL"
+    paper: "SurRoL: An Open-Source Reinforcement Learning Centered and dVRK Compatible Platform for Surgical Robot Learning"
+    arxiv: "2108.13035"
+    year: 2021
+    code: "med-air/SurRoL"
+    stars: 400
+    tags: [reinforcement-learning, surgical-robot, benchmark, dvrk, simulation]
+    parents:
+      - name: "dVRK"
+        relation: extends
+      - name: "LfD for Surgery"
+        relation: inspires
+    description: "Open-source RL-based platform for surgical robot learning with dVRK-compatible simulation"
+
+  # ===========================
+  # Surgical Scene Understanding
+  # ===========================
+  - name: "CholecTriplet"
+    paper: "CholecTriplet2021: A Benchmark Challenge for Surgical Action Triplet Recognition"
+    arxiv: "2204.04746"
+    year: 2022
+    code: "CAMMA-public/cholect45"
+    stars: 200
+    tags: [surgical-workflow, action-recognition, triplet, benchmark]
+    parents: []
+    description: "Benchmark for recognizing instrument-verb-target surgical action triplets in cholecystectomy"
+
+  - name: "SurgBERT"
+    paper: "SurgBERT: Surgical Language Model for Procedure Understanding"
+    arxiv: ""
+    year: 2023
+    code: ""
+    stars: 0
+    tags: [nlp, surgical-workflow, language-model, transformer]
+    parents:
+      - name: "CholecTriplet"
+        relation: extends
+    description: "Language model pretrained on surgical text for procedure understanding and report generation"
+
+  - name: "Surgical-DINO"
+    paper: "Surgical-DINO: Adapter Learning of Foundation Model for Depth Estimation in Endoscopic Surgery"
+    arxiv: "2401.06013"
+    year: 2024
+    code: "BeileiCui/SurgicalDINO"
+    stars: 100
+    tags: [depth-estimation, foundation-model, endoscopy, adapter, vision-transformer]
+    parents:
+      - name: "CholecTriplet"
+        relation: inspires
+    description: "Adapting DINOv2 vision foundation model for surgical scene depth estimation in endoscopy"
+
+  # ===========================
+  # Foundation Models & Latest
+  # ===========================
+  - name: "Orbit-Surgical"
+    paper: "Orbit-Surgical: An Open-Simulation Framework for Learning Surgical Augmented Dexterity"
+    arxiv: "2404.16027"
+    year: 2024
+    code: "orbit-surgical/orbit-surgical"
+    stars: 300
+    tags: [simulation, isaac-sim, surgical-robot, reinforcement-learning, dexterity]
+    parents:
+      - name: "SurRoL"
+        relation: extends
+      - name: "dVRK"
+        relation: extends
+    description: "NVIDIA Isaac Sim based surgical simulation platform for learning augmented dexterity"
+
+  - name: "FLex"
+    paper: "FLex: A Flexible Surgical Foundation Model for Generalizable Surgical Phase Recognition"
+    arxiv: ""
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [foundation-model, surgical-workflow, phase-recognition, generalization]
+    parents:
+      - name: "CholecTriplet"
+        relation: extends
+      - name: "SurgBERT"
+        relation: combines
+    description: "Flexible foundation model for surgical phase recognition generalizing across diverse procedures"
+
+  - name: "Surgical Foundation Models"
+    paper: "Foundation Models for Surgical Intelligence: A Survey"
+    arxiv: "2401.11840"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [foundation-model, survey, surgical-ai, vision-language]
+    parents:
+      - name: "Surgical-DINO"
+        relation: inspires
+      - name: "FLex"
+        relation: inspires
+      - name: "SurgBERT"
+        relation: inspires
+    description: "Survey of foundation models applied to surgical intelligence including vision, language, and action"
+
+  - name: "Autonomous Surgical Agents"
+    paper: "Towards Autonomous Robotic Surgery with Foundation Models"
+    arxiv: "2501.09324"
+    year: 2025
+    code: ""
+    stars: 0
+    tags: [autonomous-surgery, foundation-model, vlm, planning, dvrk]
+    parents:
+      - name: "Surgical Foundation Models"
+        relation: extends
+      - name: "SurRoL"
+        relation: combines
+      - name: "Orbit-Surgical"
+        relation: combines
+    description: "Using vision-language foundation models for high-level surgical task planning and autonomous execution"

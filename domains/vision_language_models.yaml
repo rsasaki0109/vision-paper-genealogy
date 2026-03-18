@@ -1,0 +1,341 @@
+name: Vision-Language Models
+description: >
+  The genealogy of vision-language models — from contrastive pretraining (CLIP)
+  through multimodal instruction tuning to modern unified vision-language systems.
+source_awesome_lists:
+  - https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models
+  - https://github.com/dk-liang/Awesome-Visual-Transformer
+
+methods:
+  # === Contrastive Foundations ===
+  - name: "CLIP"
+    paper: "Learning Transferable Visual Models From Natural Language Supervision"
+    arxiv: "2103.00020"
+    year: 2021
+    code: "openai/CLIP"
+    stars: 26000
+    tags: [contrastive, vision-language, zero-shot, pretraining]
+    parents: []
+    description: "Contrastive image-text pretraining enabling zero-shot visual recognition"
+
+  - name: "SigLIP"
+    paper: "Sigmoid Loss for Language Image Pre-Training"
+    arxiv: "2303.15343"
+    year: 2023
+    code: "google-research/big_vision"
+    stars: 2200
+    tags: [contrastive, sigmoid-loss, vision-language]
+    parents:
+      - name: "CLIP"
+        relation: extends
+    description: "Replaces softmax contrastive loss with pairwise sigmoid for better scaling"
+
+  # === Generative VLMs ===
+  - name: "Flamingo"
+    paper: "Flamingo: a Visual Language Model for Few-Shot Learning"
+    arxiv: "2204.14198"
+    year: 2022
+    code: null
+    stars: null
+    tags: [few-shot, visual-lm, cross-attention, proprietary]
+    parents:
+      - name: "CLIP"
+        relation: extends
+    description: "Few-shot visual language model using perceiver resampler and gated cross-attention"
+
+  - name: "BLIP"
+    paper: "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation"
+    arxiv: "2201.12086"
+    year: 2022
+    code: "salesforce/BLIP"
+    stars: 4800
+    tags: [vision-language, captioning, vqa, bootstrapping]
+    parents:
+      - name: "CLIP"
+        relation: extends
+    description: "Unified VL pretraining with bootstrapped caption filtering"
+
+  - name: "BLIP-2"
+    paper: "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models"
+    arxiv: "2301.12597"
+    year: 2023
+    code: "salesforce/LAVIS"
+    stars: 9800
+    tags: [vision-language, q-former, frozen-lm, efficient]
+    parents:
+      - name: "BLIP"
+        relation: extends
+    description: "Bridges frozen vision encoders and LLMs via a lightweight Q-Former module"
+
+  - name: "InstructBLIP"
+    paper: "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning"
+    arxiv: "2305.06500"
+    year: 2023
+    code: "salesforce/LAVIS"
+    stars: 9800
+    tags: [vision-language, instruction-tuning, q-former]
+    parents:
+      - name: "BLIP-2"
+        relation: extends
+    description: "Instruction-tuned BLIP-2 for general-purpose vision-language understanding"
+
+  # === Google PaLI / Gemini Family ===
+  - name: "PaLI"
+    paper: "PaLI: A Jointly-Scaled Multilingual Language-Image Model"
+    arxiv: "2209.06794"
+    year: 2022
+    code: null
+    stars: null
+    tags: [vision-language, multilingual, scaling, proprietary]
+    parents:
+      - name: "CLIP"
+        relation: inspires
+    description: "Jointly scaled multilingual vision-language model up to 17B parameters"
+
+  - name: "PaLI-X"
+    paper: "PaLI-X: On Scaling up a Multilingual Vision and Language Model"
+    arxiv: "2305.18565"
+    year: 2023
+    code: null
+    stars: null
+    tags: [vision-language, multilingual, scaling, proprietary]
+    parents:
+      - name: "PaLI"
+        relation: extends
+    description: "Scaled-up PaLI achieving state-of-the-art on diverse VL benchmarks"
+
+  - name: "Gemini"
+    paper: "Gemini: A Family of Highly Capable Multimodal Models"
+    arxiv: "2312.11805"
+    year: 2023
+    code: null
+    stars: null
+    tags: [multimodal, proprietary, reasoning, video]
+    parents:
+      - name: "PaLI-X"
+        relation: inspires
+      - name: "Flamingo"
+        relation: inspires
+    description: "Google's natively multimodal model family with strong cross-modal reasoning"
+
+  - name: "Gemini 1.5"
+    paper: "Gemini 1.5: Unlocking Multimodal Understanding Across Millions of Tokens of Context"
+    arxiv: "2403.05530"
+    year: 2024
+    code: null
+    stars: null
+    tags: [multimodal, long-context, moe, proprietary]
+    parents:
+      - name: "Gemini"
+        relation: extends
+    description: "Long-context multimodal model processing up to 10M tokens with MoE architecture"
+
+  - name: "Gemini 2"
+    paper: null
+    arxiv: null
+    year: 2025
+    code: null
+    stars: null
+    tags: [multimodal, agentic, proprietary]
+    parents:
+      - name: "Gemini 1.5"
+        relation: extends
+    description: "Next-generation Gemini with agentic capabilities and native tool use"
+
+  # === OpenAI Multimodal ===
+  - name: "GPT-4V"
+    paper: "GPT-4V(ision) System Card"
+    arxiv: "2309.17421"
+    year: 2023
+    code: null
+    stars: null
+    tags: [multimodal, proprietary, reasoning, visual-qa]
+    parents:
+      - name: "CLIP"
+        relation: inspires
+    description: "Vision-enabled GPT-4 with strong multimodal understanding and reasoning"
+
+  # === LLaVA Family ===
+  - name: "LLaVA"
+    paper: "Visual Instruction Tuning"
+    arxiv: "2304.08485"
+    year: 2023
+    code: "haotian-liu/LLaVA"
+    stars: 21000
+    tags: [multimodal, instruction-tuning, open-weight, visual-chat]
+    parents:
+      - name: "CLIP"
+        relation: combines
+      - name: "BLIP-2"
+        relation: inspires
+    description: "Visual instruction tuning connecting CLIP vision encoder with LLM via projection"
+
+  - name: "LLaVA-1.5"
+    paper: "Improved Baselines with Visual Instruction Tuning"
+    arxiv: "2310.03744"
+    year: 2023
+    code: "haotian-liu/LLaVA"
+    stars: 21000
+    tags: [multimodal, instruction-tuning, open-weight, mlp-projector]
+    parents:
+      - name: "LLaVA"
+        relation: extends
+    description: "Improved LLaVA with MLP projector and academic-task-oriented data"
+
+  - name: "LLaVA-NeXT"
+    paper: "LLaVA-NeXT: Improved Reasoning, OCR, and World Knowledge"
+    arxiv: null
+    year: 2024
+    code: "haotian-liu/LLaVA"
+    stars: 21000
+    tags: [multimodal, high-resolution, dynamic-resolution, open-weight]
+    parents:
+      - name: "LLaVA-1.5"
+        relation: extends
+    description: "Dynamic high-resolution input and improved reasoning over LLaVA-1.5"
+
+  # === MiniGPT-4 ===
+  - name: "MiniGPT-4"
+    paper: "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models"
+    arxiv: "2304.10592"
+    year: 2023
+    code: "Vision-CAIR/MiniGPT-4"
+    stars: 25200
+    tags: [multimodal, instruction-tuning, open-weight, lightweight]
+    parents:
+      - name: "BLIP-2"
+        relation: extends
+    description: "Aligns frozen visual encoder with Vicuna LLM using a single projection layer"
+
+  # === CogVLM Family ===
+  - name: "CogVLM"
+    paper: "CogVLM: Visual Expert for Pretrained Language Models"
+    arxiv: "2311.03079"
+    year: 2023
+    code: "THUDM/CogVLM"
+    stars: 6000
+    tags: [multimodal, visual-expert, deep-fusion, open-weight]
+    parents:
+      - name: "BLIP-2"
+        relation: inspires
+      - name: "LLaVA"
+        relation: inspires
+    description: "Deep visual-language fusion via trainable visual expert modules in each layer"
+
+  - name: "CogVLM2"
+    paper: "CogVLM2: Visual Language Models for Image and Video Understanding"
+    arxiv: "2408.16500"
+    year: 2024
+    code: "THUDM/CogVLM2"
+    stars: 2200
+    tags: [multimodal, video, high-resolution, open-weight]
+    parents:
+      - name: "CogVLM"
+        relation: extends
+    description: "Supports higher resolution and video understanding with improved architecture"
+
+  # === Qwen-VL Family ===
+  - name: "Qwen-VL"
+    paper: "Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond"
+    arxiv: "2308.12966"
+    year: 2023
+    code: "QwenLM/Qwen-VL"
+    stars: 4800
+    tags: [multimodal, grounding, ocr, open-weight]
+    parents:
+      - name: "CLIP"
+        relation: inspires
+      - name: "BLIP-2"
+        relation: inspires
+    description: "Versatile VLM supporting grounding, OCR, and multi-image understanding"
+
+  - name: "Qwen2-VL"
+    paper: "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution"
+    arxiv: "2409.12191"
+    year: 2024
+    code: "QwenLM/Qwen2-VL"
+    stars: 4200
+    tags: [multimodal, dynamic-resolution, video, open-weight]
+    parents:
+      - name: "Qwen-VL"
+        relation: extends
+    description: "Dynamic-resolution VLM with native video understanding and improved performance"
+
+  - name: "Qwen2.5-VL"
+    paper: "Qwen2.5-VL Technical Report"
+    arxiv: "2502.13923"
+    year: 2025
+    code: "QwenLM/Qwen2.5-VL"
+    stars: 6500
+    tags: [multimodal, agentic, video, open-weight]
+    parents:
+      - name: "Qwen2-VL"
+        relation: extends
+    description: "State-of-the-art open VLM with agentic capabilities and long-video understanding"
+
+  # === InternVL Family ===
+  - name: "InternVL"
+    paper: "InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks"
+    arxiv: "2312.14238"
+    year: 2024
+    code: "OpenGVLab/InternVL"
+    stars: 7500
+    tags: [multimodal, scaling, open-weight, dynamic-resolution]
+    parents:
+      - name: "CLIP"
+        relation: extends
+      - name: "LLaVA"
+        relation: inspires
+    description: "Scaled vision foundation model aligned for general visual-linguistic tasks"
+
+  - name: "InternVL2"
+    paper: "InternVL2: Better than the Best — Expanding Performance Boundaries of Open-Source Multimodal Models"
+    arxiv: "2407.21783"
+    year: 2024
+    code: "OpenGVLab/InternVL"
+    stars: 7500
+    tags: [multimodal, open-weight, dynamic-resolution, progressive-training]
+    parents:
+      - name: "InternVL"
+        relation: extends
+    description: "Second-generation InternVL approaching proprietary model performance"
+
+  - name: "InternVL3"
+    paper: "InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models"
+    arxiv: "2504.10479"
+    year: 2025
+    code: "OpenGVLab/InternVL3"
+    stars: 1500
+    tags: [multimodal, open-weight, test-time-compute, reasoning]
+    parents:
+      - name: "InternVL2"
+        relation: extends
+    description: "Advanced training recipes and test-time scaling for open-source VLMs"
+
+  # === Florence ===
+  - name: "Florence-2"
+    paper: "Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks"
+    arxiv: "2311.06242"
+    year: 2024
+    code: "microsoft/Florence-2"
+    stars: 3000
+    tags: [multimodal, unified, grounding, captioning, open-weight]
+    parents:
+      - name: "CLIP"
+        relation: inspires
+    description: "Unified sequence-to-sequence model handling diverse vision tasks via text prompts"
+
+  # === Molmo ===
+  - name: "Molmo"
+    paper: "Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models"
+    arxiv: "2409.17146"
+    year: 2024
+    code: "allenai/Molmo"
+    stars: 1200
+    tags: [multimodal, open-weight, open-data, pointing]
+    parents:
+      - name: "LLaVA"
+        relation: inspires
+      - name: "CLIP"
+        relation: inspires
+    description: "Fully open VLM with open data and pointing/grounding capabilities"

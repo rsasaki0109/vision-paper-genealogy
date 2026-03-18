@@ -1,0 +1,300 @@
+name: Robot Control
+description: >
+  From classical PID and model predictive control to deep reinforcement learning,
+  imitation learning, and foundation models for robot manipulation — the full
+  evolution of robot control and manipulation methods.
+source_awesome_lists:
+  - https://github.com/jdneo/awesome-robot-manipulation
+  - https://github.com/GT-RIPL/Awesome-LLM-Robotics
+  - https://github.com/mintisan/awesome-robotics-foundation-models
+
+methods:
+  # ===========================
+  # Classical Control
+  # ===========================
+  - name: "PID"
+    paper: "A History of Automatic Process Control"
+    arxiv: ""
+    year: 1922
+    code: ""
+    stars: 0
+    tags: [classical, feedback, linear, industrial]
+    parents: []
+    description: "Proportional-Integral-Derivative feedback controller, the foundational building block of classical control"
+
+  - name: "MPC"
+    paper: "Model Predictive Control: Theory, Computation, and Design"
+    arxiv: ""
+    year: 1978
+    code: ""
+    stars: 0
+    tags: [classical, optimization, model-based, predictive]
+    parents:
+      - name: "PID"
+        relation: extends
+    description: "Optimization-based control that plans optimal actions over a receding horizon using a dynamics model"
+
+  - name: "iLQR"
+    paper: "Synthesis and Stabilization of Complex Behaviors through Online Trajectory Optimization"
+    arxiv: ""
+    year: 2012
+    code: ""
+    stars: 0
+    tags: [trajectory-optimization, iterative, model-based, classical]
+    parents:
+      - name: "MPC"
+        relation: inspires
+    description: "Iterative Linear Quadratic Regulator for nonlinear trajectory optimization via local linearization"
+
+  # ===========================
+  # Deep Reinforcement Learning
+  # ===========================
+  - name: "DDPG"
+    paper: "Continuous control with deep reinforcement learning"
+    arxiv: "1509.02971"
+    year: 2016
+    code: ""
+    stars: 0
+    tags: [reinforcement-learning, off-policy, actor-critic, continuous]
+    parents: []
+    description: "Deep deterministic policy gradient for continuous action spaces using actor-critic architecture"
+
+  - name: "PPO"
+    paper: "Proximal Policy Optimization Algorithms"
+    arxiv: "1707.06347"
+    year: 2017
+    code: ""
+    stars: 0
+    tags: [reinforcement-learning, on-policy, policy-gradient, stable]
+    parents:
+      - name: "DDPG"
+        relation: inspires
+    description: "Stable on-policy RL algorithm using clipped surrogate objective for robust policy updates"
+
+  - name: "TD3"
+    paper: "Addressing Function Approximation Error in Actor-Critic Methods"
+    arxiv: "1802.09477"
+    year: 2018
+    code: "sfujim/TD3"
+    stars: 3200
+    tags: [reinforcement-learning, off-policy, actor-critic, twin-critic]
+    parents:
+      - name: "DDPG"
+        relation: extends
+    description: "Twin Delayed DDPG addressing overestimation bias with clipped double Q-learning and delayed updates"
+
+  - name: "SAC"
+    paper: "Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor"
+    arxiv: "1801.01290"
+    year: 2018
+    code: ""
+    stars: 0
+    tags: [reinforcement-learning, off-policy, maximum-entropy, stochastic]
+    parents:
+      - name: "DDPG"
+        relation: extends
+      - name: "TD3"
+        relation: inspires
+    description: "Maximum entropy RL algorithm balancing exploration and exploitation with stochastic policy"
+
+  - name: "DreamerV3"
+    paper: "Mastering Diverse Domains through World Models"
+    arxiv: "2301.04104"
+    year: 2023
+    code: "danijar/dreamerv3"
+    stars: 1300
+    tags: [world-model, model-based-rl, imagination, general]
+    parents:
+      - name: "SAC"
+        relation: inspires
+    description: "General world model agent mastering diverse domains through learned dynamics and imagination-based planning"
+
+  - name: "DecisionTransformer"
+    paper: "Decision Transformer: Reinforcement Learning via Sequence Modeling"
+    arxiv: "2106.01345"
+    year: 2021
+    code: "kzl/decision-transformer"
+    stars: 2300
+    tags: [transformer, offline-rl, sequence-modeling, return-conditioned]
+    parents:
+      - name: "PPO"
+        relation: inspires
+    description: "Casts offline RL as sequence modeling, conditioning on desired returns to generate optimal actions"
+
+  # ===========================
+  # Robot Learning & Manipulation
+  # ===========================
+  - name: "RT-1"
+    paper: "RT-1: Robotics Transformer for Real-World Control at Scale"
+    arxiv: "2212.06817"
+    year: 2023
+    code: ""
+    stars: 0
+    tags: [transformer, manipulation, real-world, google, large-scale]
+    parents:
+      - name: "DecisionTransformer"
+        relation: inspires
+    description: "Large-scale robotics transformer trained on real-world robot data for generalized manipulation"
+
+  - name: "RT-2"
+    paper: "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control"
+    arxiv: "2307.15818"
+    year: 2023
+    code: ""
+    stars: 0
+    tags: [vlm, manipulation, transfer, google, language-grounded]
+    parents:
+      - name: "RT-1"
+        relation: extends
+    description: "Vision-language-action model transferring web-scale knowledge to robotic control via VLM fine-tuning"
+
+  - name: "ACT"
+    paper: "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware"
+    arxiv: "2304.13705"
+    year: 2023
+    code: "tonyzhaozh/act"
+    stars: 2700
+    tags: [imitation-learning, bimanual, action-chunking, transformer, manipulation]
+    parents:
+      - name: "RT-1"
+        relation: inspires
+    description: "Action Chunking Transformer for bimanual manipulation learned from teleoperated demonstrations"
+
+  - name: "ALOHA"
+    paper: "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware"
+    arxiv: "2304.13705"
+    year: 2023
+    code: "tonyzhaozh/aloha"
+    stars: 5000
+    tags: [teleoperation, bimanual, low-cost, hardware, manipulation]
+    parents: []
+    description: "Low-cost bimanual teleoperation system enabling high-quality demonstration collection for imitation learning"
+
+  - name: "MobileALOHA"
+    paper: "Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation"
+    arxiv: "2401.02117"
+    year: 2024
+    code: "MarkFzp/mobile-aloha"
+    stars: 4000
+    tags: [mobile, bimanual, teleoperation, whole-body, manipulation]
+    parents:
+      - name: "ALOHA"
+        relation: extends
+      - name: "ACT"
+        relation: extends
+    description: "Mobile bimanual manipulation system extending ALOHA with a mobile base for whole-body teleoperation"
+
+  - name: "DiffusionPolicy"
+    paper: "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion"
+    arxiv: "2303.04137"
+    year: 2023
+    code: "real-stanford/diffusion_policy"
+    stars: 3500
+    tags: [diffusion, imitation-learning, visuomotor, manipulation, multi-modal]
+    parents:
+      - name: "ACT"
+        relation: inspires
+      - name: "DDPG"
+        relation: inspires
+    description: "Generates robot actions via iterative denoising diffusion, capturing multi-modal action distributions"
+
+  - name: "Octo"
+    paper: "Octo: An Open-Source Generalist Robot Policy"
+    arxiv: "2405.12213"
+    year: 2024
+    code: "octo-models/octo"
+    stars: 3700
+    tags: [foundation-model, generalist, open-source, transformer, manipulation]
+    parents:
+      - name: "RT-2"
+        relation: inspires
+      - name: "DiffusionPolicy"
+        relation: inspires
+    description: "Open-source generalist robot policy pre-trained on diverse robot data for broad manipulation tasks"
+
+  - name: "pi0"
+    paper: "pi0: A Vision-Language-Action Flow Model for General Robot Control"
+    arxiv: "2410.24164"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [foundation-model, vla, flow-matching, generalist, manipulation]
+    parents:
+      - name: "Octo"
+        relation: extends
+      - name: "RT-2"
+        relation: extends
+      - name: "DiffusionPolicy"
+        relation: extends
+    description: "Vision-language-action flow model from Physical Intelligence for general-purpose dexterous robot control"
+
+  # ===========================
+  # 2025-2026 Methods
+  # ===========================
+  - name: "pi0.5"
+    paper: "pi0.5: A Vision-Language-Action Model for Open-World Robot Manipulation"
+    arxiv: ""
+    year: 2025
+    code: ""
+    stars: 0
+    tags: [foundation-model, vla, open-world, generalist, manipulation]
+    parents:
+      - name: "pi0"
+        relation: extends
+    description: "Upgraded VLA model from Physical Intelligence with improved generalization to open-world manipulation"
+
+  - name: "OpenVLA"
+    paper: "OpenVLA: An Open-Source Vision-Language-Action Model"
+    arxiv: "2406.09246"
+    year: 2024
+    code: "openvla/openvla"
+    stars: 3000
+    tags: [open-source, vla, foundation-model, fine-tuning, manipulation]
+    parents:
+      - name: "RT-2"
+        relation: inspires
+      - name: "Octo"
+        relation: inspires
+    description: "Open-source 7B vision-language-action model for generalist robot manipulation with efficient fine-tuning"
+
+  - name: "SpatialVLA"
+    paper: "SpatialVLA: Exploring Spatial Representations for Visual-Language-Action Model"
+    arxiv: "2501.15830"
+    year: 2025
+    code: ""
+    stars: 0
+    tags: [vla, spatial, 3d, manipulation, foundation-model]
+    parents:
+      - name: "OpenVLA"
+        relation: extends
+      - name: "pi0"
+        relation: inspires
+    description: "VLA model incorporating explicit 3D spatial representations for improved manipulation accuracy"
+
+  - name: "HumanPlus"
+    paper: "HumanPlus: Humanoid Shadowing and Imitation from Humans"
+    arxiv: "2406.10454"
+    year: 2024
+    code: "MarkFzp/humanplus"
+    stars: 1200
+    tags: [humanoid, imitation-learning, whole-body, teleoperation]
+    parents:
+      - name: "MobileALOHA"
+        relation: inspires
+      - name: "ACT"
+        relation: extends
+    description: "Full-body humanoid imitation learning from human demonstrations via real-time shadowing"
+
+  - name: "SmolVLA"
+    paper: "SmolVLA: A Small Vision-Language-Action Model for Efficient Robot Learning"
+    arxiv: ""
+    year: 2025
+    code: "huggingface/lerobot"
+    stars: 8500
+    tags: [vla, efficient, small, huggingface, manipulation]
+    parents:
+      - name: "OpenVLA"
+        relation: extends
+      - name: "pi0"
+        relation: inspires
+    description: "Compact VLA model from HuggingFace LeRobot enabling efficient robot policy training on consumer hardware"

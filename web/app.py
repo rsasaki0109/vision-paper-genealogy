@@ -28,29 +28,48 @@ def main() -> None:
     )
 
     st.title("Robotics Paper Genealogy")
-    st.caption("Interactive genealogy tree of Computer Vision research methods")
+    st.caption("Interactive genealogy tree of Robotics & AI research methods")
 
     domains = load_domains()
 
-    POINT_CLOUD_DOMAINS = {
-        "LiDAR Odometry & SLAM",
-        "Point Cloud Denoising",
-        "Point Cloud Scene Flow",
-        "3D Object Detection",
-        "Visual Place Recognition",
-    }
-    VISUAL_DOMAINS = {
-        "Neural Radiance Fields & 3D Gaussian Splatting",
-        "Image Matching & Feature Detection",
-        "Visual SLAM",
-        "Depth Completion",
+    CATEGORY_MAP = {
+        "Perception (LiDAR)": {
+            "LiDAR Odometry & SLAM",
+            "Point Cloud Denoising",
+            "Point Cloud Scene Flow",
+            "3D Object Detection",
+            "Visual Place Recognition",
+        },
+        "Perception (Visual)": {
+            "Neural Radiance Fields & 3D Gaussian Splatting",
+            "Image Matching & Feature Detection",
+            "Visual SLAM",
+            "Depth Completion",
+        },
+        "Planning & Control": {
+            "Motion Planning",
+            "Robot Control",
+            "End-to-End Autonomous Driving",
+        },
+        "Robot Learning": {
+            "Imitation Learning & Robot Foundation Models",
+            "World Models for Robotics & Embodied AI",
+            "Legged Robot Control",
+        },
+        "Foundation Models": {
+            "Large Language Models",
+            "Vision-Language Models",
+        },
+        "Platforms & Simulation": {
+            "Robot Simulation",
+            "Medical & Surgical Robotics",
+        },
     }
 
-    GROUPS = {
-        "Point Cloud / LiDAR": [d for d in domains if d.name in POINT_CLOUD_DOMAINS],
-        "Visual / Camera": [d for d in domains if d.name in VISUAL_DOMAINS],
-        "All": domains,
-    }
+    GROUPS = {}
+    for cat_name, domain_names in CATEGORY_MAP.items():
+        GROUPS[cat_name] = [d for d in domains if d.name in domain_names]
+    GROUPS["All"] = domains
 
     col1, col2 = st.columns([1, 3])
 

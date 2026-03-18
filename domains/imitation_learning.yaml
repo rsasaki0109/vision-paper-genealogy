@@ -1,0 +1,381 @@
+name: Imitation Learning & Robot Foundation Models
+description: >
+  From classical behavioral cloning to modern diffusion-based policies,
+  action-chunking transformers, vision-language-action models, and the
+  LeRobot ecosystem — the full evolution of learning robot manipulation
+  from demonstrations.
+source_awesome_lists:
+  - https://github.com/huggingface/lerobot
+  - https://github.com/mimicgen/mimicgen
+  - https://github.com/opendilab/awesome-imitation-learning
+
+methods:
+  # ===========================
+  # Classical Foundations
+  # ===========================
+  - name: "Behavioral Cloning"
+    paper: "Efficient Training of Artificial Neural Networks for Autonomous Navigation"
+    arxiv: ""
+    year: 1989
+    code: ""
+    stars: 0
+    tags: [behavioral-cloning, supervised-learning, classical]
+    parents: []
+    description: "Supervised learning from expert demonstrations — the simplest imitation learning baseline"
+
+  - name: "DAgger"
+    paper: "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning"
+    arxiv: "1011.0686"
+    year: 2011
+    code: ""
+    stars: 0
+    tags: [interactive, dataset-aggregation, online-learning]
+    parents:
+      - name: "Behavioral Cloning"
+        relation: extends
+    description: "Iterative dataset aggregation that queries the expert on the learner's own state distribution"
+
+  - name: "GAIL"
+    paper: "Generative Adversarial Imitation Learning"
+    arxiv: "1606.03476"
+    year: 2016
+    code: ""
+    stars: 0
+    tags: [adversarial, inverse-rl, generative]
+    parents:
+      - name: "Behavioral Cloning"
+        relation: extends
+    description: "GAN-based imitation learning that matches occupancy measures without explicit reward recovery"
+
+  # ===========================
+  # Behavior Transformers & Tokenization
+  # ===========================
+  - name: "BeT"
+    paper: "Behavior Transformers: Cloning k Modes with One Stone"
+    arxiv: "2206.11251"
+    year: 2022
+    code: "notmahi/bet"
+    stars: 300
+    tags: [transformer, multi-modal-actions, behavioral-cloning]
+    parents:
+      - name: "Behavioral Cloning"
+        relation: extends
+    description: "Transformer-based policy that handles multimodal action distributions via k-means tokenization"
+
+  - name: "VQ-BeT"
+    paper: "Behavior Generation with Latent Actions"
+    arxiv: "2403.03181"
+    year: 2024
+    code: "jayLEE0301/vq_bet_official"
+    stars: 250
+    tags: [transformer, vq-vae, multi-modal-actions, latent-actions]
+    parents:
+      - name: "BeT"
+        relation: extends
+    description: "Improved behavior transformer using VQ-VAE for hierarchical latent action tokenization"
+
+  # ===========================
+  # Energy & Implicit Models
+  # ===========================
+  - name: "IBC"
+    paper: "Implicit Behavioral Cloning"
+    arxiv: "2109.00137"
+    year: 2021
+    code: "google-research/ibc"
+    stars: 400
+    tags: [energy-based, implicit, multi-modal-actions]
+    parents:
+      - name: "Behavioral Cloning"
+        relation: extends
+    description: "Energy-based model for imitation learning that captures multimodal action distributions implicitly"
+
+  # ===========================
+  # Diffusion-Based Policies
+  # ===========================
+  - name: "Diffusion Policy"
+    paper: "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion"
+    arxiv: "2303.04137"
+    year: 2023
+    code: "real-stanford/diffusion_policy"
+    stars: 3200
+    tags: [diffusion, visuomotor, action-generation, denoising]
+    parents:
+      - name: "Behavioral Cloning"
+        relation: extends
+      - name: "IBC"
+        relation: inspires
+    description: "Seminal work applying denoising diffusion to visuomotor policy learning with action sequence generation"
+
+  - name: "3D Diffusion Policy"
+    paper: "3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations"
+    arxiv: "2403.03954"
+    year: 2024
+    code: "YanjieZe/3D-Diffusion-Policy"
+    stars: 1000
+    tags: [diffusion, 3d, point-cloud, visuomotor]
+    parents:
+      - name: "Diffusion Policy"
+        relation: extends
+    description: "Extends diffusion policy with compact 3D visual representations for better spatial generalization"
+
+  # ===========================
+  # Action Chunking & Bimanual
+  # ===========================
+  - name: "ACT"
+    paper: "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware"
+    arxiv: "2304.13705"
+    year: 2023
+    code: "tonyzhaozh/act"
+    stars: 3500
+    tags: [action-chunking, transformer, cvae, bimanual]
+    parents:
+      - name: "Behavioral Cloning"
+        relation: extends
+      - name: "BeT"
+        relation: inspires
+    description: "Action chunking with transformers and CVAE for precise bimanual manipulation from teleoperation data"
+
+  - name: "ALOHA"
+    paper: "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware"
+    arxiv: "2304.13705"
+    year: 2023
+    code: "tonyzhaozh/aloha"
+    stars: 5000
+    tags: [bimanual, teleoperation, low-cost, hardware]
+    parents:
+      - name: "ACT"
+        relation: combines
+    description: "Low-cost bimanual teleoperation hardware system paired with ACT for fine-grained manipulation"
+
+  - name: "Mobile ALOHA"
+    paper: "Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation"
+    arxiv: "2401.02117"
+    year: 2024
+    code: "MarkFzp/mobile-aloha"
+    stars: 4000
+    tags: [bimanual, mobile, teleoperation, whole-body]
+    parents:
+      - name: "ALOHA"
+        relation: extends
+    description: "Extends ALOHA with a mobile base for whole-body bimanual manipulation via co-training"
+
+  # ===========================
+  # Robot Foundation Models (RT series)
+  # ===========================
+  - name: "RT-1"
+    paper: "RT-1: Robotics Transformer for Real-World Control at Scale"
+    arxiv: "2212.06817"
+    year: 2023
+    code: "google-research/robotics_transformer"
+    stars: 2700
+    tags: [transformer, foundation-model, real-world, large-scale]
+    parents:
+      - name: "Behavioral Cloning"
+        relation: extends
+    description: "Large-scale robotics transformer trained on 130k real-world episodes for generalized manipulation"
+
+  - name: "RT-2"
+    paper: "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control"
+    arxiv: "2307.15818"
+    year: 2023
+    code: ""
+    stars: 0
+    tags: [vla, vlm, foundation-model, web-knowledge-transfer]
+    parents:
+      - name: "RT-1"
+        relation: extends
+    description: "Vision-language-action model that transfers web-scale knowledge from VLMs to robot control"
+
+  # ===========================
+  # Vision-Language-Action Models
+  # ===========================
+  - name: "Octo"
+    paper: "Octo: An Open-Source Generalist Robot Policy"
+    arxiv: "2405.12213"
+    year: 2024
+    code: "octo-models/octo"
+    stars: 3700
+    tags: [foundation-model, open-source, generalist, multi-robot]
+    parents:
+      - name: "RT-1"
+        relation: inspires
+      - name: "Diffusion Policy"
+        relation: combines
+    description: "Open-source generalist robot policy pre-trained on 800k episodes from the Open X-Embodiment dataset"
+
+  - name: "OpenVLA"
+    paper: "OpenVLA: An Open-Source Vision-Language-Action Model"
+    arxiv: "2406.09246"
+    year: 2024
+    code: "openvla/openvla"
+    stars: 3500
+    tags: [vla, open-source, foundation-model, fine-tunable]
+    parents:
+      - name: "RT-2"
+        relation: inspires
+      - name: "Octo"
+        relation: inspires
+    description: "Open-source 7B VLA model fine-tuned from Prismatic VLM for generalist robot manipulation"
+
+  - name: "Pi0"
+    paper: "pi0: A Vision-Language-Action Flow Model for General Robot Control"
+    arxiv: "2410.24164"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [vla, flow-matching, foundation-model, dexterous]
+    parents:
+      - name: "OpenVLA"
+        relation: inspires
+      - name: "Diffusion Policy"
+        relation: combines
+    description: "Physical Intelligence's VLA model using flow matching for dexterous general-purpose robot control"
+
+  - name: "Pi0.5"
+    paper: "pi0.5: a Vision-Language-Action Model with Open-World Generalization"
+    arxiv: "2504.16054"
+    year: 2025
+    code: ""
+    stars: 0
+    tags: [vla, foundation-model, open-world, generalization]
+    parents:
+      - name: "Pi0"
+        relation: extends
+    description: "Scaled successor to pi0 with improved open-world generalization across diverse tasks and environments"
+
+  - name: "SmolVLA"
+    paper: "SmolVLA: A Small Vision-Language-Action Model for Efficient Robot Learning"
+    arxiv: "2506.01844"
+    year: 2025
+    code: "huggingface/lerobot"
+    stars: 0
+    tags: [vla, lightweight, efficient, lerobot]
+    parents:
+      - name: "OpenVLA"
+        relation: inspires
+      - name: "LeRobot"
+        relation: combines
+    description: "Compact and efficient VLA model designed for practical robot learning within the LeRobot ecosystem"
+
+  # ===========================
+  # Humanoid & Dexterous
+  # ===========================
+  - name: "GR-1"
+    paper: "GR-1: Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation"
+    arxiv: "2312.13139"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [humanoid, video-pretraining, foundation-model, bytedance]
+    parents:
+      - name: "RT-1"
+        relation: inspires
+    description: "ByteDance's humanoid foundation model using large-scale video generative pre-training for manipulation"
+
+  - name: "GR-2"
+    paper: "GR-2: A Generative Video-Language-Action Model with Web-Scale Knowledge for Robot Manipulation"
+    arxiv: "2410.06158"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [humanoid, video-language-action, foundation-model, bytedance]
+    parents:
+      - name: "GR-1"
+        relation: extends
+      - name: "RT-2"
+        relation: inspires
+    description: "Scaled successor to GR-1 incorporating video-language-action modeling with web-scale knowledge"
+
+  - name: "HumanPlus"
+    paper: "HumanPlus: Humanoid Shadowing and Imitation from Humans"
+    arxiv: "2406.10454"
+    year: 2024
+    code: "MarkFzp/humanplus"
+    stars: 1200
+    tags: [humanoid, shadowing, whole-body, teleoperation]
+    parents:
+      - name: "Mobile ALOHA"
+        relation: inspires
+    description: "Real-time humanoid shadowing and imitation learning from human demonstrations via pose retargeting"
+
+  # ===========================
+  # Data Collection & Interfaces
+  # ===========================
+  - name: "UMI"
+    paper: "Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots"
+    arxiv: "2402.10329"
+    year: 2024
+    code: "real-stanford/universal_manipulation_interface"
+    stars: 1500
+    tags: [data-collection, in-the-wild, hand-held, hardware]
+    parents:
+      - name: "Diffusion Policy"
+        relation: combines
+    description: "Portable hand-held data collection interface enabling in-the-wild demonstration without robots"
+
+  - name: "DexCap"
+    paper: "DexCap: Scalable and Portable Mocap Data Collection System for Dexterous Manipulation"
+    arxiv: "2403.07788"
+    year: 2024
+    code: "j96w/DexCap"
+    stars: 400
+    tags: [data-collection, dexterous, mocap, hand-tracking]
+    parents:
+      - name: "UMI"
+        relation: inspires
+    description: "Portable motion capture system for collecting dexterous hand manipulation demonstrations at scale"
+
+  # ===========================
+  # Frameworks, Datasets & Benchmarks
+  # ===========================
+  - name: "LeRobot"
+    paper: "LeRobot: State-of-the-art Machine Learning for Real-World Robotics in a Pythonic way"
+    arxiv: ""
+    year: 2024
+    code: "huggingface/lerobot"
+    stars: 9000
+    tags: [framework, platform, open-source, huggingface, ecosystem]
+    parents:
+      - name: "ACT"
+        relation: combines
+      - name: "Diffusion Policy"
+        relation: combines
+    description: "Hugging Face's open-source platform unifying robot learning with standardized policies and datasets"
+
+  - name: "RoboCasa"
+    paper: "RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots"
+    arxiv: "2406.02523"
+    year: 2024
+    code: "robocasa/robocasa"
+    stars: 700
+    tags: [simulation, benchmark, household, large-scale]
+    parents:
+      - name: "RT-1"
+        relation: inspires
+    description: "Large-scale simulation benchmark with realistic kitchen environments for generalist robot evaluation"
+
+  - name: "DROID"
+    paper: "DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset"
+    arxiv: "2403.12945"
+    year: 2024
+    code: "droid-dataset/droid"
+    stars: 600
+    tags: [dataset, in-the-wild, large-scale, multi-site]
+    parents:
+      - name: "RT-1"
+        relation: inspires
+      - name: "Octo"
+        relation: inspires
+    description: "Large-scale distributed dataset of 76k real-world manipulation trajectories across diverse environments"
+
+  - name: "CrossFormer"
+    paper: "CrossFormer: Cross-Robot Policy Transfer with Foundation Models"
+    arxiv: "2409.12917"
+    year: 2024
+    code: "cross-formerr/crossformer"
+    stars: 200
+    tags: [cross-embodiment, transfer, foundation-model, generalist]
+    parents:
+      - name: "Octo"
+        relation: extends
+    description: "Cross-robot policy transfer via a scalable transformer architecture pre-trained on multi-embodiment data"

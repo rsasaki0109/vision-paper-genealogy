@@ -1,0 +1,253 @@
+name: Legged Robot Control
+description: >
+  From classical ZMP and CPG methods to modern deep reinforcement learning
+  approaches for quadruped and humanoid locomotion — covering sim-to-real transfer,
+  agile parkour, and whole-body control for legged robots.
+source_awesome_lists:
+  - https://github.com/topics/legged-robots
+  - https://github.com/leggedrobotics/legged_gym
+  - https://github.com/robotics-survey/Awesome-Robotics-Foundation-Models
+
+methods:
+  # ===========================
+  # Classical Methods
+  # ===========================
+  - name: "ZMP Control"
+    paper: "Biped Walking Pattern Generation by Using Preview Control of Zero-Moment Point"
+    arxiv: ""
+    year: 2003
+    code: ""
+    stars: 0
+    tags: [bipedal, classical, model-based, trajectory-optimization]
+    parents: []
+    description: "Classical balance criterion for bipedal walking using zero-moment point preview control"
+
+  - name: "CPG"
+    paper: "Central Pattern Generators for Locomotion Control in Animals and Robots: A Review"
+    arxiv: ""
+    year: 2008
+    code: ""
+    stars: 0
+    tags: [bio-inspired, oscillator, classical, locomotion]
+    parents: []
+    description: "Bio-inspired oscillator networks for rhythmic locomotion pattern generation"
+
+  - name: "MIT Cheetah WBC"
+    paper: "Highly Dynamic Quadruped Locomotion via Whole-Body Impulse Control and Model Predictive Control"
+    arxiv: ""
+    year: 2019
+    code: "mit-biomimetics/Cheetah-Software"
+    stars: 900
+    tags: [quadruped, model-based, mpc, whole-body-control]
+    parents:
+      - name: "ZMP Control"
+        relation: extends
+    description: "MPC and whole-body impulse control enabling dynamic quadruped locomotion on MIT Cheetah 3"
+
+  # ===========================
+  # Sim-to-Real RL Foundations
+  # ===========================
+  - name: "RaiSim"
+    paper: "Per-Contact Iteration Method for Solving Contact Dynamics"
+    arxiv: "1909.05765"
+    year: 2021
+    code: "raisimTech/raisimLib"
+    stars: 900
+    tags: [simulator, physics-engine, contact-dynamics, gpu]
+    parents: []
+    description: "Fast physics engine with accurate contact dynamics for legged robot training"
+
+  - name: "Isaac Gym"
+    paper: "Isaac Gym: High Performance GPU-Based Physics Simulation for Robot Learning"
+    arxiv: "2108.10470"
+    year: 2021
+    code: ""
+    stars: 0
+    tags: [simulator, gpu, parallel, reinforcement-learning]
+    parents:
+      - name: "RaiSim"
+        relation: inspires
+    description: "GPU-accelerated massively parallel physics simulation for end-to-end robot learning"
+
+  - name: "Learning to Walk in Minutes"
+    paper: "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning"
+    arxiv: "2109.11978"
+    year: 2022
+    code: "leggedrobotics/rsl_rl"
+    stars: 1100
+    tags: [quadruped, reinforcement-learning, parallel-training, sim-to-real]
+    parents:
+      - name: "Isaac Gym"
+        relation: extends
+    description: "Train robust quadruped locomotion policies in minutes using massively parallel GPU simulation"
+
+  - name: "Legged Gym"
+    paper: "Legged Gym: Open-Source Gym Environments for Legged Robots"
+    arxiv: ""
+    year: 2021
+    code: "leggedrobotics/legged_gym"
+    stars: 2400
+    tags: [quadruped, reinforcement-learning, benchmark, open-source]
+    parents:
+      - name: "Isaac Gym"
+        relation: extends
+      - name: "Learning to Walk in Minutes"
+        relation: combines
+    description: "Open-source Isaac Gym environments and PPO training for legged robot locomotion"
+
+  # ===========================
+  # ANYmal & ETH Zurich Line
+  # ===========================
+  - name: "ANYmal RL Locomotion"
+    paper: "Learning Agile and Dynamic Motor Skills for Legged Robots"
+    arxiv: "1901.08652"
+    year: 2019
+    code: ""
+    stars: 0
+    tags: [quadruped, anymal, reinforcement-learning, sim-to-real]
+    parents:
+      - name: "CPG"
+        relation: replaces
+    description: "First robust sim-to-real RL locomotion on ANYmal, replacing hand-crafted controllers"
+
+  - name: "Rapid Locomotion"
+    paper: "Rapid Locomotion via Reinforcement Learning"
+    arxiv: "2205.02824"
+    year: 2022
+    code: "Improbable-AI/rapid-locomotion"
+    stars: 350
+    tags: [quadruped, reinforcement-learning, agile, sim-to-real]
+    parents:
+      - name: "ANYmal RL Locomotion"
+        relation: extends
+    description: "High-speed quadruped locomotion via RL with teacher-student distillation for real-world deployment"
+
+  - name: "Walk These Ways"
+    paper: "Walk These Ways: Tuning Robot Control for Generalization with Multiplicity of Behavior"
+    arxiv: "2212.03238"
+    year: 2023
+    code: "Improbable-AI/walk-these-ways"
+    stars: 600
+    tags: [quadruped, reinforcement-learning, gait-conditioning, generalization]
+    parents:
+      - name: "Rapid Locomotion"
+        relation: extends
+      - name: "Legged Gym"
+        relation: extends
+    description: "Single policy with diverse gait behaviors via multiplicity-of-behavior conditioning"
+
+  - name: "DreamWaQ"
+    paper: "DreamWaQ: Learning Robust Quadrupedal Locomotion With Implicit Terrain Imagination via Deep Reinforcement Learning"
+    arxiv: "2301.10602"
+    year: 2023
+    code: "inmo-jang/dreamwaq"
+    stars: 200
+    tags: [quadruped, reinforcement-learning, terrain-adaptation, implicit-estimation]
+    parents:
+      - name: "Legged Gym"
+        relation: extends
+      - name: "ANYmal RL Locomotion"
+        relation: inspires
+    description: "Terrain-adaptive quadruped locomotion via implicit terrain imagination without explicit estimation"
+
+  - name: "Extreme Parkour"
+    paper: "Extreme Parkour with Legged Robots"
+    arxiv: "2309.14341"
+    year: 2024
+    code: "chengxuxin/extreme-parkour"
+    stars: 1200
+    tags: [quadruped, parkour, vision, reinforcement-learning, sim-to-real]
+    parents:
+      - name: "ANYmal RL Locomotion"
+        relation: extends
+      - name: "Legged Gym"
+        relation: extends
+    description: "Vision-based agile parkour on quadrupeds including jumps, climbs, and leaps via RL"
+
+  - name: "Agile But Safe"
+    paper: "Agile But Safe: Learning Collision-Free High-Speed Legged Locomotion"
+    arxiv: "2401.17583"
+    year: 2024
+    code: "LeCAR-Lab/ABS"
+    stars: 300
+    tags: [quadruped, safety, agile, collision-avoidance, reinforcement-learning]
+    parents:
+      - name: "Rapid Locomotion"
+        relation: extends
+      - name: "Extreme Parkour"
+        relation: inspires
+    description: "Safe agile locomotion combining learned agility with safety-constrained control"
+
+  - name: "Parkour Learning ETH"
+    paper: "Robot Parkour Learning"
+    arxiv: "2309.05665"
+    year: 2024
+    code: "ZiwenZhuang/parkour"
+    stars: 500
+    tags: [quadruped, parkour, vision, depth, reinforcement-learning]
+    parents:
+      - name: "ANYmal RL Locomotion"
+        relation: extends
+      - name: "Extreme Parkour"
+        relation: inspires
+    description: "End-to-end vision-based parkour on quadrupeds with depth-conditioned policy learning"
+
+  # ===========================
+  # Humanoid Locomotion
+  # ===========================
+  - name: "HumanPlus"
+    paper: "HumanPlus: Humanoid Shadowing and Imitation from Humans"
+    arxiv: "2406.10454"
+    year: 2024
+    code: "MarkFzp/humanplus"
+    stars: 1500
+    tags: [humanoid, imitation-learning, whole-body, teleoperation]
+    parents:
+      - name: "Learning to Walk in Minutes"
+        relation: inspires
+    description: "Humanoid full-body teleoperation and imitation learning from human demonstrations"
+
+  - name: "Unitree H1 Locomotion"
+    paper: "Learning Human-to-Humanoid Real-Time Whole-Body Teleoperation"
+    arxiv: "2403.04436"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [humanoid, unitree-h1, whole-body, teleoperation, reinforcement-learning]
+    parents:
+      - name: "HumanPlus"
+        relation: inspires
+      - name: "Legged Gym"
+        relation: extends
+    description: "Real-time whole-body teleoperation of Unitree H1 humanoid via retargeting and RL"
+
+  # ===========================
+  # Unitree Go2 & Latest
+  # ===========================
+  - name: "Unitree Go2 RL Control"
+    paper: "Agile Continuous Jumping in Discontinuous Terrains"
+    arxiv: "2409.10923"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [quadruped, unitree-go2, jumping, reinforcement-learning]
+    parents:
+      - name: "Legged Gym"
+        relation: extends
+      - name: "Extreme Parkour"
+        relation: inspires
+    description: "Continuous agile jumping on Unitree Go2 across discontinuous terrain via RL"
+
+  - name: "Whole-Body RL Control"
+    paper: "Whole-Body Model Predictive Control with Reinforcement Learning for Humanoid Loco-Manipulation"
+    arxiv: "2502.09218"
+    year: 2025
+    code: ""
+    stars: 0
+    tags: [humanoid, whole-body, mpc, reinforcement-learning, loco-manipulation]
+    parents:
+      - name: "MIT Cheetah WBC"
+        relation: extends
+      - name: "HumanPlus"
+        relation: combines
+    description: "Unified whole-body MPC and RL for humanoid locomotion and manipulation tasks"

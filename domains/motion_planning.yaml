@@ -1,0 +1,378 @@
+name: Motion Planning
+description: >
+  From classical sampling-based and search-based planners to learning-based
+  motion planning for autonomous driving and mobile robots — covering RRT
+  variants, lattice planners, optimization-based methods, and modern
+  neural planners.
+source_awesome_lists:
+  - https://github.com/zhm-real/PathPlanning
+  - https://github.com/opendrivelab/End-to-end-Autonomous-Driving
+  - https://github.com/autowarefoundation/autoware
+
+methods:
+  # ===========================
+  # Classical Sampling-Based
+  # ===========================
+  - name: "PRM"
+    paper: "Probabilistic Roadmaps for Path Planning in High-Dimensional Configuration Spaces"
+    arxiv: ""
+    year: 1996
+    code: ""
+    stars: 0
+    tags: [sampling-based, multi-query, graph, classical]
+    parents: []
+    description: "Probabilistic roadmap planner using random sampling and graph search for multi-query planning"
+
+  - name: "RRT"
+    paper: "Rapidly-Exploring Random Trees: A New Tool for Path Planning"
+    arxiv: ""
+    year: 1998
+    code: ""
+    stars: 0
+    tags: [sampling-based, single-query, tree, classical]
+    parents:
+      - name: "PRM"
+        relation: inspires
+    description: "Tree-based incremental planner that rapidly explores configuration spaces via random sampling"
+
+  - name: "RRT*"
+    paper: "Sampling-based Algorithms for Optimal Motion Planning"
+    arxiv: "1105.1186"
+    year: 2011
+    code: ""
+    stars: 0
+    tags: [sampling-based, optimal, asymptotic, classical]
+    parents:
+      - name: "RRT"
+        relation: extends
+    description: "Asymptotically optimal variant of RRT with rewiring of the tree structure"
+
+  - name: "InformedRRT*"
+    paper: "Informed RRT*: Optimal Sampling-based Path Planning Focused via Direct Sampling of an Admissible Ellipsoidal Heuristic"
+    arxiv: "1404.2334"
+    year: 2014
+    code: ""
+    stars: 0
+    tags: [sampling-based, optimal, heuristic, classical]
+    parents:
+      - name: "RRT*"
+        relation: extends
+    description: "Focuses RRT* sampling to an ellipsoidal subset for faster convergence to optimal paths"
+
+  - name: "BIT*"
+    paper: "Batch Informed Trees (BIT*): Sampling-based Optimal Planning via the Heuristically Guided Search of Implicit Random Geometric Graphs"
+    arxiv: "1405.5848"
+    year: 2015
+    code: ""
+    stars: 0
+    tags: [sampling-based, optimal, batch, heuristic]
+    parents:
+      - name: "InformedRRT*"
+        relation: extends
+      - name: "RRT*"
+        relation: extends
+    description: "Combines graph-based and sampling-based planning using batch processing of implicit random geometric graphs"
+
+  # ===========================
+  # Classical Search-Based
+  # ===========================
+  - name: "A*"
+    paper: "A Formal Basis for the Heuristic Determination of Minimum Cost Paths"
+    arxiv: ""
+    year: 1968
+    code: ""
+    stars: 0
+    tags: [search-based, optimal, heuristic, classical, grid]
+    parents: []
+    description: "Optimal graph search algorithm using heuristic functions to guide exploration"
+
+  - name: "D*"
+    paper: "Optimal and Efficient Path Planning for Partially-Known Environments"
+    arxiv: ""
+    year: 1994
+    code: ""
+    stars: 0
+    tags: [search-based, dynamic, replanning, classical]
+    parents:
+      - name: "A*"
+        relation: extends
+    description: "Dynamic replanning search algorithm for partially known or changing environments"
+
+  - name: "D* Lite"
+    paper: "D* Lite"
+    arxiv: ""
+    year: 2002
+    code: ""
+    stars: 0
+    tags: [search-based, dynamic, replanning, incremental, classical]
+    parents:
+      - name: "D*"
+        relation: replaces
+      - name: "A*"
+        relation: extends
+    description: "Simplified and more efficient incremental replanning algorithm based on Lifelong Planning A*"
+
+  - name: "Hybrid A*"
+    paper: "Practical Search Techniques in Path Planning for Autonomous Driving"
+    arxiv: ""
+    year: 2010
+    code: ""
+    stars: 0
+    tags: [search-based, hybrid, continuous, autonomous-driving, classical]
+    parents:
+      - name: "A*"
+        relation: extends
+    description: "Extends A* to continuous state spaces with kinematic constraints for vehicle path planning"
+
+  # ===========================
+  # Local Planners / Optimization
+  # ===========================
+  - name: "DWA"
+    paper: "The Dynamic Window Approach to Collision Avoidance"
+    arxiv: ""
+    year: 1997
+    code: ""
+    stars: 0
+    tags: [local-planner, reactive, velocity-space, mobile-robot, classical]
+    parents: []
+    description: "Reactive collision avoidance by searching velocity space within dynamic constraints"
+
+  - name: "TEB"
+    paper: "Trajectory Modification Considering Dynamic Constraints of Autonomous Robots"
+    arxiv: ""
+    year: 2013
+    code: "rst-tu-dortmund/teb_local_planner"
+    stars: 1100
+    tags: [local-planner, trajectory-optimization, elastic-band, ros]
+    parents:
+      - name: "DWA"
+        relation: replaces
+    description: "Timed Elastic Band local planner optimizing trajectory timing and shape under kinodynamic constraints"
+
+  - name: "MPPI"
+    paper: "Information Theoretic MPC for Model-Based Reinforcement Learning"
+    arxiv: "1707.02342"
+    year: 2017
+    code: ""
+    stars: 0
+    tags: [sampling-based, mpc, information-theoretic, model-based]
+    parents:
+      - name: "DWA"
+        relation: inspires
+    description: "Model Predictive Path Integral control using sampling-based optimization with information-theoretic cost"
+
+  - name: "MPPI-Generic"
+    paper: "MPPI-Generic: A CUDA Library for Stochastic Optimization"
+    arxiv: "2409.07563"
+    year: 2024
+    code: "ACDSLab/MPPI-Generic"
+    stars: 200
+    tags: [sampling-based, mpc, cuda, gpu, library]
+    parents:
+      - name: "MPPI"
+        relation: extends
+    description: "GPU-accelerated CUDA library for MPPI enabling real-time sampling-based MPC on robotics hardware"
+
+  # ===========================
+  # Learning-Based Driving Planners
+  # ===========================
+  - name: "ChauffeurNet"
+    paper: "ChauffeurNet: Learning to Drive by Imitating the Best and Synthesizing the Worst"
+    arxiv: "1812.03079"
+    year: 2019
+    code: ""
+    stars: 0
+    tags: [imitation-learning, autonomous-driving, mid-to-mid, waymo]
+    parents: []
+    description: "Imitation learning driving policy trained on expert demonstrations with data augmentation via worst-case synthesis"
+
+  - name: "NMP"
+    paper: "Neural Motion Planner for Autonomous Driving in Urban Environments"
+    arxiv: ""
+    year: 2020
+    code: ""
+    stars: 0
+    tags: [neural-planner, cost-learning, lidar, autonomous-driving]
+    parents:
+      - name: "ChauffeurNet"
+        relation: inspires
+    description: "Learns a neural cost function from LiDAR for motion planning in urban driving scenarios"
+
+  - name: "CoverNet"
+    paper: "CoverNet: Multimodal Behavior Prediction using Trajectory Sets"
+    arxiv: "1911.10298"
+    year: 2020
+    code: ""
+    stars: 0
+    tags: [trajectory-prediction, classification, fixed-set, autonomous-driving]
+    parents: []
+    description: "Formulates trajectory prediction as classification over a fixed set of trajectory anchors"
+
+  - name: "UniAD"
+    paper: "Planning-oriented Autonomous Driving"
+    arxiv: "2212.10156"
+    year: 2023
+    code: "OpenDriveLab/UniAD"
+    stars: 5000
+    tags: [end-to-end, unified, multi-task, transformer, autonomous-driving]
+    parents:
+      - name: "ChauffeurNet"
+        relation: inspires
+    description: "Unified autonomous driving framework connecting perception, prediction, and planning in one transformer network"
+
+  - name: "VAD"
+    paper: "VAD: Vectorized Scene Representation for Efficient Autonomous Driving"
+    arxiv: "2303.12077"
+    year: 2023
+    code: "hustvl/VAD"
+    stars: 1200
+    tags: [vectorized, end-to-end, efficient, autonomous-driving]
+    parents:
+      - name: "UniAD"
+        relation: extends
+    description: "Vectorized autonomous driving framework using scene-level vectorized representation for efficient planning"
+
+  - name: "GameFormer"
+    paper: "GameFormer: Game-theoretic Modeling and Learning of Transformer-based Interactive Prediction and Planning for Autonomous Driving"
+    arxiv: "2303.05760"
+    year: 2023
+    code: "MCZhi/GameFormer"
+    stars: 400
+    tags: [game-theory, transformer, interaction, prediction, planning]
+    parents:
+      - name: "UniAD"
+        relation: inspires
+    description: "Game-theoretic transformer for interactive prediction and planning with iterative level-k reasoning"
+
+  - name: "PDM-Closed"
+    paper: "Parting with Misconceptions about Learning-based Vehicle Motion Planning"
+    arxiv: "2306.07962"
+    year: 2023
+    code: "tudelft-iv/PDM-Lite"
+    stars: 300
+    tags: [rule-based, planning, nuplan, benchmark, autonomous-driving]
+    parents: []
+    description: "Strong rule-based planning baseline showing classical planners remain competitive on nuPlan benchmark"
+
+  - name: "PDM-Open"
+    paper: "PDM-Open: An Open Planner for Learning-based Motion Planning"
+    arxiv: ""
+    year: 2024
+    code: "tudelft-iv/PDM-Lite"
+    stars: 300
+    tags: [hybrid, learning, planning, nuplan, autonomous-driving]
+    parents:
+      - name: "PDM-Closed"
+        relation: extends
+    description: "Open-loop extension of PDM-Closed incorporating learned features for improved motion planning"
+
+  - name: "PlanTF"
+    paper: "Real-Time Motion Planning via an Interaction-aware Large Language Model"
+    arxiv: "2310.05018"
+    year: 2024
+    code: "jchengai/planTF"
+    stars: 300
+    tags: [transformer, planning, nuplan, state-space, autonomous-driving]
+    parents:
+      - name: "PDM-Closed"
+        relation: inspires
+      - name: "UniAD"
+        relation: inspires
+    description: "Transformer-based open-loop planner leveraging state-space representations for nuPlan planning"
+
+  - name: "GenAD"
+    paper: "GenAD: Generalized Predictive Model for Autonomous Driving"
+    arxiv: "2403.09630"
+    year: 2024
+    code: "OpenDriveLab/GenAD"
+    stars: 500
+    tags: [generative, world-model, prediction, planning, autonomous-driving]
+    parents:
+      - name: "VAD"
+        relation: extends
+      - name: "UniAD"
+        relation: extends
+    description: "Generalized predictive model unifying scene prediction and planning via generative world modeling"
+
+  - name: "PARA-Drive"
+    paper: "PARA-Drive: Parallelized Architecture for Real-time Autonomous Driving"
+    arxiv: "2406.12742"
+    year: 2024
+    code: "wljungbergh/PARA-Drive"
+    stars: 100
+    tags: [parallel, real-time, end-to-end, efficient, autonomous-driving]
+    parents:
+      - name: "UniAD"
+        relation: extends
+    description: "Parallelized end-to-end driving architecture enabling real-time inference by decoupling task heads"
+
+  - name: "CTG++"
+    paper: "CTG++: Connected Traffic Generation with Large Language Models"
+    arxiv: "2306.10043"
+    year: 2023
+    code: ""
+    stars: 0
+    tags: [diffusion, traffic-generation, controllable, planning]
+    parents:
+      - name: "CoverNet"
+        relation: inspires
+    description: "Controllable traffic generation using diffusion models with language-guided constraints for planning"
+
+  - name: "DiffusionDrive"
+    paper: "DiffusionDrive: Truncated Diffusion Model for End-to-End Autonomous Driving"
+    arxiv: "2411.15139"
+    year: 2024
+    code: "hustvl/DiffusionDrive"
+    stars: 300
+    tags: [diffusion, end-to-end, truncated, real-time, autonomous-driving]
+    parents:
+      - name: "VAD"
+        relation: extends
+      - name: "CTG++"
+        relation: inspires
+    description: "Truncated diffusion model for efficient end-to-end driving with multi-modal trajectory generation"
+
+  # ===========================
+  # 2025-2026 Methods
+  # ===========================
+  - name: "SparseDrive"
+    paper: "SparseDrive: End-to-End Autonomous Driving via Sparse Scene Representation"
+    arxiv: "2405.19620"
+    year: 2025
+    code: "swc-17/SparseDrive"
+    stars: 400
+    tags: [sparse, end-to-end, efficient, scene-representation, autonomous-driving]
+    parents:
+      - name: "VAD"
+        relation: extends
+      - name: "UniAD"
+        relation: extends
+    description: "Sparse scene representation framework for efficient end-to-end autonomous driving planning"
+
+  - name: "HydraPlanner"
+    paper: "Hydra-MDP: End-to-end Multimodal Planning with Multi-target Hydra-Distillation"
+    arxiv: "2406.06978"
+    year: 2025
+    code: ""
+    stars: 0
+    tags: [multi-modal, distillation, planning, autonomous-driving]
+    parents:
+      - name: "PDM-Closed"
+        relation: extends
+      - name: "GenAD"
+        relation: inspires
+    description: "Multi-target hydra-distillation framework for multimodal end-to-end motion planning"
+
+  - name: "BEVPlanner2.0"
+    paper: "BEV-Planner: A Bird's Eye View Planning Framework for Autonomous Driving"
+    arxiv: ""
+    year: 2025
+    code: ""
+    stars: 0
+    tags: [bev, planning, end-to-end, autonomous-driving]
+    parents:
+      - name: "UniAD"
+        relation: extends
+      - name: "VAD"
+        relation: extends
+    description: "Unified BEV planning framework consolidating perception and planning in bird's-eye-view space"

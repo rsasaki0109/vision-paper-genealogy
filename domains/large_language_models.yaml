@@ -1,0 +1,371 @@
+name: Large Language Models
+description: >
+  The genealogy of large language models — from the Transformer architecture
+  through the BERT/GPT era to modern open-weight models and beyond.
+source_awesome_lists:
+  - https://github.com/Hannibal046/Awesome-LLM
+  - https://github.com/RUCAIBox/LLMSurvey
+
+methods:
+  # === Foundations ===
+  - name: "Transformer"
+    paper: "Attention Is All You Need"
+    arxiv: "1706.03762"
+    year: 2017
+    code: "tensorflow/tensor2tensor"
+    stars: 15500
+    tags: [attention, architecture, seq2seq]
+    parents: []
+    description: "Self-attention-based architecture that replaced recurrence for sequence modeling"
+
+  # === Encoder Models ===
+  - name: "BERT"
+    paper: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+    arxiv: "1810.04805"
+    year: 2018
+    code: "google-research/bert"
+    stars: 38500
+    tags: [encoder, masked-lm, pretraining]
+    parents:
+      - name: "Transformer"
+        relation: extends
+    description: "Bidirectional pretraining via masked language modeling for NLU tasks"
+
+  # === Encoder-Decoder Models ===
+  - name: "T5"
+    paper: "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+    arxiv: "1910.10683"
+    year: 2020
+    code: "google-research/text-to-text-transfer-transformer"
+    stars: 6200
+    tags: [encoder-decoder, text-to-text, pretraining]
+    parents:
+      - name: "Transformer"
+        relation: extends
+      - name: "BERT"
+        relation: inspires
+    description: "Unified text-to-text framework exploring transfer learning at scale"
+
+  # === GPT Family ===
+  - name: "GPT-2"
+    paper: "Language Models are Unsupervised Multitask Learners"
+    arxiv: null
+    year: 2019
+    code: "openai/gpt-2"
+    stars: 22500
+    tags: [decoder, autoregressive, generative]
+    parents:
+      - name: "Transformer"
+        relation: extends
+    description: "Demonstrated zero-shot task transfer with autoregressive language modeling"
+
+  - name: "GPT-3"
+    paper: "Language Models are Few-Shot Learners"
+    arxiv: "2005.14165"
+    year: 2020
+    code: null
+    stars: null
+    tags: [decoder, autoregressive, few-shot, scaling]
+    parents:
+      - name: "GPT-2"
+        relation: extends
+    description: "175B parameter model showing emergent few-shot learning capabilities"
+
+  - name: "GPT-4"
+    paper: "GPT-4 Technical Report"
+    arxiv: "2303.08774"
+    year: 2023
+    code: null
+    stars: null
+    tags: [decoder, multimodal, reasoning, proprietary]
+    parents:
+      - name: "GPT-3"
+        relation: extends
+    description: "Multimodal large language model with strong reasoning across diverse tasks"
+
+  # === Scaling Laws & Efficiency ===
+  - name: "Chinchilla"
+    paper: "Training Compute-Optimal Large Language Models"
+    arxiv: "2203.15556"
+    year: 2022
+    code: null
+    stars: null
+    tags: [scaling-laws, compute-optimal, training]
+    parents:
+      - name: "GPT-3"
+        relation: inspires
+    description: "Derived compute-optimal scaling laws showing data should scale with parameters"
+
+  # === Google Models ===
+  - name: "PaLM"
+    paper: "PaLM: Scaling Language Modeling with Pathways"
+    arxiv: "2204.02311"
+    year: 2022
+    code: null
+    stars: null
+    tags: [decoder, scaling, pathways, proprietary]
+    parents:
+      - name: "Transformer"
+        relation: extends
+      - name: "GPT-3"
+        relation: inspires
+    description: "540B parameter model trained on Pathways system with strong reasoning"
+
+  - name: "PaLM 2"
+    paper: "PaLM 2 Technical Report"
+    arxiv: "2305.10403"
+    year: 2023
+    code: null
+    stars: null
+    tags: [decoder, multilingual, reasoning, proprietary]
+    parents:
+      - name: "PaLM"
+        relation: extends
+      - name: "Chinchilla"
+        relation: inspires
+    description: "Compute-optimal successor to PaLM with improved multilingual and reasoning"
+
+  # === Claude Family ===
+  - name: "Claude"
+    paper: null
+    arxiv: null
+    year: 2023
+    code: null
+    stars: null
+    tags: [decoder, rlhf, safety, proprietary]
+    parents:
+      - name: "Transformer"
+        relation: extends
+    description: "Anthropic's family of safety-focused large language models (no public paper/code)"
+
+  # === LLaMA Family ===
+  - name: "LLaMA"
+    paper: "LLaMA: Open and Efficient Foundation Language Models"
+    arxiv: "2302.13971"
+    year: 2023
+    code: "meta-llama/llama"
+    stars: 56000
+    tags: [decoder, open-weight, efficient]
+    parents:
+      - name: "Transformer"
+        relation: extends
+      - name: "Chinchilla"
+        relation: inspires
+    description: "Competitive open-weight models trained on publicly available data"
+
+  - name: "LLaMA 2"
+    paper: "Llama 2: Open Foundation and Fine-Tuned Chat Models"
+    arxiv: "2307.09288"
+    year: 2023
+    code: "meta-llama/llama"
+    stars: 56000
+    tags: [decoder, open-weight, rlhf, chat]
+    parents:
+      - name: "LLaMA"
+        relation: extends
+    description: "Open-weight LLM with RLHF-tuned chat variants up to 70B parameters"
+
+  - name: "LLaMA 3"
+    paper: "The Llama 3 Herd of Models"
+    arxiv: "2407.21783"
+    year: 2024
+    code: "meta-llama/llama3"
+    stars: 28000
+    tags: [decoder, open-weight, multilingual, scaling]
+    parents:
+      - name: "LLaMA 2"
+        relation: extends
+    description: "Next-generation Llama with 8B-405B variants and multilingual support"
+
+  - name: "LLaMA 4"
+    paper: "The Llama 4 Herd of Models"
+    arxiv: null
+    year: 2025
+    code: "meta-llama/llama4"
+    stars: 5000
+    tags: [decoder, moe, open-weight, multimodal]
+    parents:
+      - name: "LLaMA 3"
+        relation: extends
+    description: "Mixture-of-experts Llama models including Scout and Maverick variants"
+
+  # === Mistral Family ===
+  - name: "Mistral 7B"
+    paper: "Mistral 7B"
+    arxiv: "2310.06825"
+    year: 2023
+    code: "mistralai/mistral-src"
+    stars: 9500
+    tags: [decoder, open-weight, sliding-window-attention, efficient]
+    parents:
+      - name: "LLaMA"
+        relation: inspires
+    description: "Efficient 7B model with grouped-query and sliding-window attention"
+
+  - name: "Mixtral"
+    paper: "Mixtral of Experts"
+    arxiv: "2401.04088"
+    year: 2024
+    code: "mistralai/mistral-src"
+    stars: 9500
+    tags: [decoder, moe, open-weight, sparse]
+    parents:
+      - name: "Mistral 7B"
+        relation: extends
+    description: "Sparse mixture-of-experts model outperforming dense models at same inference cost"
+
+  # === Microsoft Phi Family ===
+  - name: "Phi-2"
+    paper: "Phi-2: The Surprising Power of Small Language Models"
+    arxiv: null
+    year: 2023
+    code: null
+    stars: null
+    tags: [decoder, small-lm, data-quality, efficient]
+    parents:
+      - name: "Transformer"
+        relation: extends
+    description: "2.7B model matching larger models via high-quality training data curation"
+
+  - name: "Phi-3"
+    paper: "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone"
+    arxiv: "2404.14219"
+    year: 2024
+    code: null
+    stars: null
+    tags: [decoder, small-lm, on-device, efficient]
+    parents:
+      - name: "Phi-2"
+        relation: extends
+    description: "3.8B model rivaling larger models, designed for on-device deployment"
+
+  # === Google Gemma ===
+  - name: "Gemma"
+    paper: "Gemma: Open Models Based on Gemini Research and Technology"
+    arxiv: "2403.08295"
+    year: 2024
+    code: "google/gemma"
+    stars: 600
+    tags: [decoder, open-weight, lightweight]
+    parents:
+      - name: "PaLM 2"
+        relation: inspires
+    description: "Open-weight lightweight models derived from Gemini research"
+
+  # === Alibaba Qwen Family ===
+  - name: "Qwen"
+    paper: "Qwen Technical Report"
+    arxiv: "2309.16609"
+    year: 2023
+    code: "QwenLM/Qwen"
+    stars: 13500
+    tags: [decoder, open-weight, multilingual]
+    parents:
+      - name: "Transformer"
+        relation: extends
+      - name: "LLaMA"
+        relation: inspires
+    description: "Alibaba's multilingual LLM series with strong coding and math abilities"
+
+  - name: "Qwen2"
+    paper: "Qwen2 Technical Report"
+    arxiv: "2407.10671"
+    year: 2024
+    code: "QwenLM/Qwen2"
+    stars: 4500
+    tags: [decoder, open-weight, multilingual, gqa]
+    parents:
+      - name: "Qwen"
+        relation: extends
+    description: "Second-generation Qwen with GQA and expanded multilingual support"
+
+  - name: "Qwen2.5"
+    paper: "Qwen2.5 Technical Report"
+    arxiv: "2412.15115"
+    year: 2025
+    code: "QwenLM/Qwen2.5"
+    stars: 12000
+    tags: [decoder, open-weight, long-context, coding]
+    parents:
+      - name: "Qwen2"
+        relation: extends
+    description: "Improved Qwen series with strong coding, math, and long-context abilities"
+
+  # === DeepSeek Family ===
+  - name: "DeepSeek-V2"
+    paper: "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"
+    arxiv: "2405.04434"
+    year: 2024
+    code: "deepseek-ai/DeepSeek-V2"
+    stars: 2500
+    tags: [decoder, moe, efficient, open-weight]
+    parents:
+      - name: "Transformer"
+        relation: extends
+      - name: "Mixtral"
+        relation: inspires
+    description: "MoE model with multi-head latent attention for efficient inference"
+
+  - name: "DeepSeek-V3"
+    paper: "DeepSeek-V3 Technical Report"
+    arxiv: "2412.19437"
+    year: 2025
+    code: "deepseek-ai/DeepSeek-V3"
+    stars: 22000
+    tags: [decoder, moe, fp8-training, open-weight]
+    parents:
+      - name: "DeepSeek-V2"
+        relation: extends
+    description: "671B MoE model with FP8 training achieving frontier-level performance"
+
+  - name: "DeepSeek-R1"
+    paper: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
+    arxiv: "2501.12948"
+    year: 2025
+    code: "deepseek-ai/DeepSeek-R1"
+    stars: 40000
+    tags: [decoder, reasoning, rl, chain-of-thought, open-weight]
+    parents:
+      - name: "DeepSeek-V3"
+        relation: extends
+    description: "Reasoning-focused model trained with RL to produce chain-of-thought solutions"
+
+  # === Falcon ===
+  - name: "Falcon"
+    paper: "The Falcon Series of Open Language Models"
+    arxiv: "2311.16867"
+    year: 2023
+    code: "tiiuae/falcon-40b"
+    stars: 900
+    tags: [decoder, open-weight, web-data]
+    parents:
+      - name: "Transformer"
+        relation: extends
+      - name: "GPT-3"
+        relation: inspires
+    description: "Open-weight LLMs trained on carefully curated web data by TII"
+
+  # === Alternative Architectures ===
+  - name: "RWKV"
+    paper: "RWKV: Reinventing RNNs for the Transformer Era"
+    arxiv: "2305.13048"
+    year: 2023
+    code: "BlinkDL/RWKV-LM"
+    stars: 13000
+    tags: [rnn, linear-attention, efficient-inference]
+    parents:
+      - name: "Transformer"
+        relation: replaces
+    description: "Linear-complexity RNN architecture combining transformer training with RNN inference"
+
+  - name: "Mamba"
+    paper: "Mamba: Linear-Time Sequence Modeling with Selective State Spaces"
+    arxiv: "2312.00752"
+    year: 2024
+    code: "state-spaces/mamba"
+    stars: 14000
+    tags: [ssm, state-space, linear-time, efficient-inference]
+    parents:
+      - name: "Transformer"
+        relation: replaces
+    description: "Selective state-space model achieving linear-time sequence modeling"
