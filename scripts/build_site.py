@@ -6,8 +6,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from robotics_paper_genealogy.graph.builder import build_graph, build_graph_from_domains
-from robotics_paper_genealogy.models import Domain, OpenSourceStatus, RelationType, load_all_domains
+from robotics_technology_genealogy.graph.builder import build_graph, build_graph_from_domains
+from robotics_technology_genealogy.models import Domain, OpenSourceStatus, RelationType, load_all_domains
 
 RELATION_COLORS = {
     RelationType.extends: "#22c55e",
@@ -180,7 +180,7 @@ INDEX_HTML = """\
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Robotics Paper Genealogy</title>
+<title>Robotics Technology Genealogy</title>
 <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -210,7 +210,7 @@ INDEX_HTML = """\
 <body>
 
 <div class="header">
-  <h1>Robotics Paper Genealogy</h1>
+  <h1>Robotics Technology Genealogy</h1>
   <div class="controls">
     <select id="category"></select>
     <select id="domain"></select>
@@ -221,7 +221,7 @@ INDEX_HTML = """\
     <button class="filter-btn" id="btn-nopaper" title="Show only without paper">No Paper</button>
     <span class="stats" id="stats"></span>
   </div>
-  <a href="https://github.com/rsasaki0109/robotics-paper-genealogy" target="_blank">GitHub</a>
+  <a href="https://github.com/rsasaki0109/robotics-technology-genealogy" target="_blank">GitHub</a>
 </div>
 
 <div id="graph"></div>

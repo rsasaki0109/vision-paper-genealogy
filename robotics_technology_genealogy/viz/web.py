@@ -6,8 +6,8 @@ from pathlib import Path
 
 from pyvis.network import Network
 
-from robotics_paper_genealogy.graph.builder import GenealogyGraph
-from robotics_paper_genealogy.models import RelationType
+from robotics_technology_genealogy.graph.builder import GenealogyGraph
+from robotics_technology_genealogy.models import RelationType
 
 RELATION_COLORS = {
     RelationType.extends: "#22c55e",   # green

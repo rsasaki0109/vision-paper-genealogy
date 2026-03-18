@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "robotics-paper-genealogy"
+name = "robotics-technology-genealogy"
 version = "0.1.0"
 description = "Interactive genealogy tree visualizer for Robotics & AI research methods"
 readme = "README.md"
@@ -36,7 +36,7 @@ web = [
 ]
 
 [project.scripts]
-robotics-paper-genealogy = "robotics_paper_genealogy.cli:app"
+robotics-technology-genealogy = "robotics_technology_genealogy.cli:app"
 
 [tool.ruff]
 line-length = 100

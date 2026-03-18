@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from robotics_paper_genealogy.models import Domain, Method, RelationType
+from robotics_technology_genealogy.models import Domain, Method, RelationType
 
 
 @dataclass
