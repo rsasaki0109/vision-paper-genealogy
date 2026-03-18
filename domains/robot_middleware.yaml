@@ -1,0 +1,256 @@
+name: Robot Middleware & Frameworks
+description: >
+  Evolution of robot middleware and software frameworks — from Player/Stage
+  to ROS 2 and modern cloud robotics platforms.
+source_awesome_lists: []
+
+methods:
+  # === Pioneers ===
+  - name: "Player/Stage"
+    paper: "Player/Stage Project: Tools for Multi-Robot and Distributed Sensor Systems"
+    year: 2003
+    code: "playerproject/player"
+    tags: [middleware, multi-robot, distributed]
+    parents: []
+    description: "Early open-source robot server and 2D simulator for multi-robot research"
+
+  - name: "YARP"
+    paper: "YARP: Yet Another Robot Platform"
+    year: 2006
+    code: "robotology/yarp"
+    stars: 500
+    tags: [middleware, humanoid, icub]
+    parents: []
+    description: "Middleware for humanoid robotics developed for iCub, focusing on inter-process communication"
+
+  - name: "OROCOS"
+    paper: "Open Robot Control Software: the OROCOS project"
+    year: 2001
+    tags: [middleware, real-time, control]
+    parents: []
+    description: "Real-time capable robot control framework with component-based architecture"
+
+  # === ROS 1 Ecosystem ===
+  - name: "ROS"
+    paper: "ROS: an open-source Robot Operating System"
+    year: 2009
+    code: "ros/ros"
+    stars: 2500
+    tags: [middleware, open-source, ecosystem, pub-sub]
+    parents:
+      - name: "Player/Stage"
+        relation: extends
+    description: "De facto standard robot middleware with pub/sub, services, and massive package ecosystem"
+
+  - name: "MoveIt"
+    paper: "MoveIt! An Introduction to Motion Planning"
+    year: 2014
+    code: "moveit/moveit"
+    stars: 1700
+    tags: [motion-planning, manipulation, ros, framework]
+    parents:
+      - name: "ROS"
+        relation: extends
+    description: "ROS-integrated motion planning framework for manipulation and mobile robots"
+
+  - name: "Navigation Stack (ROS)"
+    paper: "The Office Marathon: Robust Navigation in an Indoor Office Environment"
+    year: 2010
+    code: "ros-planning/navigation"
+    stars: 2300
+    tags: [navigation, autonomous, costmap, ros]
+    parents:
+      - name: "ROS"
+        relation: extends
+    description: "2D navigation stack with costmaps, global/local planners for autonomous mobile robots"
+
+  - name: "TF / tf2"
+    year: 2010
+    code: "ros/geometry2"
+    tags: [transforms, coordinate-frames, ros]
+    parents:
+      - name: "ROS"
+        relation: extends
+    description: "Distributed coordinate transform library tracking multiple frames over time"
+
+  - name: "rosbridge"
+    year: 2012
+    code: "RobotWebTools/rosbridge_suite"
+    stars: 800
+    tags: [web, json, bridge, ros]
+    parents:
+      - name: "ROS"
+        relation: extends
+    description: "WebSocket bridge enabling web applications to communicate with ROS"
+
+  - name: "rosbag"
+    year: 2010
+    tags: [data-recording, playback, ros]
+    parents:
+      - name: "ROS"
+        relation: extends
+    description: "Tool for recording and playing back ROS message data for debugging and analysis"
+
+  # === ROS 2 ===
+  - name: "ROS 2"
+    paper: "Robot Operating System 2: Design, architecture, and uses in the wild"
+    year: 2022
+    code: "ros2/ros2"
+    stars: 3500
+    tags: [middleware, dds, real-time, security, lifecycle]
+    parents:
+      - name: "ROS"
+        relation: replaces
+    description: "Next-generation ROS built on DDS with real-time support, security, and lifecycle management"
+
+  - name: "Nav2"
+    paper: "Nav2: The Navigation Stack for ROS 2"
+    year: 2020
+    code: "ros-navigation/navigation2"
+    stars: 2500
+    tags: [navigation, behavior-tree, ros2]
+    parents:
+      - name: "Navigation Stack (ROS)"
+        relation: replaces
+      - name: "ROS 2"
+        relation: extends
+    description: "ROS 2 navigation framework with behavior trees, new planners, and lifecycle nodes"
+
+  - name: "MoveIt 2"
+    year: 2021
+    code: "moveit/moveit2"
+    stars: 1100
+    tags: [motion-planning, manipulation, ros2]
+    parents:
+      - name: "MoveIt"
+        relation: replaces
+      - name: "ROS 2"
+        relation: extends
+    description: "ROS 2 port of MoveIt with real-time capabilities and improved architecture"
+
+  - name: "rosbag2"
+    year: 2020
+    code: "ros2/rosbag2"
+    tags: [data-recording, mcap, ros2]
+    parents:
+      - name: "rosbag"
+        relation: replaces
+      - name: "ROS 2"
+        relation: extends
+    description: "ROS 2 recording system with pluggable storage backends (SQLite, MCAP)"
+
+  - name: "ros2_control"
+    year: 2021
+    code: "ros-controls/ros2_control"
+    stars: 500
+    tags: [control, hardware-abstraction, ros2, real-time]
+    parents:
+      - name: "ROS 2"
+        relation: extends
+    description: "Real-time hardware abstraction and controller framework for ROS 2"
+
+  - name: "micro-ROS"
+    year: 2020
+    code: "micro-ROS/micro_ros_setup"
+    stars: 500
+    tags: [embedded, microcontroller, ros2, real-time]
+    parents:
+      - name: "ROS 2"
+        relation: extends
+    description: "ROS 2 for microcontrollers enabling embedded devices to be first-class ROS 2 nodes"
+
+  # === Autonomous Driving Stacks ===
+  - name: "Autoware"
+    paper: "Autoware on Board: Enabling Autonomous Vehicles with a Generic Software Stack"
+    year: 2018
+    code: "autowarefoundation/autoware"
+    stars: 9000
+    tags: [autonomous-driving, full-stack, ros, open-source]
+    parents:
+      - name: "ROS"
+        relation: extends
+    description: "Open-source full-stack autonomous driving software built on ROS/ROS 2"
+
+  - name: "Apollo"
+    year: 2017
+    code: "ApolloAuto/apollo"
+    stars: 25000
+    tags: [autonomous-driving, full-stack, cyber-rt, baidu]
+    parents:
+      - name: "ROS"
+        relation: inspires
+    description: "Baidu's open autonomous driving platform with custom CyberRT middleware"
+
+  - name: "OpenPilot"
+    year: 2016
+    code: "commaai/openpilot"
+    stars: 52000
+    tags: [autonomous-driving, adas, consumer, end-to-end]
+    parents: []
+    description: "comma.ai's open-source driver assistance system for consumer vehicles"
+
+  # === Cloud & Fleet ===
+  - name: "ROS 2 with Zenoh"
+    year: 2023
+    code: "eclipse-zenoh/zenoh-plugin-ros2dds"
+    stars: 400
+    tags: [middleware, cloud, edge, zenoh, ros2]
+    parents:
+      - name: "ROS 2"
+        relation: extends
+    description: "Zenoh-based ROS 2 communication enabling cloud-edge-robot seamless connectivity"
+
+  - name: "Foxglove"
+    year: 2021
+    code: "foxglove/studio"
+    stars: 2000
+    tags: [visualization, web, debugging, ros2, mcap]
+    parents:
+      - name: "ROS 2"
+        relation: extends
+    description: "Web-based robotics visualization and debugging platform supporting ROS 2 and MCAP"
+
+  # === Communication Middleware (underlying) ===
+  - name: "DDS (Data Distribution Service)"
+    year: 2004
+    tags: [middleware, pub-sub, real-time, standard, omg]
+    parents: []
+    description: "OMG standard for real-time publish-subscribe data distribution, foundation of ROS 2"
+
+  - name: "Zenoh"
+    year: 2020
+    code: "eclipse-zenoh/zenoh"
+    stars: 2000
+    tags: [middleware, pub-sub, edge-cloud, low-latency]
+    parents:
+      - name: "DDS (Data Distribution Service)"
+        relation: replaces
+    description: "Zero-overhead pub/sub protocol for edge-to-cloud robotics with minimal footprint"
+
+  - name: "MCAP"
+    year: 2022
+    code: "foxglove/mcap"
+    stars: 600
+    tags: [data-format, recording, serialization]
+    parents:
+      - name: "rosbag2"
+        relation: inspires
+    description: "Open-source container file format for heterogeneous timestamped data (successor to rosbag format)"
+
+  # === Build & Dev Tools ===
+  - name: "colcon"
+    year: 2018
+    code: "colcon/colcon-core"
+    tags: [build-tool, ros2, workspace]
+    parents:
+      - name: "ROS 2"
+        relation: extends
+    description: "Collective construction build tool for ROS 2 workspaces"
+
+  - name: "ament"
+    year: 2017
+    tags: [build-system, cmake, ros2]
+    parents:
+      - name: "ROS 2"
+        relation: extends
+    description: "Meta build system for ROS 2 packages using CMake and Python setuptools"

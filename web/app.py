@@ -66,6 +66,7 @@ def main() -> None:
         },
         "Platforms & Simulation": {
             "Robot Simulation",
+            "Robot Middleware & Frameworks",
             "Medical & Surgical Robotics",
         },
     }
