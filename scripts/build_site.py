@@ -118,7 +118,7 @@ def domain_to_graph_data(domains: list[Domain]) -> dict:
                 "highlight": {"background": base_color, "border": "#ffffff"},
             },
             "borderWidth": 3,
-            "font": {"size": 18, "color": "white"},
+            "font": {"size": 24, "color": "white"},
             "level": year_to_level[m.year],
             "oss": oss.value,
             "hasPaper": m.has_paper,
