@@ -32,7 +32,7 @@ CATEGORY_MAP = {
         "3D Object Detection",
         "Point Cloud Denoising",
         "Point Cloud Scene Flow",
-        "Visual Place Recognition",
+        "Place Recognition",
     ],
     "Perception (Visual)": [
         "Neural Radiance Fields & 3D Gaussian Splatting",
@@ -148,7 +148,7 @@ def build_site_data(domains: list[Domain]) -> dict:
     """Build all graph data for the site."""
     domain_by_name = {d.name: d for d in domains}
 
-    site_data = {"categories": {}, "domains": {}}
+    site_data = {"categories": {}, "domains": {}, "method_index": {}}
 
     for cat_name, domain_names in CATEGORY_MAP.items():
         cat_domains = [domain_by_name[n] for n in domain_names if n in domain_by_name]
@@ -163,6 +163,12 @@ def build_site_data(domains: list[Domain]) -> dict:
             "methods_count": len(d.methods),
             "graph": domain_to_graph_data([d]),
         }
+
+    # Build method -> domain reverse index
+    for d in domains:
+        for m in d.methods:
+            if m.name not in site_data["method_index"]:
+                site_data["method_index"][m.name] = d.name
 
     return site_data
 
@@ -185,6 +191,8 @@ INDEX_HTML = """\
   .controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
   select { background: #1a1d23; color: #fff; border: 1px solid #444; border-radius: 6px; padding: 8px 12px; font-size: 14px; cursor: pointer; }
   select:hover { border-color: #666; }
+  #search { background: #1a1d23; color: #fff; border: 1px solid #444; border-radius: 6px; padding: 8px 12px; font-size: 14px; width: 200px; }
+  #search:focus { border-color: #3b82f6; outline: none; }
   .filter-btn { background: #1a1d23; color: #888; border: 1px solid #444; border-radius: 6px; padding: 6px 10px; font-size: 12px; cursor: pointer; }
   .filter-btn.active { color: #fff; border-color: #22c55e; background: #1a2e1a; }
   .filter-btn:hover { border-color: #666; }
@@ -205,6 +213,8 @@ INDEX_HTML = """\
   <div class="controls">
     <select id="category"></select>
     <select id="domain"></select>
+    <input type="text" id="search" placeholder="Search method..." autocomplete="off" list="search-list">
+    <datalist id="search-list"></datalist>
     <button class="filter-btn" id="btn-oss" title="Show only open source">OSS Only</button>
     <button class="filter-btn" id="btn-paper" title="Show only with paper">Paper Only</button>
     <button class="filter-btn" id="btn-nopaper" title="Show only without paper">No Paper</button>
@@ -298,6 +308,40 @@ function toggleFilter(key, btnId) {
   if (currentGraphData) renderGraph(currentGraphData, false);
 }
 
+function buildSearchIndex() {
+  const list = document.getElementById("search-list");
+  for (const name of Object.keys(DATA.method_index)) {
+    const opt = document.createElement("option");
+    opt.value = name;
+    list.appendChild(opt);
+  }
+}
+
+function searchMethod(query) {
+  if (!query || !DATA.method_index[query]) return;
+  const domainName = DATA.method_index[query];
+
+  // Find which category contains this domain
+  for (const [catName, catData] of Object.entries(DATA.categories)) {
+    if (catData.domain_names.includes(domainName)) {
+      // Switch category
+      document.getElementById("category").value = catName;
+      populateDomains(catName);
+      // Switch domain
+      document.getElementById("domain").value = domainName;
+      renderGraph(DATA.domains[domainName].graph);
+      // Focus on the node after a short delay
+      setTimeout(() => {
+        if (network) {
+          network.selectNodes([query]);
+          network.focus(query, { scale: 1.2, animation: { duration: 500 } });
+        }
+      }, 300);
+      break;
+    }
+  }
+}
+
 function populateDomains(catName) {
   const domainSelect = document.getElementById("domain");
   domainSelect.innerHTML = "";
@@ -348,6 +392,10 @@ fetch("data.json")
     document.getElementById("btn-oss").addEventListener("click", () => toggleFilter("oss"));
     document.getElementById("btn-paper").addEventListener("click", () => toggleFilter("paper"));
     document.getElementById("btn-nopaper").addEventListener("click", () => toggleFilter("nopaper"));
+    const searchInput = document.getElementById("search");
+    searchInput.addEventListener("change", (e) => { searchMethod(e.target.value); e.target.value = ""; });
+    searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") { searchMethod(e.target.value); e.target.value = ""; } });
+    buildSearchIndex();
     onCategoryChange();
   });
 </script>

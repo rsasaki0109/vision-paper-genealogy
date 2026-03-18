@@ -38,7 +38,7 @@ def main() -> None:
             "3D Object Detection",
             "Point Cloud Denoising",
             "Point Cloud Scene Flow",
-            "Visual Place Recognition",
+            "Place Recognition",
         },
         "Perception (Visual)": {
             "Neural Radiance Fields & 3D Gaussian Splatting",

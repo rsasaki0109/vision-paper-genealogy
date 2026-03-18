@@ -1,6 +1,6 @@
-name: Visual Place Recognition
+name: Place Recognition
 description: >
-  Evolution of visual place recognition methods — from hand-crafted
+  Evolution of place recognition methods — from hand-crafted
   bag-of-words to learned global descriptors, spanning camera-based
   and LiDAR-based approaches for localization and loop closure.
 source_awesome_lists:
@@ -65,7 +65,7 @@ methods:
     description: "Simplified training with cosine similarity-based loss for scalable geo-localization"
 
   - name: "EigenPlaces"
-    paper: "EigenPlaces: Training Viewpoint Robust Models for Visual Place Recognition"
+    paper: "EigenPlaces: Training Viewpoint Robust Models for Place Recognition"
     arxiv: "2308.10832"
     year: 2023
     code: "gmberton/EigenPlaces"
@@ -77,7 +77,7 @@ methods:
     description: "Viewpoint-robust descriptor training using principal component-based partitioning"
 
   - name: "MixVPR"
-    paper: "MixVPR: Feature Mixing for Visual Place Recognition"
+    paper: "MixVPR: Feature Mixing for Place Recognition"
     arxiv: "2303.02190"
     year: 2023
     code: "amaralibey/MixVPR"
@@ -91,7 +91,7 @@ methods:
     description: "All-MLP feature mixing architecture replacing aggregation layers for compact descriptors"
 
   - name: "AnyLoc"
-    paper: "AnyLoc: Towards Universal Visual Place Recognition"
+    paper: "AnyLoc: Towards Universal Place Recognition"
     arxiv: "2308.00688"
     year: 2024
     code: "AnyLoc/AnyLoc"
@@ -213,7 +213,7 @@ methods:
     description: "Extends 3D bag-of-words to 4D spatiotemporal LiDAR features for robust place recognition"
 
   - name: "PlaceFormer"
-    paper: "PlaceFormer: Transformer-based Visual Place Recognition with Multi-Level Attention Aggregation"
+    paper: "PlaceFormer: Transformer-based Place Recognition with Multi-Level Attention Aggregation"
     arxiv: "2501.06588"
     year: 2025
     tags: [deep-learning, transformer, attention, global-descriptor]
@@ -225,7 +225,7 @@ methods:
     description: "Transformer-based VPR using multi-level attention aggregation for robust global descriptors"
 
   - name: "AnyLoc-v2"
-    paper: "AnyLoc v2: Learning Robust Visual Place Recognition with Multimodal Foundation Models"
+    paper: "AnyLoc v2: Learning Robust Place Recognition with Multimodal Foundation Models"
     arxiv: "2502.15691"
     year: 2025
     code: "AnyLoc/AnyLoc-v2"
@@ -237,7 +237,7 @@ methods:
     description: "Advances universal VPR using multimodal foundation models for stronger cross-domain generalization"
 
   - name: "SelaVPR"
-    paper: "SelaVPR: Self-Supervised Adaptation for Visual Place Recognition"
+    paper: "SelaVPR: Self-Supervised Adaptation for Place Recognition"
     arxiv: "2407.02230"
     year: 2025
     code: "Lu-Feng/SelaVPR"
