@@ -6,8 +6,8 @@ from rich.console import Console
 from rich.text import Text
 from rich.tree import Tree
 
-from vision_paper_genealogy.graph.builder import GenealogyGraph, MethodNode
-from vision_paper_genealogy.models import RelationType
+from robotics_paper_genealogy.graph.builder import GenealogyGraph, MethodNode
+from robotics_paper_genealogy.models import RelationType
 
 RELATION_SYMBOLS = {
     RelationType.extends: "\u2191",    # ↑

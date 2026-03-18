@@ -7,9 +7,9 @@ from pathlib import Path
 import typer
 from rich.console import Console
 
-from vision_paper_genealogy.graph.builder import build_graph, build_graph_from_domains
-from vision_paper_genealogy.models import load_all_domains, load_domain
-from vision_paper_genealogy.viz.tree import render_ancestors, render_method_detail, render_tree
+from robotics_paper_genealogy.graph.builder import build_graph, build_graph_from_domains
+from robotics_paper_genealogy.models import load_all_domains, load_domain
+from robotics_paper_genealogy.viz.tree import render_ancestors, render_method_detail, render_tree
 
 app = typer.Typer(
     name="vision-paper-genealogy",

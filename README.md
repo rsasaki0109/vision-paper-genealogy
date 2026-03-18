@@ -1,4 +1,4 @@
-# vision-paper-genealogy
+# robotics-paper-genealogy
 
 Interactive genealogy tree visualizer for Computer Vision research methods.
 
@@ -30,20 +30,20 @@ pip install -e .
 
 ```bash
 # Show genealogy tree for all domains
-vision-paper-genealogy show
+robotics-paper-genealogy show
 
 # Show a specific domain
-vision-paper-genealogy show neural_radiance_fields
+robotics-paper-genealogy show neural_radiance_fields
 
 # Trace ancestors of a method
-vision-paper-genealogy ancestors "3D Gaussian Splatting"
+robotics-paper-genealogy ancestors "3D Gaussian Splatting"
 
 # Show detailed info about a method
-vision-paper-genealogy info "LoFTR"
+robotics-paper-genealogy info "LoFTR"
 
 # List all methods (filter by tag or year)
-vision-paper-genealogy list --tag transformer
-vision-paper-genealogy list --year 2024
+robotics-paper-genealogy list --tag transformer
+robotics-paper-genealogy list --year 2024
 ```
 
 ## Relation Types

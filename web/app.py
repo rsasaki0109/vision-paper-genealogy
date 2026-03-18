@@ -8,9 +8,9 @@ from pathlib import Path
 import streamlit as st
 import streamlit.components.v1 as components
 
-from vision_paper_genealogy.graph.builder import build_graph, build_graph_from_domains
-from vision_paper_genealogy.models import Domain, load_all_domains
-from vision_paper_genealogy.viz.web import export_html
+from robotics_paper_genealogy.graph.builder import build_graph, build_graph_from_domains
+from robotics_paper_genealogy.models import Domain, load_all_domains
+from robotics_paper_genealogy.viz.web import export_html
 
 DOMAINS_DIR = Path(__file__).parent.parent / "domains"
 
@@ -22,12 +22,12 @@ def load_domains() -> list[Domain]:
 
 def main() -> None:
     st.set_page_config(
-        page_title="Vision Paper Genealogy",
+        page_title="Robotics Paper Genealogy",
         page_icon="🌳",
         layout="wide",
     )
 
-    st.title("Vision Paper Genealogy")
+    st.title("Robotics Paper Genealogy")
     st.caption("Interactive genealogy tree of Computer Vision research methods")
 
     domains = load_domains()
@@ -88,7 +88,7 @@ def main() -> None:
     with col2:
         # Apply filters: rebuild graph with filtered methods
         if selected_tags or year_range != (min(all_years), max(all_years)):
-            from vision_paper_genealogy.graph.builder import GenealogyGraph
+            from robotics_paper_genealogy.graph.builder import GenealogyGraph
 
             filtered = GenealogyGraph()
             for name, node in graph.nodes.items():
