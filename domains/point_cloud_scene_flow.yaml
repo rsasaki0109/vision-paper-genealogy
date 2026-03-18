@@ -240,3 +240,46 @@ methods:
       - name: "Flow4D"
         relation: inspires
     description: "Bucket-based point grouping strategy for efficient real-time scene flow on large point clouds"
+
+  # === Optical Flow Foundations ===
+  - name: "FlowNet"
+    paper: "FlowNet: Learning Optical Flow with Convolutional Networks"
+    arxiv: "1504.06852"
+    year: 2015
+    tags: [deep-learning, optical-flow, cnn, foundation]
+    parents: []
+    description: "Foundational CNN architecture for end-to-end optical flow estimation"
+
+  - name: "PWC-Net"
+    paper: "PWC-Net: CNNs for Optical Flow Using Pyramid, Warping, and Cost Volume"
+    arxiv: "1709.02371"
+    year: 2018
+    tags: [deep-learning, optical-flow, pyramid, cost-volume]
+    parents:
+      - name: "FlowNet"
+        relation: extends
+    description: "Pyramid warping cost volume network for compact and accurate optical flow estimation"
+
+  - name: "RAFT"
+    paper: "RAFT: Recurrent All-Pairs Field Transforms for Optical Flow"
+    arxiv: "2003.12039"
+    year: 2020
+    code: "princeton-vl/RAFT"
+    stars: 3500
+    tags: [deep-learning, optical-flow, recurrent, all-pairs]
+    parents:
+      - name: "PWC-Net"
+        relation: replaces
+    description: "Recurrent all-pairs field transforms achieving state-of-the-art optical flow with iterative refinement"
+
+  - name: "CamLiFlow"
+    paper: "CamLiFlow: Bidirectional Camera-LiDAR Fusion for Joint Optical Flow and Scene Flow Estimation"
+    arxiv: "2111.10502"
+    year: 2022
+    tags: [deep-learning, camera-lidar, fusion, scene-flow, optical-flow]
+    parents:
+      - name: "PointPWC-Net"
+        relation: extends
+      - name: "RAFT"
+        relation: inspires
+    description: "Bidirectional camera-LiDAR fusion for joint optical flow and scene flow estimation"

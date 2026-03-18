@@ -460,3 +460,107 @@ methods:
       - name: "ORB-SLAM3"
         relation: extends
     description: "Community-maintained ORB-SLAM3 with stereo-inertial bug fixes and improved initialization"
+
+  # ===========================
+  # Dense Reconstruction (Classical)
+  # ===========================
+  - name: "KinectFusion"
+    paper: "KinectFusion: Real-time 3D Reconstruction and Interaction Using a Moving Depth Camera"
+    year: 2011
+    code: ""
+    stars: 0
+    tags: [rgbd, dense-reconstruction, tsdf, real-time]
+    parents: []
+    description: "First real-time dense 3D reconstruction system using TSDF volume integration"
+
+  - name: "ElasticFusion"
+    paper: "ElasticFusion: Dense SLAM Without A Pose Graph"
+    arxiv: "1511.04463"
+    year: 2015
+    code: "mp3guy/ElasticFusion"
+    stars: 1800
+    tags: [rgbd, dense-reconstruction, surfel, deformation]
+    parents:
+      - name: "KinectFusion"
+        relation: extends
+    description: "Surfel-based dense SLAM with non-rigid deformation for globally consistent reconstruction"
+
+  - name: "BundleFusion"
+    paper: "BundleFusion: Real-time Globally Consistent 3D Reconstruction using On-the-fly Surface Re-integration"
+    arxiv: "1604.01093"
+    year: 2017
+    code: ""
+    stars: 0
+    tags: [rgbd, dense-reconstruction, global-optimization, real-time]
+    parents:
+      - name: "KinectFusion"
+        relation: extends
+    description: "Globally consistent real-time dense 3D reconstruction with on-the-fly surface re-integration"
+
+  # ===========================
+  # Visual-Inertial Odometry (Classical)
+  # ===========================
+  - name: "MSCKF"
+    paper: "A Multi-State Constraint Kalman Filter for Vision-aided Inertial Navigation"
+    year: 2007
+    code: ""
+    stars: 0
+    tags: [visual-inertial, kalman-filter, vio, real-time]
+    parents: []
+    description: "Multi-state constraint Kalman filter for efficient tightly-coupled visual-inertial odometry"
+
+  - name: "OKVIS"
+    paper: "Keyframe-based Visual-Inertial Odometry using Nonlinear Optimization"
+    arxiv: "1403.2286"
+    year: 2015
+    code: "ethz-asl/okvis"
+    stars: 1200
+    tags: [visual-inertial, keyframe, nonlinear-optimization, vio]
+    parents:
+      - name: "MSCKF"
+        relation: extends
+    description: "Keyframe-based visual-inertial odometry using nonlinear optimization with IMU preintegration"
+
+  - name: "BASALT"
+    paper: "BASALT: Visual-Inertial Mapping with Non-Linear Factor Recovery"
+    arxiv: "1904.06504"
+    year: 2019
+    code: "VladyslavUsenko/basalt-mirror"
+    stars: 800
+    tags: [visual-inertial, vio, non-linear, factor-recovery]
+    parents:
+      - name: "OKVIS"
+        relation: extends
+      - name: "DSO"
+        relation: inspires
+    description: "Visual-inertial odometry and mapping with non-linear factor recovery for efficient optimization"
+
+  # ===========================
+  # Learning-Based Visual Odometry (Additional)
+  # ===========================
+  - name: "TartanVO"
+    paper: "TartanVO: A Generalizable Learning-based Visual Odometry"
+    arxiv: "2011.00359"
+    year: 2021
+    code: "castacks/tartanvo"
+    stars: 600
+    tags: [deep-learning, visual-odometry, generalizable, self-supervised]
+    parents:
+      - name: "DSO"
+        relation: inspires
+    description: "Generalizable learning-based visual odometry trained on diverse simulated environments"
+
+  # ===========================
+  # Dynamic SLAM
+  # ===========================
+  - name: "DynaSLAM"
+    paper: "DynaSLAM: Tracking, Mapping, and Inpainting in Dynamic Scenes"
+    arxiv: "1806.05620"
+    year: 2018
+    code: ""
+    stars: 0
+    tags: [dynamic-scenes, segmentation, inpainting, feature-based]
+    parents:
+      - name: "ORB-SLAM2"
+        relation: extends
+    description: "SLAM in dynamic environments using deep learning-based segmentation to filter moving objects"

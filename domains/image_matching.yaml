@@ -335,3 +335,54 @@ methods:
       - name: "MASt3R"
         relation: inspires
     description: "Efficient multi-view extension of DUSt3R eliminating pairwise computation bottleneck"
+
+  # === SfM Pipelines ===
+  - name: "COLMAP"
+    paper: "Structure-from-Motion Revisited"
+    year: 2016
+    code: "colmap/colmap"
+    stars: 7500
+    tags: [structure-from-motion, multi-view-stereo, 3d-reconstruction, classical]
+    parents:
+      - name: "SIFT"
+        relation: inspires
+    description: "Dominant general-purpose structure-from-motion and multi-view stereo pipeline"
+
+  - name: "hloc"
+    paper: "Hierarchical Localization: From Coarse to Fine"
+    arxiv: "1812.03506"
+    year: 2019
+    code: "cvg/Hierarchical-Localization"
+    stars: 3500
+    tags: [localization, hierarchical, structure-from-motion, toolbox]
+    parents:
+      - name: "COLMAP"
+        relation: extends
+      - name: "SuperPoint"
+        relation: combines
+    description: "Hierarchical localization toolbox combining retrieval, local features, and COLMAP"
+
+  # === Additional Dense Matchers ===
+  - name: "CroCo"
+    paper: "CroCo: Self-Supervised Pre-training for 3D Vision Tasks by Cross-View Completion"
+    arxiv: "2210.10716"
+    year: 2022
+    code: "naver/croco"
+    stars: 700
+    tags: [self-supervised, pretraining, cross-view, 3d-vision]
+    parents:
+      - name: "LoFTR"
+        relation: inspires
+    description: "Cross-view completion pretraining for 3D vision tasks including matching and reconstruction"
+
+  - name: "DKM"
+    paper: "DKM: Dense Kernelized Feature Matching for Geometry Estimation"
+    arxiv: "2202.00667"
+    year: 2023
+    code: "Parskatt/DKM"
+    stars: 500
+    tags: [feature-matching, dense-matching, kernelized, geometry]
+    parents:
+      - name: "LoFTR"
+        relation: extends
+    description: "Dense kernelized feature matching using global correlation and kernel regression for geometry estimation"

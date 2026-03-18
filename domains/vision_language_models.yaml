@@ -20,6 +20,20 @@ methods:
     parents: []
     description: "Contrastive image-text pretraining enabling zero-shot visual recognition"
 
+  - name: "OpenCLIP"
+    paper: "Reproducible Scaling Laws for Contrastive Language-Image Learning"
+    arxiv: "2212.07143"
+    year: 2022
+    code: "mlfoundations/open_clip"
+    stars: 10000
+    open_source: open
+    license: "MIT"
+    tags: [contrastive, vision-language, open-source, reproducible]
+    parents:
+      - name: "CLIP"
+        relation: extends
+    description: "Open-source reproduction of CLIP with scaling law analysis and diverse pretrained checkpoints"
+
   - name: "SigLIP"
     paper: "Sigmoid Loss for Language Image Pre-Training"
     arxiv: "2303.15343"
@@ -178,6 +192,68 @@ methods:
       - name: "CLIP"
         relation: inspires
     description: "Vision-enabled GPT-4 with strong multimodal understanding and reasoning"
+
+  - name: "GPT-4o"
+    paper: "GPT-4o System Card"
+    arxiv: null
+    year: 2024
+    code: null
+    stars: null
+    open_source: closed
+    license: null
+    tags: [multimodal, proprietary, omni, audio-visual-text]
+    parents:
+      - name: "GPT-4V"
+        relation: extends
+    description: "Natively multimodal omni-model processing text, vision, and audio with unified architecture"
+
+  - name: "Idefics2"
+    paper: "What matters when building vision-language models?"
+    arxiv: "2405.02246"
+    year: 2024
+    code: "huggingface/transformers"
+    stars: 140000
+    open_source: open
+    license: "Apache-2.0"
+    tags: [multimodal, open-weight, instruction-tuning, huggingface]
+    parents:
+      - name: "Flamingo"
+        relation: inspires
+      - name: "LLaVA"
+        relation: inspires
+    description: "Open VLM studying key design choices for vision-language model training and architecture"
+
+  - name: "Cambrian-1"
+    paper: "Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs"
+    arxiv: "2406.16860"
+    year: 2024
+    code: "cambrian-mllm/cambrian"
+    stars: 1700
+    open_source: open
+    license: "Apache-2.0"
+    tags: [multimodal, open-weight, vision-centric, multi-encoder]
+    parents:
+      - name: "LLaVA"
+        relation: extends
+      - name: "CLIP"
+        relation: inspires
+    description: "Vision-centric multimodal LLM exploring multiple visual encoders and data strategies"
+
+  - name: "Pixtral"
+    paper: "Pixtral 12B"
+    arxiv: "2410.07073"
+    year: 2024
+    code: "mistralai/mistral-inference"
+    stars: 400
+    open_source: open
+    license: "Apache-2.0"
+    tags: [multimodal, open-weight, mistral, variable-resolution]
+    parents:
+      - name: "LLaVA"
+        relation: inspires
+      - name: "CLIP"
+        relation: inspires
+    description: "Mistral's 12B natively multimodal model supporting variable image sizes and aspect ratios"
 
   # === LLaVA Family ===
   - name: "LLaVA"

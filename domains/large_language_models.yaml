@@ -53,6 +53,20 @@ methods:
     description: "Unified text-to-text framework exploring transfer learning at scale"
 
   # === GPT Family ===
+  - name: "GPT-1"
+    paper: "Improving Language Understanding by Generative Pre-Training"
+    arxiv: null
+    year: 2018
+    code: null
+    stars: null
+    open_source: closed
+    license: null
+    tags: [decoder, autoregressive, pretraining, generative]
+    parents:
+      - name: "Transformer"
+        relation: extends
+    description: "First GPT model demonstrating generative pretraining followed by discriminative fine-tuning"
+
   - name: "GPT-2"
     paper: "Language Models are Unsupervised Multitask Learners"
     arxiv: null
@@ -63,7 +77,7 @@ methods:
     license: "MIT"
     tags: [decoder, autoregressive, generative]
     parents:
-      - name: "Transformer"
+      - name: "GPT-1"
         relation: extends
     description: "Demonstrated zero-shot task transfer with autoregressive language modeling"
 
@@ -80,6 +94,20 @@ methods:
       - name: "GPT-2"
         relation: extends
     description: "175B parameter model showing emergent few-shot learning capabilities"
+
+  - name: "InstructGPT"
+    paper: "Training language models to follow instructions with human feedback"
+    arxiv: "2203.02155"
+    year: 2022
+    code: null
+    stars: null
+    open_source: closed
+    license: null
+    tags: [decoder, rlhf, instruction-following, alignment]
+    parents:
+      - name: "GPT-3"
+        relation: extends
+    description: "Aligns GPT-3 to follow instructions via supervised fine-tuning and RLHF"
 
   - name: "GPT-4"
     paper: "GPT-4 Technical Report"
@@ -216,6 +244,52 @@ methods:
       - name: "LLaMA 3"
         relation: extends
     description: "Mixture-of-experts Llama models including Scout and Maverick variants"
+
+  - name: "CodeLlama"
+    paper: "Code Llama: Open Foundation Models for Code"
+    arxiv: "2308.12950"
+    year: 2023
+    code: "meta-llama/codellama"
+    stars: 16000
+    open_source: open
+    license: "LLaMA 2 Community License"
+    tags: [decoder, open-weight, code, fine-tuned]
+    parents:
+      - name: "LLaMA 2"
+        relation: extends
+    description: "Code-specialized LLaMA 2 fine-tuned on code data for generation, infilling, and instruction following"
+
+  # === InternLM Family ===
+  - name: "InternLM2"
+    paper: "InternLM2 Technical Report"
+    arxiv: "2403.17297"
+    year: 2024
+    code: "InternLM/InternLM"
+    stars: 6500
+    open_source: open
+    license: "Apache-2.0"
+    tags: [decoder, open-weight, multilingual, long-context]
+    parents:
+      - name: "Transformer"
+        relation: extends
+      - name: "LLaMA"
+        relation: inspires
+    description: "Open-source LLM with strong reasoning, long-context, and tool-use capabilities from Shanghai AI Lab"
+
+  # === Allen AI ===
+  - name: "OLMo"
+    paper: "OLMo: Accelerating the Science of Language Models"
+    arxiv: "2402.00838"
+    year: 2024
+    code: "allenai/OLMo"
+    stars: 4500
+    open_source: open
+    license: "Apache-2.0"
+    tags: [decoder, open-weight, open-data, reproducible]
+    parents:
+      - name: "LLaMA"
+        relation: inspires
+    description: "Fully open language model with open data, training code, and evaluation for reproducible LLM research"
 
   # === Mistral Family ===
   - name: "Mistral 7B"

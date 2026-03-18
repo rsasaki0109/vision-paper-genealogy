@@ -45,6 +45,21 @@ methods:
     description: "MPC and whole-body impulse control enabling dynamic quadruped locomotion on MIT Cheetah 3"
 
   # ===========================
+  # Sim-to-Real Pioneering
+  # ===========================
+  - name: "Sim-to-Real Quadruped"
+    paper: "Sim-to-Real: Learning Agile Locomotion For Quadruped Robots"
+    arxiv: "1804.10332"
+    year: 2018
+    code: ""
+    stars: 0
+    tags: [quadruped, sim-to-real, reinforcement-learning, domain-randomization]
+    parents:
+      - name: "CPG"
+        relation: replaces
+    description: "Pioneering sim-to-real transfer for quadruped locomotion using domain randomization and RL"
+
+  # ===========================
   # Sim-to-Real RL Foundations
   # ===========================
   - name: "RaiSim"
@@ -110,6 +125,30 @@ methods:
         relation: replaces
     description: "First robust sim-to-real RL locomotion on ANYmal, replacing hand-crafted controllers"
 
+  - name: "AMP"
+    paper: "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Animation"
+    arxiv: "2104.02180"
+    year: 2021
+    code: ""
+    stars: 0
+    tags: [adversarial, motion-prior, style-transfer, reinforcement-learning, locomotion]
+    parents:
+      - name: "ANYmal RL Locomotion"
+        relation: inspires
+    description: "Adversarial motion priors enabling RL agents to learn naturalistic locomotion styles from reference motions"
+
+  - name: "RMA"
+    paper: "RMA: Rapid Motor Adaptation for Legged Robots"
+    arxiv: "2107.04034"
+    year: 2021
+    code: ""
+    stars: 0
+    tags: [quadruped, adaptation, reinforcement-learning, sim-to-real, online]
+    parents:
+      - name: "ANYmal RL Locomotion"
+        relation: extends
+    description: "Online adaptation module enabling legged robots to rapidly adapt to changing terrain and dynamics"
+
   - name: "Rapid Locomotion"
     paper: "Rapid Locomotion via Reinforcement Learning"
     arxiv: "2205.02824"
@@ -149,6 +188,20 @@ methods:
       - name: "ANYmal RL Locomotion"
         relation: inspires
     description: "Terrain-adaptive quadruped locomotion via implicit terrain imagination without explicit estimation"
+
+  - name: "DribbleBot"
+    paper: "DribbleBot: Dynamic Legged Manipulation in the Wild"
+    arxiv: "2304.01159"
+    year: 2023
+    code: "Improbable-AI/dribblebot"
+    stars: 400
+    tags: [quadruped, ball-dribbling, manipulation, reinforcement-learning, sim-to-real]
+    parents:
+      - name: "Rapid Locomotion"
+        relation: extends
+      - name: "RMA"
+        relation: inspires
+    description: "Quadruped robot dribbling a soccer ball on diverse terrains via RL with onboard sensing"
 
   - name: "Extreme Parkour"
     paper: "Extreme Parkour with Legged Robots"

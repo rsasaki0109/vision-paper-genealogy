@@ -27,11 +27,11 @@ DOMAINS_DIR = Path(__file__).parent.parent / "domains"
 OUTPUT_DIR = Path(__file__).parent.parent / "docs"
 
 CATEGORY_MAP = {
-    "Perception (LiDAR)": [
+    "Perception (LiDAR/3D)": [
         "LiDAR Odometry & SLAM",
+        "3D Object Detection",
         "Point Cloud Denoising",
         "Point Cloud Scene Flow",
-        "3D Object Detection",
         "Visual Place Recognition",
     ],
     "Perception (Visual)": [
@@ -39,6 +39,8 @@ CATEGORY_MAP = {
         "Image Matching & Feature Detection",
         "Visual SLAM",
         "Depth Completion",
+        "2D Object Detection",
+        "Semantic Segmentation",
     ],
     "Planning & Control": [
         "Motion Planning",
@@ -49,10 +51,12 @@ CATEGORY_MAP = {
         "Imitation Learning & Robot Foundation Models",
         "World Models for Robotics & Embodied AI",
         "Legged Robot Control",
+        "Grasp Planning & Manipulation",
     ],
     "Foundation Models": [
         "Large Language Models",
         "Vision-Language Models",
+        "Diffusion Models",
     ],
     "Platforms & Simulation": [
         "Robot Simulation",

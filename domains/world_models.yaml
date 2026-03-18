@@ -23,6 +23,18 @@ methods:
     parents: []
     description: "Seminal work learning a compressed spatial-temporal model of the environment for planning in latent space"
 
+  - name: "PlaNet"
+    paper: "Learning Latent Dynamics for Planning from Pixels"
+    arxiv: "1811.04551"
+    year: 2019
+    code: "google-research/planet"
+    stars: 1100
+    tags: [latent-dynamics, planning, model-based-rl, rssm]
+    parents:
+      - name: "World Models"
+        relation: extends
+    description: "Learns latent dynamics from pixels and plans via cross-entropy method in the learned latent space"
+
   # ===========================
   # Dreamer Series
   # ===========================
@@ -34,7 +46,7 @@ methods:
     stars: 1000
     tags: [latent-dynamics, imagination, model-based-rl, rssm]
     parents:
-      - name: "World Models"
+      - name: "PlaNet"
         relation: extends
     description: "Learns long-horizon behaviors purely from latent imagination using a recurrent state-space model"
 
@@ -49,6 +61,18 @@ methods:
       - name: "Dreamer"
         relation: extends
     description: "Discrete latent world model achieving human-level Atari performance via categorical representations"
+
+  - name: "DayDreamer"
+    paper: "DayDreamer: World Models for Physical Robot Learning"
+    arxiv: "2206.14176"
+    year: 2022
+    code: "danijar/daydreamer"
+    stars: 500
+    tags: [real-robot, model-based-rl, locomotion, manipulation]
+    parents:
+      - name: "DreamerV2"
+        relation: extends
+    description: "Applies Dreamer world models to physical robots, learning locomotion and manipulation from real-world interaction"
 
   - name: "DreamerV3"
     paper: "Mastering Diverse Domains through World Models"
@@ -255,6 +279,32 @@ methods:
       - name: "Genie 2"
         relation: inspires
     description: "Geometry-aware unified world model bridging 3D understanding with generative video prediction for embodied AI"
+
+  - name: "V-JEPA"
+    paper: "V-JEPA: Latent Video Prediction for Visual Representation Learning"
+    arxiv: "2404.08471"
+    year: 2024
+    code: "facebookresearch/jepa"
+    stars: 2500
+    tags: [self-supervised, video-prediction, latent-representation, meta]
+    parents:
+      - name: "World Models"
+        relation: inspires
+    description: "Self-supervised video prediction in latent space for learning visual representations without generative decoding"
+
+  - name: "Oasis"
+    paper: "Oasis: A Universe in a Transformer"
+    arxiv: "2411.17382"
+    year: 2024
+    code: "etched-ai/oasis"
+    stars: 5000
+    tags: [interactive, real-time, game-generation, transformer, video-generation]
+    parents:
+      - name: "Genie"
+        relation: inspires
+      - name: "DIAMOND"
+        relation: inspires
+    description: "Real-time interactive world model generating playable game environments frame by frame via a transformer"
 
   - name: "AVID"
     paper: "AVID: Adapting Video Diffusion Models to World Models"

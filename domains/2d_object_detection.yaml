@@ -1,0 +1,411 @@
+name: 2D Object Detection
+description: >
+  From R-CNN to DETR and open-vocabulary foundation models — the evolution of 2D object
+  detection methods spanning region-based, single-shot, anchor-free, transformer-based,
+  and vision-language approaches.
+source_awesome_lists:
+  - https://github.com/amusi/awesome-object-detection
+  - https://github.com/hoya012/deep-learning-object-detection
+
+methods:
+  # ========================================
+  # Classical / Region-based CNN Era
+  # ========================================
+  - name: "R-CNN"
+    paper: "Rich feature hierarchies for accurate object detection and semantic segmentation"
+    arxiv: "1311.2524"
+    year: 2014
+    code: "rbgirshick/rcnn"
+    stars: 2400
+    tags: [two-stage, region-based, cnn, foundation]
+    parents: []
+    description: "Pioneering region-based CNN approach using selective search and per-region classification"
+
+  - name: "SPPNet"
+    paper: "Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition"
+    arxiv: "1406.4729"
+    year: 2014
+    code: ""
+    stars: 0
+    tags: [two-stage, spatial-pyramid, pooling]
+    parents:
+      - name: "R-CNN"
+        relation: extends
+    description: "Spatial pyramid pooling enables arbitrary-size input and shared feature computation"
+
+  - name: "Fast R-CNN"
+    paper: "Fast R-CNN"
+    arxiv: "1504.08083"
+    year: 2015
+    code: "rbgirshick/fast-rcnn"
+    stars: 2200
+    tags: [two-stage, region-based, roi-pooling]
+    parents:
+      - name: "R-CNN"
+        relation: extends
+      - name: "SPPNet"
+        relation: inspires
+    description: "End-to-end training with RoI pooling over shared convolutional features"
+
+  - name: "Faster R-CNN"
+    paper: "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks"
+    arxiv: "1506.01497"
+    year: 2015
+    code: "facebookresearch/detectron2"
+    stars: 30000
+    tags: [two-stage, region-based, rpn, anchor-based]
+    parents:
+      - name: "Fast R-CNN"
+        relation: extends
+    description: "Region Proposal Network replaces selective search for fully differentiable two-stage detection"
+
+  # ========================================
+  # Single-shot Detectors
+  # ========================================
+  - name: "YOLO"
+    paper: "You Only Look Once: Unified, Real-Time Object Detection"
+    arxiv: "1506.02640"
+    year: 2016
+    code: "pjreddie/darknet"
+    stars: 25700
+    tags: [single-stage, real-time, grid-based]
+    parents: []
+    description: "First single-shot detector framing detection as a regression problem on a grid"
+
+  - name: "SSD"
+    paper: "SSD: Single Shot MultiBox Detector"
+    arxiv: "1512.02325"
+    year: 2016
+    code: "weiliu89/caffe"
+    stars: 4800
+    tags: [single-stage, multi-scale, anchor-based]
+    parents:
+      - name: "YOLO"
+        relation: inspires
+      - name: "Faster R-CNN"
+        relation: inspires
+    description: "Multi-scale feature map predictions with default boxes for efficient single-shot detection"
+
+  - name: "YOLOv2"
+    paper: "YOLO9000: Better, Faster, Stronger"
+    arxiv: "1612.08242"
+    year: 2017
+    code: "pjreddie/darknet"
+    stars: 25700
+    tags: [single-stage, real-time, anchor-based, batch-norm]
+    parents:
+      - name: "YOLO"
+        relation: extends
+    description: "Batch normalization, anchor boxes, and multi-scale training improve YOLO accuracy and speed"
+
+  - name: "FPN"
+    paper: "Feature Pyramid Networks for Object Detection"
+    arxiv: "1612.03144"
+    year: 2017
+    code: "facebookresearch/detectron2"
+    stars: 30000
+    tags: [multi-scale, feature-pyramid, backbone, foundation]
+    parents:
+      - name: "Faster R-CNN"
+        relation: extends
+    description: "Top-down feature pyramid with lateral connections for multi-scale feature extraction"
+
+  - name: "RetinaNet"
+    paper: "Focal Loss for Dense Object Detection"
+    arxiv: "1708.02002"
+    year: 2017
+    code: "facebookresearch/detectron2"
+    stars: 30000
+    tags: [single-stage, focal-loss, anchor-based]
+    parents:
+      - name: "FPN"
+        relation: extends
+      - name: "SSD"
+        relation: inspires
+    description: "Focal loss addresses class imbalance to close the gap between one-stage and two-stage detectors"
+
+  - name: "YOLOv3"
+    paper: "YOLOv3: An Incremental Improvement"
+    arxiv: "1804.02767"
+    year: 2018
+    code: "pjreddie/darknet"
+    stars: 25700
+    tags: [single-stage, real-time, multi-scale, darknet]
+    parents:
+      - name: "YOLOv2"
+        relation: extends
+      - name: "FPN"
+        relation: inspires
+    description: "Multi-scale predictions across three scales with Darknet-53 backbone"
+
+  - name: "CornerNet"
+    paper: "CornerNet: Detecting Objects as Paired Keypoints"
+    arxiv: "1808.01244"
+    year: 2018
+    code: "princeton-vl/CornerNet"
+    stars: 2600
+    tags: [anchor-free, keypoint-based, heatmap]
+    parents:
+      - name: "SSD"
+        relation: inspires
+    description: "Anchor-free detection by predicting top-left and bottom-right corner heatmaps"
+
+  - name: "CenterNet"
+    paper: "Objects as Points"
+    arxiv: "1904.07850"
+    year: 2019
+    code: "xingyizhou/CenterNet"
+    stars: 7300
+    tags: [anchor-free, keypoint-based, center-point]
+    parents:
+      - name: "CornerNet"
+        relation: extends
+    description: "Anchor-free detection modeling objects as single center points with regression heads"
+
+  - name: "FCOS"
+    paper: "FCOS: Fully Convolutional One-Stage Object Detection"
+    arxiv: "1904.01355"
+    year: 2019
+    code: "tianzhi0549/FCOS"
+    stars: 3300
+    tags: [anchor-free, fully-convolutional, per-pixel]
+    parents:
+      - name: "FPN"
+        relation: extends
+      - name: "RetinaNet"
+        relation: inspires
+    description: "Per-pixel prediction anchor-free detector with centerness branch"
+
+  - name: "EfficientDet"
+    paper: "EfficientDet: Scalable and Efficient Object Detection"
+    arxiv: "1911.09070"
+    year: 2020
+    code: "google/automl"
+    stars: 6200
+    tags: [single-stage, efficient, nas, bi-fpn]
+    parents:
+      - name: "FPN"
+        relation: extends
+      - name: "RetinaNet"
+        relation: inspires
+    description: "BiFPN and compound scaling for a family of efficient detectors across compute budgets"
+
+  - name: "YOLOv4"
+    paper: "YOLOv4: Optimal Speed and Accuracy of Object Detection"
+    arxiv: "2004.10934"
+    year: 2020
+    code: "AlexeyAB/darknet"
+    stars: 21700
+    tags: [single-stage, real-time, bag-of-freebies, bag-of-specials]
+    parents:
+      - name: "YOLOv3"
+        relation: extends
+    description: "Systematic combination of bag-of-freebies and bag-of-specials training techniques"
+
+  - name: "YOLOv5"
+    paper: "YOLOv5"
+    arxiv: ""
+    year: 2020
+    code: "ultralytics/yolov5"
+    stars: 51000
+    tags: [single-stage, real-time, pytorch, production]
+    parents:
+      - name: "YOLOv4"
+        relation: extends
+    description: "PyTorch reimplementation with auto-anchor, mosaic augmentation, and production-ready deployment"
+
+  - name: "YOLOv7"
+    paper: "YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors"
+    arxiv: "2207.02696"
+    year: 2022
+    code: "WongKinYiu/yolov7"
+    stars: 13500
+    tags: [single-stage, real-time, reparameterization, elan]
+    parents:
+      - name: "YOLOv5"
+        relation: inspires
+      - name: "YOLOv4"
+        relation: extends
+    description: "E-ELAN architecture and trainable bag-of-freebies with reparameterized convolutions"
+
+  - name: "YOLOv8"
+    paper: "YOLOv8"
+    arxiv: ""
+    year: 2023
+    code: "ultralytics/ultralytics"
+    stars: 35000
+    tags: [single-stage, real-time, anchor-free, decoupled-head]
+    parents:
+      - name: "YOLOv5"
+        relation: extends
+    description: "Anchor-free design with decoupled head and task-aligned assigner for real-time detection"
+
+  - name: "YOLOv9"
+    paper: "YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information"
+    arxiv: "2402.13616"
+    year: 2024
+    code: "WongKinYiu/yolov9"
+    stars: 9000
+    tags: [single-stage, real-time, pgi, gelan]
+    parents:
+      - name: "YOLOv7"
+        relation: extends
+    description: "Programmable Gradient Information and GELAN architecture to address information bottleneck"
+
+  - name: "YOLO11"
+    paper: "YOLO11"
+    arxiv: ""
+    year: 2024
+    code: "ultralytics/ultralytics"
+    stars: 35000
+    tags: [single-stage, real-time, multi-task, unified]
+    parents:
+      - name: "YOLOv8"
+        relation: extends
+    description: "Unified multi-task architecture supporting detection, segmentation, pose, and OBB"
+
+  # ========================================
+  # Transformer-based Detectors
+  # ========================================
+  - name: "DETR"
+    paper: "End-to-End Object Detection with Transformers"
+    arxiv: "2005.12872"
+    year: 2020
+    code: "facebookresearch/detr"
+    stars: 13500
+    tags: [transformer, end-to-end, set-prediction, bipartite-matching]
+    parents:
+      - name: "Faster R-CNN"
+        relation: inspires
+    description: "First transformer-based detector using set prediction with bipartite matching loss"
+
+  - name: "Deformable DETR"
+    paper: "Deformable DETR: Deformable Transformers for End-to-End Object Detection"
+    arxiv: "2010.04159"
+    year: 2021
+    code: "fundamentalvision/Deformable-DETR"
+    stars: 3400
+    tags: [transformer, deformable-attention, multi-scale, efficient]
+    parents:
+      - name: "DETR"
+        relation: extends
+    description: "Deformable attention modules for faster convergence and multi-scale feature handling"
+
+  - name: "DAB-DETR"
+    paper: "DAB-DETR: Dynamic Anchor Boxes are Better Queries for DETR"
+    arxiv: "2201.12329"
+    year: 2022
+    code: "IDEA-Research/DAB-DETR"
+    stars: 400
+    tags: [transformer, dynamic-anchor, query-design]
+    parents:
+      - name: "Deformable DETR"
+        relation: extends
+    description: "Dynamic anchor box queries provide better positional priors for transformer detection"
+
+  - name: "DINO"
+    paper: "DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection"
+    arxiv: "2203.03605"
+    year: 2023
+    code: "IDEA-Research/DINO"
+    stars: 2200
+    tags: [transformer, denoising, contrastive, state-of-the-art]
+    parents:
+      - name: "DAB-DETR"
+        relation: extends
+      - name: "Deformable DETR"
+        relation: extends
+    description: "Contrastive denoising training and mixed query selection push DETR to state-of-the-art"
+
+  - name: "Co-DETR"
+    paper: "DETRs with Collaborative Hybrid Assignments Training"
+    arxiv: "2211.12860"
+    year: 2023
+    code: "Sense-X/Co-DETR"
+    stars: 1100
+    tags: [transformer, hybrid-assignment, collaborative, encoder-enhancement]
+    parents:
+      - name: "DINO"
+        relation: extends
+      - name: "Deformable DETR"
+        relation: extends
+    description: "Collaborative hybrid assignment training with auxiliary heads to enhance encoder learning"
+
+  - name: "RT-DETR"
+    paper: "DETRs Beat YOLOs on Real-time Object Detection"
+    arxiv: "2304.08069"
+    year: 2023
+    code: "lyuwenyu/RT-DETR"
+    stars: 2300
+    tags: [transformer, real-time, efficient, hybrid-encoder]
+    parents:
+      - name: "DINO"
+        relation: inspires
+      - name: "DETR"
+        relation: extends
+    description: "Real-time DETR variant with hybrid encoder achieving YOLO-competitive latency"
+
+  # ========================================
+  # Open-vocabulary / Foundation Models
+  # ========================================
+  - name: "OWL-ViT"
+    paper: "Simple Open-Vocabulary Object Detection with Vision Transformers"
+    arxiv: "2205.06230"
+    year: 2022
+    code: "google-research/scenic"
+    stars: 3400
+    tags: [open-vocabulary, vision-transformer, text-conditioned, zero-shot]
+    parents:
+      - name: "DETR"
+        relation: inspires
+    description: "Open-vocabulary detection via vision transformer with text-conditioned classification"
+
+  - name: "OWLv2"
+    paper: "Scaling Open-Vocabulary Object Detection"
+    arxiv: "2306.09683"
+    year: 2023
+    code: "google-research/scenic"
+    stars: 3400
+    tags: [open-vocabulary, self-training, scaling, zero-shot]
+    parents:
+      - name: "OWL-ViT"
+        relation: extends
+    description: "Self-training on web-scale pseudo-labels to scale open-vocabulary detection performance"
+
+  - name: "Grounding DINO"
+    paper: "Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection"
+    arxiv: "2303.05499"
+    year: 2024
+    code: "IDEA-Research/GroundingDINO"
+    stars: 7200
+    tags: [open-set, grounding, text-conditioned, vision-language, foundation]
+    parents:
+      - name: "DINO"
+        relation: extends
+    description: "Fuses language and vision features for open-set detection with text-guided queries"
+
+  - name: "YOLO-World"
+    paper: "YOLO-World: Real-Time Open-Vocabulary Object Detection"
+    arxiv: "2401.17270"
+    year: 2024
+    code: "AILab-CVC/YOLO-World"
+    stars: 4800
+    tags: [open-vocabulary, real-time, yolo, vision-language]
+    parents:
+      - name: "YOLOv8"
+        relation: extends
+      - name: "Grounding DINO"
+        relation: inspires
+    description: "Real-time open-vocabulary detection by re-parameterizing text embeddings into YOLO"
+
+  - name: "Florence-2"
+    paper: "Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks"
+    arxiv: "2311.06242"
+    year: 2024
+    code: "microsoft/Florence-2"
+    stars: 3000
+    tags: [foundation, multi-task, vision-language, unified, detection]
+    parents:
+      - name: "DETR"
+        relation: inspires
+    description: "Unified vision foundation model handling detection, captioning, and grounding via sequence-to-sequence"

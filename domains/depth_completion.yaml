@@ -161,3 +161,88 @@ methods:
       - name: "PromptDC"
         relation: inspires
     description: "Zero-shot foundation model for stereo matching applicable to dense depth completion tasks"
+
+  # === Monocular Depth Estimation ===
+  - name: "MiDaS"
+    paper: "Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-shot Cross-dataset Transfer"
+    arxiv: "1907.01341"
+    year: 2020
+    code: "isl-org/MiDaS"
+    stars: 4500
+    tags: [monocular-depth, zero-shot, multi-dataset, relative-depth]
+    parents: []
+    description: "Robust relative monocular depth estimation via mixing diverse training datasets"
+
+  - name: "DPT"
+    paper: "Vision Transformers for Dense Prediction"
+    arxiv: "2103.13413"
+    year: 2021
+    code: ""
+    stars: 0
+    tags: [monocular-depth, transformer, dense-prediction]
+    parents:
+      - name: "MiDaS"
+        relation: extends
+    description: "Dense prediction transformers for monocular depth estimation with global receptive field"
+
+  - name: "Depth Anything v1"
+    paper: "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data"
+    arxiv: "2401.10891"
+    year: 2024
+    code: "LiheYoung/Depth-Anything"
+    stars: 7000
+    tags: [monocular-depth, foundation-model, large-scale, self-supervised]
+    parents:
+      - name: "DPT"
+        relation: extends
+      - name: "MiDaS"
+        relation: extends
+    description: "Large-scale monocular depth foundation model trained on massive unlabeled data"
+
+  - name: "ZoeDepth"
+    paper: "ZoeDepth: Zero-shot Transfer by Combining Relative and Metric Depth"
+    arxiv: "2302.12288"
+    year: 2023
+    code: "isl-org/ZoeDepth"
+    stars: 1800
+    tags: [monocular-depth, metric-depth, zero-shot]
+    parents:
+      - name: "MiDaS"
+        relation: extends
+    description: "Zero-shot metric depth estimation combining relative MiDaS features with metric depth heads"
+
+  - name: "Marigold"
+    paper: "Marigold: Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation"
+    arxiv: "2312.02145"
+    year: 2024
+    code: "prs-eth/Marigold"
+    stars: 2200
+    tags: [monocular-depth, diffusion, generative, fine-tuning]
+    parents:
+      - name: "MiDaS"
+        relation: inspires
+    description: "Diffusion-based monocular depth estimation repurposing Stable Diffusion image priors"
+
+  # === Stereo Depth ===
+  - name: "RAFT-Stereo"
+    paper: "RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching"
+    arxiv: "2109.07547"
+    year: 2021
+    code: "princeton-vl/RAFT-Stereo"
+    stars: 800
+    tags: [stereo-matching, recurrent, correlation, optical-flow]
+    parents: []
+    description: "Recurrent all-pairs field transforms for accurate and efficient stereo matching"
+
+  # === Additional Depth Completion ===
+  - name: "PENet"
+    paper: "PENet: Towards Precise and Efficient Image Guided Depth Completion"
+    arxiv: "2103.00783"
+    year: 2021
+    code: ""
+    stars: 0
+    tags: [depth-completion, efficient, image-guided, two-branch]
+    parents:
+      - name: "NLSPN"
+        relation: extends
+    description: "Precise and efficient depth completion with two-branch architecture for color and depth guidance"

@@ -249,3 +249,43 @@ methods:
       - name: "MixVPR"
         relation: inspires
     description: "Self-supervised test-time adaptation for VPR improving performance in unseen environments"
+
+  # === Additional Methods ===
+  - name: "VLAD"
+    paper: "Aggregating Local Descriptors into a Compact Image Representation"
+    year: 2010
+    tags: [classical, aggregation, global-descriptor]
+    parents: []
+    description: "Original vector of locally aggregated descriptors for compact image representation"
+
+  - name: "PointNetVLAD"
+    paper: "PointNetVLAD: Deep Point Cloud Based Retrieval for Large-Scale Place Recognition"
+    arxiv: "1804.03492"
+    year: 2018
+    code: "cattaneod/PointNetVLAD"
+    tags: [lidar, deep-learning, point-cloud, vlad, global-descriptor]
+    parents:
+      - name: "NetVLAD"
+        relation: extends
+    description: "First learned 3D point cloud descriptor for large-scale place recognition combining PointNet with VLAD"
+
+  - name: "MinkLoc3D"
+    paper: "MinkLoc3D: Point Cloud Based Large-Scale Place Recognition"
+    arxiv: "2011.04530"
+    year: 2021
+    code: "jac99/MinkLoc3D"
+    tags: [lidar, deep-learning, sparse-convolution, global-descriptor]
+    parents:
+      - name: "PointNetVLAD"
+        relation: extends
+    description: "Sparse convolution-based 3D point cloud place recognition with efficient feature extraction"
+
+  - name: "OverlapTransformer"
+    paper: "OverlapTransformer: An Efficient and Yaw-Angle-Invariant Transformer Network for LiDAR-Based Place Recognition"
+    arxiv: "2203.03397"
+    year: 2022
+    tags: [lidar, deep-learning, transformer, range-image, yaw-invariant]
+    parents:
+      - name: "OverlapNet"
+        relation: extends
+    description: "Transformer-based LiDAR place recognition using range images with yaw-angle invariance"

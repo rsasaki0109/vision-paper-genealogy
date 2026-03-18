@@ -1,0 +1,263 @@
+name: Grasp Planning & Manipulation
+description: >
+  From classical grasp simulators and analytic grasp metrics through deep
+  learning-based grasp pose detection, 6-DOF grasp synthesis, and
+  large-scale grasp datasets, to language-guided and dexterous in-hand
+  manipulation — the evolution of robotic grasping and manipulation.
+source_awesome_lists:
+  - https://github.com/jdneo/awesome-robot-manipulation
+  - https://github.com/rhett-chen/awesome-robot-grasping
+
+methods:
+  # ===========================
+  # Classical Foundations
+  # ===========================
+  - name: "GraspIt!"
+    paper: "GraspIt! A Versatile Simulator for Robotic Grasping"
+    arxiv: ""
+    year: 2004
+    code: "graspit-simulator/graspit"
+    stars: 300
+    tags: [simulator, classical, analytic, grasp-quality]
+    parents: []
+    description: "Classical open-source grasp simulator with analytic grasp quality metrics and eigengrasp planning"
+
+  # ===========================
+  # Deep Grasp Pose Detection
+  # ===========================
+  - name: "GPD"
+    paper: "Grasp Pose Detection in Point Clouds"
+    arxiv: "1706.09911"
+    year: 2017
+    code: "atenpas/gpd"
+    stars: 600
+    tags: [point-cloud, grasp-detection, deep-learning, parallel-jaw]
+    parents:
+      - name: "GraspIt!"
+        relation: inspires
+    description: "Deep learning approach for detecting 6-DOF grasp poses directly from point cloud input"
+
+  - name: "6-DOF GraspNet"
+    paper: "6-DOF GraspNet: Variational Grasp Generation for Object Manipulation"
+    arxiv: "1905.10520"
+    year: 2019
+    code: "NVlabs/6dof-graspnet"
+    stars: 600
+    tags: [6dof, variational, grasp-generation, deep-learning]
+    parents:
+      - name: "GPD"
+        relation: extends
+    description: "Variational autoencoder approach for generating diverse 6-DOF grasps conditioned on object shape"
+
+  # ===========================
+  # Large-Scale Grasp Datasets & Networks
+  # ===========================
+  - name: "GraspNet-1Billion"
+    paper: "GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping"
+    arxiv: "1912.13470"
+    year: 2020
+    code: "graspnet/graspnet-baseline"
+    stars: 500
+    tags: [benchmark, large-scale, dataset, grasp-detection]
+    parents:
+      - name: "6-DOF GraspNet"
+        relation: inspires
+    description: "Large-scale benchmark with 1 billion grasp annotations for general object grasping in cluttered scenes"
+
+  - name: "SuctionNet"
+    paper: "SuctionNet-1Billion: A Large-Scale Benchmark for Suction Grasping"
+    arxiv: "2103.12311"
+    year: 2021
+    code: "graspnet/suctionnet-baseline"
+    stars: 100
+    tags: [suction, benchmark, grasping, large-scale]
+    parents:
+      - name: "GraspNet-1Billion"
+        relation: extends
+    description: "Large-scale benchmark for suction-based grasping complementing parallel-jaw grasp datasets"
+
+  - name: "AnyGrasp"
+    paper: "AnyGrasp: Robust and Efficient Grasp Perception in Spatial and Temporal Space"
+    arxiv: "2212.08333"
+    year: 2023
+    code: "graspnet/anygrasp_sdk"
+    stars: 900
+    tags: [real-time, robust, sdk, grasp-detection]
+    parents:
+      - name: "GraspNet-1Billion"
+        relation: extends
+    description: "Robust real-time grasp perception system handling spatial and temporal reasoning for diverse objects"
+
+  # ===========================
+  # Volumetric & NeRF-Based Grasping
+  # ===========================
+  - name: "VGN"
+    paper: "Volumetric Grasping Network: Real-time 6 DOF Grasp Detection in Clutter"
+    arxiv: "2101.01132"
+    year: 2021
+    code: "ethz-asl/vgn"
+    stars: 400
+    tags: [volumetric, real-time, 6dof, tsdf]
+    parents:
+      - name: "6-DOF GraspNet"
+        relation: extends
+    description: "Volumetric grasping network predicting grasp quality and pose from TSDF for real-time 6-DOF grasping"
+
+  - name: "Contact-GraspNet"
+    paper: "Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes"
+    arxiv: "2103.14127"
+    year: 2021
+    code: "NVlabs/contact_graspnet"
+    stars: 700
+    tags: [contact, 6dof, cluttered, point-cloud]
+    parents:
+      - name: "6-DOF GraspNet"
+        relation: extends
+    description: "Contact-based 6-DOF grasp generation using predicted contact maps for efficient grasping in clutter"
+
+  - name: "GraspNeRF"
+    paper: "GraspNeRF: Multiview-based 6-DoF Grasp Detection for Transparent and Specular Objects Using Generalizable NeRF"
+    arxiv: "2210.06575"
+    year: 2023
+    code: ""
+    stars: 0
+    tags: [nerf, transparent, multiview, 6dof]
+    parents:
+      - name: "VGN"
+        relation: extends
+      - name: "Contact-GraspNet"
+        relation: inspires
+    description: "NeRF-based multiview grasp detection handling transparent and specular objects via generalizable neural rendering"
+
+  # ===========================
+  # Dexterous Grasping
+  # ===========================
+  - name: "UniDexGrasp"
+    paper: "UniDexGrasp: Universal Robotic Dexterous Grasping via Learning Diverse Proposal Generation and Goal-Conditioned Policy"
+    arxiv: "2303.00938"
+    year: 2023
+    code: "PKU-MARL/DexterousHands"
+    stars: 800
+    tags: [dexterous, universal, goal-conditioned, policy]
+    parents:
+      - name: "6-DOF GraspNet"
+        relation: inspires
+    description: "Universal dexterous grasping framework with diverse proposal generation and goal-conditioned policy learning"
+
+  - name: "DexGraspNet"
+    paper: "DexGraspNet: A Large-Scale Robotic Dexterous Grasp Dataset for General Objects"
+    arxiv: "2210.02697"
+    year: 2023
+    code: "PKU-EPIC/DexGraspNet"
+    stars: 400
+    tags: [dexterous, dataset, large-scale, general-objects]
+    parents:
+      - name: "GraspNet-1Billion"
+        relation: inspires
+      - name: "UniDexGrasp"
+        relation: inspires
+    description: "Large-scale dataset of dexterous grasps for general objects enabling diverse dexterous manipulation research"
+
+  # ===========================
+  # Dexterous Manipulation
+  # ===========================
+  - name: "Hora"
+    paper: "In-Hand Object Rotation via Rapid Motor Adaptation"
+    arxiv: "2210.04887"
+    year: 2022
+    code: "HaozhiQi/Hora"
+    stars: 200
+    tags: [in-hand, rotation, motor-adaptation, sim-to-real]
+    parents: []
+    description: "Rapid motor adaptation approach for in-hand object rotation transferring from simulation to real dexterous hands"
+
+  - name: "DexMV"
+    paper: "DexMV: Imitation Learning for Dexterous Manipulation from Human Hand Demonstrations in the Wild"
+    arxiv: "2108.05877"
+    year: 2022
+    code: "yzqin/dexmv-sim"
+    stars: 200
+    tags: [dexterous, imitation-learning, human-demo, manipulation]
+    parents:
+      - name: "Hora"
+        relation: inspires
+    description: "Imitation learning framework for dexterous manipulation using human hand demonstrations captured in the wild"
+
+  - name: "DexPoint"
+    paper: "DexPoint: Generalizable Point Cloud Reinforcement Learning for Sim-to-Real Dexterous Manipulation"
+    arxiv: "2211.15459"
+    year: 2023
+    code: "yzqin/dexpoint-release"
+    stars: 100
+    tags: [dexterous, point-cloud, sim-to-real, reinforcement-learning]
+    parents:
+      - name: "DexMV"
+        relation: extends
+    description: "Point cloud-based RL for generalizable sim-to-real dexterous manipulation with minimal domain gap"
+
+  - name: "DexPBT"
+    paper: "DexPBT: Scaling up Dexterous Manipulation for Hand-Arm Systems with Population Based Training"
+    arxiv: "2305.12127"
+    year: 2023
+    code: ""
+    stars: 0
+    tags: [dexterous, population-based, hand-arm, scaling]
+    parents:
+      - name: "Hora"
+        relation: extends
+    description: "Population-based training for scaling dexterous manipulation across diverse hand-arm systems"
+
+  - name: "RotateIt"
+    paper: "RotateIt: A Robotic Manipulation Benchmark for In-Hand Object Rotation"
+    arxiv: "2304.11654"
+    year: 2023
+    code: ""
+    stars: 0
+    tags: [in-hand, rotation, benchmark, dexterous]
+    parents:
+      - name: "Hora"
+        relation: extends
+      - name: "DexMV"
+        relation: inspires
+    description: "Benchmark for in-hand object rotation evaluating diverse robotic manipulation approaches"
+
+  # ===========================
+  # Language-Guided & Foundation Model Grasping
+  # ===========================
+  - name: "GraspGPT"
+    paper: "GraspGPT: Leveraging Semantic Knowledge from a Large Language Model for Task-Oriented Grasping"
+    arxiv: "2307.13204"
+    year: 2024
+    code: "mkt1412/GraspGPT"
+    stars: 100
+    tags: [llm, task-oriented, semantic, language-guided]
+    parents:
+      - name: "Contact-GraspNet"
+        relation: extends
+    description: "LLM-guided task-oriented grasping leveraging semantic knowledge for functional grasp selection"
+
+  - name: "SprayGrasp"
+    paper: "SprayGrasp: Open-Vocabulary Robotic Grasping via Language-Guided Spray Prediction"
+    arxiv: "2312.11942"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [open-vocabulary, language-guided, spray, grasping]
+    parents:
+      - name: "GraspGPT"
+        relation: inspires
+      - name: "AnyGrasp"
+        relation: inspires
+    description: "Open-vocabulary grasping using language-guided spray prediction for zero-shot object manipulation"
+
+  - name: "ManipLLM"
+    paper: "ManipLLM: Embodied Multimodal Large Language Model for Object-Centric Robotic Manipulation"
+    arxiv: "2312.16217"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [multimodal-llm, embodied, object-centric, manipulation]
+    parents:
+      - name: "GraspGPT"
+        relation: inspires
+    description: "Multimodal LLM for object-centric robotic manipulation predicting contact points and manipulation parameters"

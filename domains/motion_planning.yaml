@@ -11,6 +11,19 @@ source_awesome_lists:
 
 methods:
   # ===========================
+  # Classical Potential Field
+  # ===========================
+  - name: "Potential Field"
+    paper: "Real-Time Obstacle Avoidance for Manipulators and Mobile Robots"
+    arxiv: ""
+    year: 1986
+    code: ""
+    stars: 0
+    tags: [reactive, obstacle-avoidance, classical, local-planner]
+    parents: []
+    description: "Artificial potential field method for reactive obstacle avoidance using attractive and repulsive forces"
+
+  # ===========================
   # Classical Sampling-Based
   # ===========================
   - name: "PRM"
@@ -34,6 +47,18 @@ methods:
       - name: "PRM"
         relation: inspires
     description: "Tree-based incremental planner that rapidly explores configuration spaces via random sampling"
+
+  - name: "RRT-Connect"
+    paper: "RRT-Connect: An Efficient Approach to Single-Query Path Planning"
+    arxiv: ""
+    year: 2000
+    code: ""
+    stars: 0
+    tags: [sampling-based, bidirectional, single-query, classical]
+    parents:
+      - name: "RRT"
+        relation: extends
+    description: "Bidirectional RRT variant growing two trees from start and goal for faster single-query planning"
 
   - name: "RRT*"
     paper: "Sampling-based Algorithms for Optimal Motion Planning"
@@ -125,6 +150,60 @@ methods:
     description: "Extends A* to continuous state spaces with kinematic constraints for vehicle path planning"
 
   # ===========================
+  # Lattice & Frenet Planners
+  # ===========================
+  - name: "State Lattice Planner"
+    paper: "State Space Sampling of Feasible Motions for High-Performance Mobile Robot Navigation in Complex Environments"
+    arxiv: ""
+    year: 2009
+    code: ""
+    stars: 0
+    tags: [search-based, lattice, kinodynamic, classical, autonomous-driving]
+    parents:
+      - name: "A*"
+        relation: extends
+    description: "Precomputes a lattice of dynamically feasible motion primitives searched with graph-based planners"
+
+  - name: "Frenet Planner"
+    paper: "Optimal Trajectory Generation for Dynamic Street Scenarios in a Frenet Frame"
+    arxiv: ""
+    year: 2010
+    code: ""
+    stars: 0
+    tags: [trajectory-planning, frenet-frame, autonomous-driving, classical]
+    parents:
+      - name: "State Lattice Planner"
+        relation: inspires
+    description: "Generates optimal trajectories in Frenet coordinates separating lateral and longitudinal planning"
+
+  # ===========================
+  # Optimization-Based Planners
+  # ===========================
+  - name: "CHOMP"
+    paper: "CHOMP: Covariant Hamiltonian Optimization for Motion Planning"
+    arxiv: ""
+    year: 2009
+    code: ""
+    stars: 0
+    tags: [optimization, trajectory-optimization, covariant, manipulation]
+    parents:
+      - name: "A*"
+        relation: inspires
+    description: "Trajectory optimization via covariant gradient descent minimizing smoothness and collision costs"
+
+  - name: "STOMP"
+    paper: "STOMP: Stochastic Trajectory Optimization for Motion Planning"
+    arxiv: ""
+    year: 2011
+    code: ""
+    stars: 0
+    tags: [optimization, stochastic, trajectory-optimization, manipulation]
+    parents:
+      - name: "CHOMP"
+        relation: extends
+    description: "Stochastic trajectory optimizer using noisy rollouts to handle non-differentiable cost functions"
+
+  # ===========================
   # Local Planners / Optimization
   # ===========================
   - name: "DWA"
@@ -185,6 +264,54 @@ methods:
     tags: [imitation-learning, autonomous-driving, mid-to-mid, waymo]
     parents: []
     description: "Imitation learning driving policy trained on expert demonstrations with data augmentation via worst-case synthesis"
+
+  - name: "Roach"
+    paper: "End-to-End Urban Driving by Imitating a Reinforcement Learning Coach"
+    arxiv: "2108.08265"
+    year: 2021
+    code: "zhejz/carla-roach"
+    stars: 500
+    tags: [reinforcement-learning, imitation-learning, carla, autonomous-driving]
+    parents:
+      - name: "ChauffeurNet"
+        relation: inspires
+    description: "RL-trained privileged coach distilled into a vision-based driving policy via imitation learning"
+
+  - name: "ST-P3"
+    paper: "ST-P3: End-to-end Vision-based Autonomous Driving via Spatial-Temporal Feature Learning"
+    arxiv: "2207.07601"
+    year: 2022
+    code: "OpenDriveLab/ST-P3"
+    stars: 400
+    tags: [spatial-temporal, end-to-end, vision, autonomous-driving]
+    parents:
+      - name: "ChauffeurNet"
+        relation: inspires
+    description: "End-to-end driving framework with spatial-temporal feature learning for prediction and planning"
+
+  - name: "PlanT"
+    paper: "PlanT: Explainable Planning Transformers via Object-Level Representations"
+    arxiv: "2210.14222"
+    year: 2022
+    code: "autonomousvision/plant"
+    stars: 200
+    tags: [transformer, explainable, object-level, carla, planning]
+    parents:
+      - name: "ChauffeurNet"
+        relation: inspires
+    description: "Planning transformer using object-level representations for explainable autonomous driving"
+
+  - name: "MILE"
+    paper: "Model-Based Imitation Learning for Urban Driving"
+    arxiv: "2210.07729"
+    year: 2022
+    code: "wayveai/mile"
+    stars: 400
+    tags: [model-based, imitation-learning, world-model, autonomous-driving]
+    parents:
+      - name: "ChauffeurNet"
+        relation: inspires
+    description: "Model-based imitation learning combining learned world model with planning for urban driving"
 
   - name: "NMP"
     paper: "Neural Motion Planner for Autonomous Driving in Urban Environments"

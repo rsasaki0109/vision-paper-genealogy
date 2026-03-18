@@ -1,0 +1,270 @@
+name: Diffusion Models
+description: >
+  From the foundational denoising diffusion probabilistic models (DDPM)
+  and score-based generative modeling through accelerated sampling (DDIM),
+  classifier-free guidance, and latent diffusion, to large-scale text-to-image
+  systems (Stable Diffusion, DALL-E 2, Imagen), diffusion transformers (DiT),
+  flow matching, and video generation (SORA, Stable Video Diffusion) — the
+  evolution of diffusion-based generative models.
+source_awesome_lists:
+  - https://github.com/diff-usion/Awesome-Diffusion-Models
+  - https://github.com/heejkoo/Awesome-Diffusion-Models
+
+methods:
+  # ===========================
+  # Foundational Methods
+  # ===========================
+  - name: "DDPM"
+    paper: "Denoising Diffusion Probabilistic Models"
+    arxiv: "2006.11239"
+    year: 2020
+    code: "hojonathanho/diffusion"
+    stars: 6500
+    tags: [generative, denoising, probabilistic, foundational]
+    parents: []
+    description: "Foundational work establishing denoising diffusion probabilistic models for high-quality image generation"
+
+  - name: "Score-Based SDE"
+    paper: "Score-Based Generative Modeling through Stochastic Differential Equations"
+    arxiv: "2011.13456"
+    year: 2021
+    code: "yang-song/score_sde"
+    stars: 2400
+    tags: [score-matching, sde, continuous-time, generative]
+    parents:
+      - name: "DDPM"
+        relation: extends
+    description: "Unified framework connecting score matching and diffusion models via stochastic differential equations"
+
+  - name: "DDIM"
+    paper: "Denoising Diffusion Implicit Models"
+    arxiv: "2010.02502"
+    year: 2021
+    code: ""
+    stars: 0
+    tags: [accelerated-sampling, deterministic, implicit, efficient]
+    parents:
+      - name: "DDPM"
+        relation: extends
+    description: "Non-Markovian implicit sampling process enabling deterministic generation and 10-50x faster sampling from DDPM"
+
+  - name: "Classifier-Free Guidance"
+    paper: "Classifier-Free Diffusion Guidance"
+    arxiv: "2207.12598"
+    year: 2022
+    code: ""
+    stars: 0
+    tags: [guidance, conditional, training-technique, foundational]
+    parents:
+      - name: "DDPM"
+        relation: extends
+    description: "Guidance technique mixing conditional and unconditional diffusion scores without a separate classifier"
+
+  # ===========================
+  # Latent Diffusion & Stable Diffusion
+  # ===========================
+  - name: "Latent Diffusion"
+    paper: "High-Resolution Image Synthesis with Latent Diffusion Models"
+    arxiv: "2112.10752"
+    year: 2022
+    code: "CompVis/latent-diffusion"
+    stars: 12000
+    tags: [latent-space, vae, text-to-image, efficient]
+    parents:
+      - name: "DDPM"
+        relation: extends
+      - name: "Classifier-Free Guidance"
+        relation: combines
+    description: "Diffusion in learned latent space via autoencoder enabling high-resolution image synthesis at reduced compute"
+
+  - name: "Stable Diffusion"
+    paper: "High-Resolution Image Synthesis with Latent Diffusion Models"
+    arxiv: "2112.10752"
+    year: 2022
+    code: "Stability-AI/stablediffusion"
+    stars: 39000
+    tags: [text-to-image, open-source, latent-space, large-scale]
+    parents:
+      - name: "Latent Diffusion"
+        relation: extends
+    description: "Open-source large-scale text-to-image model based on latent diffusion trained on LAION-5B dataset"
+
+  - name: "Stable Diffusion XL"
+    paper: "SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis"
+    arxiv: "2307.01952"
+    year: 2023
+    code: "Stability-AI/generative-models"
+    stars: 25000
+    tags: [text-to-image, high-resolution, refiner, open-source]
+    parents:
+      - name: "Stable Diffusion"
+        relation: extends
+    description: "Larger UNet architecture with dual text encoders and refiner model for higher-resolution image synthesis"
+
+  - name: "SDXL Turbo / LCM"
+    paper: "Latent Consistency Models: Synthesizing High-Resolution Images with Few-Step Inference"
+    arxiv: "2310.04378"
+    year: 2023
+    code: "luosiallen/latent-consistency-model"
+    stars: 4500
+    tags: [distillation, few-step, real-time, efficient]
+    parents:
+      - name: "Stable Diffusion XL"
+        relation: extends
+      - name: "DDIM"
+        relation: inspires
+    description: "Consistency distillation enabling high-quality image generation in 1-4 sampling steps for real-time inference"
+
+  # ===========================
+  # Large-Scale Text-to-Image
+  # ===========================
+  - name: "DALL-E 2"
+    paper: "Hierarchical Text-Conditional Image Generation with CLIP Latents"
+    arxiv: "2204.06125"
+    year: 2022
+    code: ""
+    stars: 0
+    tags: [text-to-image, clip, hierarchical, closed-source]
+    parents:
+      - name: "DDPM"
+        relation: extends
+      - name: "Classifier-Free Guidance"
+        relation: combines
+    description: "Hierarchical text-to-image generation using CLIP embeddings with diffusion prior and decoder"
+
+  - name: "Imagen"
+    paper: "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding"
+    arxiv: "2205.11487"
+    year: 2022
+    code: ""
+    stars: 0
+    tags: [text-to-image, t5, photorealistic, cascaded]
+    parents:
+      - name: "DDPM"
+        relation: extends
+      - name: "Classifier-Free Guidance"
+        relation: combines
+    description: "Cascaded diffusion model using large T5 text encoder achieving photorealistic text-to-image generation"
+
+  # ===========================
+  # Diffusion Transformers
+  # ===========================
+  - name: "DiT"
+    paper: "Scalable Diffusion Models with Transformers"
+    arxiv: "2212.09748"
+    year: 2023
+    code: "facebookresearch/DiT"
+    stars: 6000
+    tags: [transformer, scalable, class-conditional, architecture]
+    parents:
+      - name: "DDPM"
+        relation: extends
+      - name: "Latent Diffusion"
+        relation: extends
+    description: "Replacing UNet with transformer backbone in diffusion models demonstrating favorable scaling properties"
+
+  - name: "SiT"
+    paper: "SiT: Exploring Flow and Diffusion-based Generative Models with Scalable Interpolant Transformers"
+    arxiv: "2401.08740"
+    year: 2024
+    code: "willisma/SiT"
+    stars: 1000
+    tags: [transformer, interpolant, flow, scalable]
+    parents:
+      - name: "DiT"
+        relation: extends
+      - name: "Flow Matching"
+        relation: combines
+    description: "Scalable interpolant transformers unifying flow and diffusion frameworks with improved training objectives"
+
+  - name: "Stable Diffusion 3"
+    paper: "Scaling Rectified Flow Transformers for High-Resolution Image Synthesis"
+    arxiv: "2403.03206"
+    year: 2024
+    code: "Stability-AI/sd3.5"
+    stars: 5000
+    tags: [rectified-flow, mmdit, text-to-image, transformer]
+    parents:
+      - name: "DiT"
+        relation: extends
+      - name: "Rectified Flow"
+        relation: combines
+      - name: "Stable Diffusion XL"
+        relation: extends
+    description: "Multimodal diffusion transformer using rectified flow for scalable high-resolution text-to-image synthesis"
+
+  - name: "FLUX"
+    paper: "FLUX"
+    arxiv: ""
+    year: 2024
+    code: "black-forest-labs/flux"
+    stars: 19000
+    tags: [transformer, text-to-image, open-source, high-quality]
+    parents:
+      - name: "DiT"
+        relation: extends
+      - name: "Rectified Flow"
+        relation: combines
+      - name: "Stable Diffusion 3"
+        relation: inspires
+    description: "State-of-the-art open text-to-image model from Black Forest Labs using flow-based transformer architecture"
+
+  # ===========================
+  # Flow Matching & Rectified Flow
+  # ===========================
+  - name: "Rectified Flow"
+    paper: "Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow"
+    arxiv: "2209.03003"
+    year: 2023
+    code: "gnobitab/RectifiedFlow"
+    stars: 900
+    tags: [ode, straight-paths, reflow, efficient]
+    parents:
+      - name: "Score-Based SDE"
+        relation: extends
+    description: "Straightening ODE paths between noise and data distributions for fast and efficient generation"
+
+  - name: "Flow Matching"
+    paper: "Flow Matching for Generative Modeling"
+    arxiv: "2210.02747"
+    year: 2023
+    code: ""
+    stars: 0
+    tags: [conditional-flow, ode, simulation-free, generative]
+    parents:
+      - name: "Score-Based SDE"
+        relation: extends
+      - name: "Rectified Flow"
+        relation: inspires
+    description: "Simulation-free training of continuous normalizing flows via conditional flow matching objectives"
+
+  # ===========================
+  # Video Generation
+  # ===========================
+  - name: "SORA"
+    paper: "Video generation models as world simulators"
+    arxiv: ""
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [video-generation, world-simulator, closed-source, transformer]
+    parents:
+      - name: "DiT"
+        relation: extends
+      - name: "Classifier-Free Guidance"
+        relation: combines
+    description: "OpenAI's large-scale video generation model treating videos as world simulators with transformer architecture"
+
+  - name: "Stable Video Diffusion"
+    paper: "Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets"
+    arxiv: "2311.15127"
+    year: 2024
+    code: "Stability-AI/generative-models"
+    stars: 25000
+    tags: [video-generation, latent-video, temporal, open-source]
+    parents:
+      - name: "Stable Diffusion"
+        relation: extends
+      - name: "Latent Diffusion"
+        relation: extends
+    description: "Latent video diffusion model extending Stable Diffusion with temporal layers for video generation"

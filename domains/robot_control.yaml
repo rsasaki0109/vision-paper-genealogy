@@ -24,6 +24,20 @@ methods:
     parents: []
     description: "Proportional-Integral-Derivative feedback controller, the foundational building block of classical control"
 
+  - name: "LQR"
+    paper: "Contributions to the Theory of Optimal Control"
+    arxiv: ""
+    year: 1960
+    code: ""
+    stars: 0
+    open_source: open
+    license: ""
+    tags: [classical, optimal-control, linear, quadratic]
+    parents:
+      - name: "PID"
+        relation: inspires
+    description: "Linear Quadratic Regulator computing optimal state-feedback gains by minimizing a quadratic cost function"
+
   - name: "MPC"
     paper: "Model Predictive Control: Theory, Computation, and Design"
     arxiv: ""
@@ -37,6 +51,34 @@ methods:
       - name: "PID"
         relation: extends
     description: "Optimization-based control that plans optimal actions over a receding horizon using a dynamics model"
+
+  - name: "Impedance Control"
+    paper: "Impedance Control: An Approach to Manipulation"
+    arxiv: ""
+    year: 1985
+    code: ""
+    stars: 0
+    open_source: open
+    license: ""
+    tags: [classical, force-control, compliance, manipulation]
+    parents:
+      - name: "PID"
+        relation: extends
+    description: "Controls dynamic interaction between robot and environment by regulating mechanical impedance"
+
+  - name: "Operational Space Control"
+    paper: "A Unified Approach for Motion and Force Control of Robot Manipulators: The Operational Space Formulation"
+    arxiv: ""
+    year: 1987
+    code: ""
+    stars: 0
+    open_source: open
+    license: ""
+    tags: [classical, task-space, force-control, manipulation]
+    parents:
+      - name: "Impedance Control"
+        relation: inspires
+    description: "Task-space control framework decoupling motion and force control in operational coordinates"
 
   - name: "iLQR"
     paper: "Synthesis and Stabilization of Complex Behaviors through Online Trajectory Optimization"
@@ -55,6 +97,32 @@ methods:
   # ===========================
   # Deep Reinforcement Learning
   # ===========================
+  - name: "DQN"
+    paper: "Human-level control through deep reinforcement learning"
+    arxiv: ""
+    year: 2015
+    code: ""
+    stars: 0
+    open_source: open
+    license: ""
+    tags: [reinforcement-learning, deep-learning, value-based, discrete]
+    parents: []
+    description: "Deep Q-Network combining Q-learning with deep neural networks for human-level Atari game play"
+
+  - name: "TRPO"
+    paper: "Trust Region Policy Optimization"
+    arxiv: "1502.05477"
+    year: 2015
+    code: ""
+    stars: 0
+    open_source: open
+    license: ""
+    tags: [reinforcement-learning, on-policy, policy-gradient, trust-region]
+    parents:
+      - name: "DQN"
+        relation: inspires
+    description: "Policy gradient method using trust region constraints to ensure stable and monotonic policy improvement"
+
   - name: "DDPG"
     paper: "Continuous control with deep reinforcement learning"
     arxiv: "1509.02971"
@@ -77,8 +145,8 @@ methods:
     license: ""
     tags: [reinforcement-learning, on-policy, policy-gradient, stable]
     parents:
-      - name: "DDPG"
-        relation: inspires
+      - name: "TRPO"
+        relation: extends
     description: "Stable on-policy RL algorithm using clipped surrogate objective for robust policy updates"
 
   - name: "TD3"

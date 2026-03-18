@@ -435,3 +435,89 @@ methods:
       - name: "DETR3D"
         relation: extends
     description: "Advancing sparse query-based end-to-end 3D detection and tracking with temporal fusion"
+
+  # === Additional Methods ===
+  - name: "LSS"
+    paper: "Lift, Splat, Shoot: Encoding Images from Arbitrary Camera Rigs by Implicitly Unprojecting to 3D"
+    arxiv: "2008.05711"
+    year: 2020
+    code: "nv-tlabs/lift-splat-shoot"
+    stars: 1800
+    tags: [camera, bev, view-transform, foundation]
+    parents: []
+    description: "Foundational BEV view transform lifting 2D image features to 3D via depth distribution"
+
+  - name: "PointRCNN"
+    paper: "PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud"
+    arxiv: "1812.04244"
+    year: 2019
+    code: "sshaoshuai/PointRCNN"
+    tags: [point-cloud, two-stage, 3d-detection]
+    parents:
+      - name: "PointNet++"
+        relation: extends
+    description: "First two-stage 3D object detector generating proposals directly from raw point clouds"
+
+  - name: "FCOS3D"
+    paper: "FCOS3D: Fully Convolutional One-Stage Monocular 3D Object Detection"
+    arxiv: "2104.10956"
+    year: 2021
+    tags: [camera, monocular, anchor-free, 3d-detection]
+    parents: []
+    description: "Anchor-free fully convolutional monocular 3D object detector extending FCOS to 3D"
+
+  - name: "CenterNet"
+    paper: "Objects as Points"
+    arxiv: "1904.07850"
+    year: 2019
+    code: "xingyizhou/CenterNet"
+    stars: 7000
+    tags: [anchor-free, center-based, 2d-detection, foundation]
+    parents: []
+    description: "Center-based anchor-free detection representing objects as single keypoints"
+
+  - name: "DETR"
+    paper: "End-to-End Object Detection with Transformers"
+    arxiv: "2005.12872"
+    year: 2020
+    code: "facebookresearch/detr"
+    stars: 13000
+    tags: [transformer, end-to-end, set-prediction, 2d-detection, foundation]
+    parents: []
+    description: "Transformer-based end-to-end object detection eliminating hand-crafted components like NMS"
+
+  - name: "BEVDepth"
+    paper: "BEVDepth: Acquisition of Reliable Depth for Multi-view 3D Object Detection"
+    arxiv: "2206.10092"
+    year: 2022
+    tags: [camera, bev, depth-supervision, multi-view, 3d-detection]
+    parents:
+      - name: "BEVDet"
+        relation: extends
+      - name: "LSS"
+        relation: extends
+    description: "Depth-supervised BEV detection improving view transform with explicit depth estimation"
+
+  - name: "MonoDETR"
+    paper: "MonoDETR: Depth-guided Transformer for Monocular 3D Object Detection"
+    arxiv: "2203.13310"
+    year: 2022
+    tags: [camera, monocular, transformer, depth-guided, 3d-detection]
+    parents:
+      - name: "DETR"
+        relation: extends
+      - name: "FCOS3D"
+        relation: inspires
+    description: "DETR-style transformer for monocular 3D detection with depth-guided query initialization"
+
+  - name: "PV-RCNN++"
+    paper: "PV-RCNN++: Point-Voxel Feature Set Abstraction With Local Vector Representation for 3D Object Detection"
+    arxiv: "2102.00463"
+    year: 2022
+    code: "open-mmlab/OpenPCDet"
+    stars: 4700
+    tags: [point-cloud, point-voxel, two-stage, 3d-detection]
+    parents:
+      - name: "PV-RCNN"
+        relation: extends
+    description: "Improved PV-RCNN with sectorized proposal-centric pooling for faster and more accurate 3D detection"

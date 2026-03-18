@@ -32,6 +32,18 @@ methods:
     parents: []
     description: "Fast and accurate physics engine designed for model-based control and reinforcement learning"
 
+  - name: "OpenAI Gym"
+    paper: "OpenAI Gym"
+    arxiv: "1606.01540"
+    year: 2016
+    code: "Farama-Foundation/Gymnasium"
+    stars: 7500
+    tags: [benchmark, api, reinforcement-learning, open-source, standard]
+    parents:
+      - name: "MuJoCo"
+        relation: inspires
+    description: "Standard API and benchmark suite for reinforcement learning providing unified environment interface"
+
   - name: "PyBullet"
     paper: "Bullet Physics SDK"
     arxiv: ""
@@ -47,6 +59,20 @@ methods:
   # ===========================
   # Embodied AI Environments
   # ===========================
+  - name: "DMControl"
+    paper: "DeepMind Control Suite"
+    arxiv: "1801.00690"
+    year: 2018
+    code: "google-deepmind/dm_control"
+    stars: 3800
+    tags: [benchmark, continuous-control, mujoco, reinforcement-learning]
+    parents:
+      - name: "MuJoCo"
+        relation: extends
+      - name: "OpenAI Gym"
+        relation: inspires
+    description: "DeepMind's continuous control benchmark suite built on MuJoCo for RL research"
+
   - name: "AI2-THOR"
     paper: "AI2-THOR: An Interactive 3D Environment for Visual AI"
     arxiv: "1712.05474"
@@ -83,6 +109,34 @@ methods:
         relation: inspires
     description: "High-performance 3D simulator for embodied AI with photorealistic indoor environments"
 
+  - name: "Robosuite"
+    paper: "robosuite: A Modular Simulation Framework and Benchmark for Robot Learning"
+    arxiv: "2009.12293"
+    year: 2020
+    code: "ARISE-Initiative/robosuite"
+    stars: 1300
+    tags: [manipulation, benchmark, modular, mujoco, open-source]
+    parents:
+      - name: "MuJoCo"
+        relation: extends
+      - name: "OpenAI Gym"
+        relation: inspires
+    description: "Modular MuJoCo-based simulation framework and benchmark for reproducible robot manipulation research"
+
+  - name: "MetaWorld"
+    paper: "Meta-World: A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning"
+    arxiv: "1910.10897"
+    year: 2020
+    code: "Farama-Foundation/Metaworld"
+    stars: 1200
+    tags: [meta-learning, multi-task, benchmark, manipulation, mujoco]
+    parents:
+      - name: "MuJoCo"
+        relation: extends
+      - name: "OpenAI Gym"
+        relation: extends
+    description: "Benchmark of 50 manipulation tasks for evaluating multi-task and meta reinforcement learning"
+
   - name: "SAPIEN"
     paper: "SAPIEN: A SimulAted Part-based Interactive ENvironment"
     arxiv: "2003.08515"
@@ -112,6 +166,20 @@ methods:
   # ===========================
   # GPU-Accelerated Simulators
   # ===========================
+  - name: "Brax"
+    paper: "Brax -- A Differentiable Physics Engine for Large Scale Rigid Body Simulation"
+    arxiv: "2106.13281"
+    year: 2021
+    code: "google/brax"
+    stars: 2300
+    tags: [differentiable, jax, gpu, physics-engine, reinforcement-learning]
+    parents:
+      - name: "MuJoCo"
+        relation: inspires
+      - name: "OpenAI Gym"
+        relation: inspires
+    description: "JAX-based differentiable physics engine for massively parallel rigid body simulation on accelerators"
+
   - name: "Isaac Gym"
     paper: "Isaac Gym: High Performance GPU-Based Physics Simulation for Robot Learning"
     arxiv: "2108.10470"

@@ -526,3 +526,107 @@ methods:
       - name: "3D Gaussian Splatting"
         relation: extends
     description: "Point cloud latent diffusion for interactive and scalable 3D Gaussian generation"
+
+  # === Surface Reconstruction ===
+  - name: "NeuS"
+    paper: "NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view Reconstruction"
+    arxiv: "2106.10689"
+    year: 2021
+    code: "Totoro97/NeuS"
+    stars: 1800
+    tags: [neural-rendering, sdf, surface-reconstruction, volume-rendering]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Neural implicit surface reconstruction using signed distance functions with volume rendering"
+
+  - name: "VolSDF"
+    paper: "Volume Rendering of Neural Implicit Surfaces"
+    arxiv: "2106.12052"
+    year: 2021
+    code: ""
+    stars: 0
+    tags: [neural-rendering, sdf, surface-reconstruction, volume-rendering]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Volume rendering formulation for neural implicit surfaces defined by signed distance functions"
+
+  - name: "Neuralangelo"
+    paper: "Neuralangelo: High-Fidelity Neural Surface Reconstruction"
+    arxiv: "2306.03092"
+    year: 2023
+    code: "NVlabs/neuralangelo"
+    stars: 3800
+    tags: [neural-rendering, surface-reconstruction, high-fidelity, hash-encoding]
+    parents:
+      - name: "NeuS"
+        relation: extends
+      - name: "Instant-NGP"
+        relation: combines
+    description: "High-fidelity neural surface reconstruction combining multi-resolution hash encoding with SDF"
+
+  # === 3D-Aware Generation ===
+  - name: "EG3D"
+    paper: "Efficient Geometry-aware 3D Generative Adversarial Networks"
+    arxiv: "2112.07945"
+    year: 2022
+    code: "NVlabs/eg3d"
+    stars: 3000
+    tags: [neural-rendering, 3d-gan, tri-plane, generative]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Efficient geometry-aware 3D GANs using tri-plane hybrid representation"
+
+  # === Platforms & Tools ===
+  - name: "Nerfstudio"
+    paper: "Nerfstudio: A Modular Framework for Neural Radiance Field Development"
+    arxiv: "2302.04264"
+    year: 2023
+    code: "nerfstudio-project/nerfstudio"
+    stars: 10000
+    tags: [neural-rendering, framework, modular, gaussian-splatting]
+    parents:
+      - name: "NeRF"
+        relation: inspires
+      - name: "Instant-NGP"
+        relation: inspires
+    description: "Modular framework for developing and benchmarking NeRF and Gaussian Splatting methods"
+
+  - name: "gsplat"
+    paper: "gsplat: An Open-Source Library for Gaussian Splatting"
+    arxiv: "2409.06765"
+    year: 2024
+    code: "nerfstudio-project/gsplat"
+    stars: 1800
+    tags: [gaussian-splatting, rasterization, library, efficient]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Open-source efficient rasterization library for 3D Gaussian Splatting"
+
+  # === Point-Based & Editing ===
+  - name: "Point-NeRF"
+    paper: "Point-NeRF: Point-based Neural Radiance Fields"
+    arxiv: "2201.08845"
+    year: 2022
+    code: "Xharlie/pointnerf"
+    stars: 900
+    tags: [neural-rendering, point-based, generalizable]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Point-based neural radiance field using neural point clouds for efficient rendering"
+
+  - name: "Instruct-NeRF2NeRF"
+    paper: "Instruct-NeRF2NeRF: Editing 3D Scenes with Instructions"
+    arxiv: "2303.12789"
+    year: 2023
+    code: "ayaanzhaque/instruct-nerf2nerf"
+    stars: 1200
+    tags: [neural-rendering, 3d-editing, text-instruction, diffusion]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Text instruction-based editing of NeRF scenes using iterative dataset update with diffusion models"

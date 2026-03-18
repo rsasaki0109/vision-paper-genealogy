@@ -69,6 +69,52 @@ methods:
         relation: inspires
     description: "Two-stage training: privileged agent learns from ground truth, then distilled to vision-only student"
 
+  - name: "Roach"
+    paper: "End-to-End Urban Driving by Imitating a Reinforcement Learning Coach"
+    arxiv: "2108.08265"
+    year: 2021
+    code: "zhejz/carla-roach"
+    stars: 500
+    open_source: open
+    license: ""
+    tags: [reinforcement-learning, imitation-learning, distillation, carla]
+    parents:
+      - name: "LBC"
+        relation: extends
+    description: "RL-trained privileged coach distilled into a vision-based student for robust end-to-end urban driving"
+
+  - name: "MILE"
+    paper: "Model-Based Imitation Learning for Urban Driving"
+    arxiv: "2210.07729"
+    year: 2022
+    code: "wayveai/mile"
+    stars: 400
+    open_source: open
+    license: ""
+    tags: [model-based, imitation-learning, world-model, carla]
+    parents:
+      - name: "LBC"
+        relation: inspires
+      - name: "Roach"
+        relation: inspires
+    description: "Model-based imitation learning jointly training a world model and driving policy for urban scenarios"
+
+  - name: "ST-P3"
+    paper: "ST-P3: End-to-end Vision-based Autonomous Driving via Spatial-Temporal Feature Learning"
+    arxiv: "2207.07601"
+    year: 2022
+    code: "OpenDriveLab/ST-P3"
+    stars: 400
+    open_source: open
+    license: ""
+    tags: [spatial-temporal, end-to-end, prediction, planning, nuscenes]
+    parents:
+      - name: "PilotNet"
+        relation: extends
+      - name: "ChauffeurNet"
+        relation: inspires
+    description: "End-to-end driving with spatial-temporal feature learning bridging perception, prediction, and planning"
+
   - name: "TransFuser"
     paper: "Multi-Modal Fusion Transformer for End-to-End Autonomous Driving"
     arxiv: "2104.09224"
@@ -242,6 +288,36 @@ methods:
       - name: "VAD"
         relation: extends
     description: "Bridges VLMs with end-to-end driving by integrating language reasoning into the planning pipeline"
+
+  - name: "GAIA-1"
+    paper: "GAIA-1: A Generative World Model for Autonomous Driving"
+    arxiv: "2309.17080"
+    year: 2023
+    code: ""
+    stars: 0
+    open_source: closed
+    license: ""
+    tags: [world-model, generative, video-prediction, wayve]
+    parents:
+      - name: "MILE"
+        relation: extends
+    description: "Wayve's generative world model predicting driving video and control for autonomous driving"
+
+  - name: "OccWorld"
+    paper: "OccWorld: Learning a 3D Occupancy World Model for Autonomous Driving"
+    arxiv: "2311.16038"
+    year: 2024
+    code: "wzzheng/OccWorld"
+    stars: 500
+    open_source: open
+    license: ""
+    tags: [occupancy, world-model, 3d, prediction, autonomous-driving]
+    parents:
+      - name: "UniAD"
+        relation: inspires
+      - name: "GAIA-1"
+        relation: inspires
+    description: "3D occupancy-based world model predicting future scenes for autonomous driving planning"
 
   - name: "DriveDreamer"
     paper: "DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving"

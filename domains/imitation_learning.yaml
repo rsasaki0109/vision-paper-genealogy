@@ -54,6 +54,54 @@ methods:
     description: "GAN-based imitation learning that matches occupancy measures without explicit reward recovery"
 
   # ===========================
+  # Pick-and-Place & Spatial Models
+  # ===========================
+  - name: "Transporter Networks"
+    paper: "Transporter Networks: Rearranging the Visual World for Robotic Manipulation"
+    arxiv: "2010.14406"
+    year: 2021
+    code: "google-research/ravens"
+    stars: 800
+    open_source: open
+    license: "Apache-2.0"
+    tags: [spatial-action, pick-and-place, equivariant, manipulation]
+    parents:
+      - name: "Behavioral Cloning"
+        relation: extends
+    description: "Learns spatial action maps for pick-and-place by detecting and transporting visual correspondences"
+
+  - name: "CLIPort"
+    paper: "CLIPort: What and Where Pathways for Robotic Manipulation"
+    arxiv: "2109.12098"
+    year: 2022
+    code: "cliport/cliport"
+    stars: 500
+    open_source: open
+    license: "Apache-2.0"
+    tags: [language-conditioned, clip, spatial-action, manipulation]
+    parents:
+      - name: "Transporter Networks"
+        relation: extends
+    description: "Combines CLIP semantic features with Transporter spatial action maps for language-conditioned manipulation"
+
+  # ===========================
+  # Generalist & Multi-Embodiment
+  # ===========================
+  - name: "Gato"
+    paper: "A Generalist Agent"
+    arxiv: "2205.06175"
+    year: 2022
+    code: ""
+    stars: 0
+    open_source: closed
+    license: ""
+    tags: [generalist, multi-task, multi-modal, transformer, deepmind]
+    parents:
+      - name: "Behavioral Cloning"
+        relation: extends
+    description: "Single generalist transformer agent performing over 600 tasks including games, chat, and robot control"
+
+  # ===========================
   # Behavior Transformers & Tokenization
   # ===========================
   - name: "BeT"
@@ -211,6 +259,22 @@ methods:
       - name: "RT-1"
         relation: extends
     description: "Vision-language-action model that transfers web-scale knowledge from VLMs to robot control"
+
+  - name: "Open X-Embodiment"
+    paper: "Open X-Embodiment: Robotic Learning Datasets and RT-X Models"
+    arxiv: "2310.08864"
+    year: 2023
+    code: "google-deepmind/open_x_embodiment"
+    stars: 800
+    open_source: open
+    license: "Apache-2.0"
+    tags: [dataset, multi-embodiment, cross-robot, foundation-model, large-scale]
+    parents:
+      - name: "RT-1"
+        relation: extends
+      - name: "RT-2"
+        relation: extends
+    description: "Large-scale multi-embodiment dataset and RT-X models enabling cross-robot transfer learning"
 
   # ===========================
   # Vision-Language-Action Models

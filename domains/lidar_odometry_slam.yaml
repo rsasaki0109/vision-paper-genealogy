@@ -430,3 +430,126 @@ methods:
       - name: "FAST-LIO2"
         relation: inspires
     description: "Hierarchical bundle adjustment for globally consistent large-scale LiDAR mapping"
+
+  # === Additional Methods ===
+  - name: "Cartographer"
+    paper: "Real-Time Loop Closure in 2D LIDAR SLAM"
+    year: 2016
+    code: "googlecartographer/cartographer"
+    stars: 7000
+    tags: [lidar-slam, graph-based, submap, real-time]
+    parents:
+      - name: "NDT"
+        relation: inspires
+    description: "Submap-based graph SLAM with real-time loop closure using branch-and-bound scan matching"
+
+  - name: "GICP"
+    paper: "Generalized-ICP"
+    year: 2009
+    tags: [point-cloud-registration, classical, plane-to-plane]
+    parents:
+      - name: "ICP"
+        relation: extends
+      - name: "NDT"
+        relation: combines
+    description: "Generalized ICP unifying point-to-point and point-to-plane with plane-to-plane matching"
+
+  - name: "R3LIVE"
+    paper: "R3LIVE: A Robust, Real-time, RGB-colored, LiDAR-Inertial-Visual Tightly-Coupled State Estimation and Mapping Package"
+    arxiv: "2109.07982"
+    year: 2022
+    code: "hku-mars/r3live"
+    stars: 2000
+    tags: [lidar-inertial-visual, tightly-coupled, rgb, real-time]
+    parents:
+      - name: "FAST-LIO2"
+        relation: extends
+    description: "LiDAR-inertial-camera tightly-coupled SLAM with real-time RGB-colored dense mapping"
+
+  - name: "R2LIVE"
+    paper: "R2LIVE: A Robust, Real-time, LiDAR-Inertial-Visual Tightly-Coupled State Estimator and Mapping"
+    arxiv: "2102.12400"
+    year: 2021
+    code: "hku-mars/r2live"
+    tags: [lidar-inertial-visual, tightly-coupled, real-time]
+    parents:
+      - name: "FAST-LIO"
+        relation: extends
+    description: "Precursor to R3LIVE combining LiDAR-inertial-visual tightly-coupled state estimation"
+
+  - name: "LIO-Mapping"
+    paper: "LIO-Mapping: A Tightly Coupled 3D Lidar Inertial Odometry and Mapping Approach"
+    year: 2019
+    tags: [lidar-inertial, tightly-coupled, early]
+    parents:
+      - name: "LOAM"
+        relation: extends
+    description: "Early tightly-coupled LiDAR-inertial odometry and mapping approach"
+
+  - name: "LOCUS"
+    paper: "LOCUS: A Multi-Sensor Lidar-Centric Solution for High-Precision Odometry and 3D Mapping in Real-Time"
+    year: 2021
+    tags: [lidar-odometry, multi-resolution, surfel, real-time]
+    parents:
+      - name: "LOAM"
+        relation: inspires
+    description: "JPL multi-resolution surfel matching for high-precision LiDAR odometry in challenging environments"
+
+  - name: "MULLS"
+    paper: "MULLS: Versatile LiDAR SLAM via Multi-metric Linear Least Square"
+    year: 2021
+    code: "YuePanEdward/MULLS"
+    tags: [lidar-slam, multi-metric, icp, versatile]
+    parents:
+      - name: "GICP"
+        relation: extends
+    description: "Multi-metric linear least square ICP SLAM using point, line, and plane features"
+
+  # === Visual-LiDAR Fusion ===
+  - name: "LVI-SAM"
+    paper: "LVI-SAM: Tightly-coupled Lidar-Visual-Inertial Odometry via Smoothing and Mapping"
+    arxiv: "2104.10831"
+    year: 2021
+    code: "TixiaoShan/LVI-SAM"
+    stars: 3200
+    tags: [lidar-visual-inertial, tightly-coupled, factor-graph]
+    parents:
+      - name: "LIO-SAM"
+        relation: extends
+    description: "Tightly-coupled LiDAR-visual-inertial odometry combining LIO-SAM with visual features"
+
+  - name: "FAST-LIVO"
+    paper: "FAST-LIVO: Fast and Tightly-coupled Sparse-Direct LiDAR-Inertial-Visual Odometry"
+    arxiv: "2203.00893"
+    year: 2022
+    code: "hku-mars/FAST-LIVO"
+    stars: 1200
+    tags: [lidar-visual-inertial, tightly-coupled, direct]
+    parents:
+      - name: "FAST-LIO2"
+        relation: extends
+    description: "Extends FAST-LIO2 with tightly-coupled direct visual odometry"
+
+  - name: "FAST-LIVO2"
+    paper: "FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry"
+    arxiv: "2408.01916"
+    year: 2024
+    code: "hku-mars/FAST-LIVO2"
+    stars: 800
+    tags: [lidar-visual-inertial, tightly-coupled, direct, real-time]
+    parents:
+      - name: "FAST-LIVO"
+        relation: extends
+    description: "Improved direct LiDAR-inertial-visual odometry with better efficiency and accuracy"
+
+  - name: "CamVox"
+    paper: "CamVox: A Low-cost and Accurate Lidar-assisted Visual SLAM System"
+    arxiv: "2011.11357"
+    year: 2021
+    code: "ISEE-Technology/CamVox"
+    stars: 500
+    tags: [lidar-visual, low-cost, livox]
+    parents:
+      - name: "LOAM"
+        relation: inspires
+    description: "Low-cost LiDAR-assisted visual SLAM using Livox LiDAR"

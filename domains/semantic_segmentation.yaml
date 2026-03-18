@@ -1,0 +1,491 @@
+name: Semantic Segmentation
+description: >
+  Evolution of image segmentation methods — from FCN to SAM foundation models,
+  covering semantic, instance, panoptic, 3D point cloud, and video segmentation.
+source_awesome_lists: []
+
+methods:
+  # ========================================
+  # Semantic Segmentation Foundations
+  # ========================================
+  - name: "FCN"
+    paper: "Fully Convolutional Networks for Semantic Segmentation"
+    arxiv: "1411.4038"
+    year: 2015
+    code: "shelhamer/fcn.berkeleyvision.org"
+    stars: 1900
+    tags: [semantic, fully-convolutional, foundation]
+    parents: []
+    description: "Pioneering fully convolutional approach that adapts classification CNNs for dense per-pixel prediction"
+
+  - name: "U-Net"
+    paper: "U-Net: Convolutional Networks for Biomedical Image Segmentation"
+    arxiv: "1505.04597"
+    year: 2015
+    code: "milesial/Pytorch-UNet"
+    stars: 8500
+    tags: [semantic, encoder-decoder, medical, foundation]
+    parents:
+      - name: "FCN"
+        relation: extends
+    description: "Symmetric encoder-decoder with skip connections for precise biomedical image segmentation"
+
+  - name: "DeepLab v1"
+    paper: "Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs"
+    arxiv: "1412.7062"
+    year: 2015
+    code: ""
+    stars: 0
+    tags: [semantic, atrous-convolution, crf]
+    parents:
+      - name: "FCN"
+        relation: extends
+    description: "Combines atrous (dilated) convolutions with fully connected CRFs for structured segmentation"
+
+  - name: "DeepLab v2"
+    paper: "DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs"
+    arxiv: "1606.00915"
+    year: 2017
+    code: ""
+    stars: 0
+    tags: [semantic, atrous-convolution, aspp, crf]
+    parents:
+      - name: "DeepLab v1"
+        relation: extends
+    description: "Introduces Atrous Spatial Pyramid Pooling (ASPP) for multi-scale context aggregation"
+
+  - name: "PSPNet"
+    paper: "Pyramid Scene Parsing Network"
+    arxiv: "1612.01105"
+    year: 2017
+    code: "hszhao/semseg"
+    stars: 2000
+    tags: [semantic, pyramid-pooling, scene-parsing]
+    parents:
+      - name: "FCN"
+        relation: extends
+    description: "Pyramid pooling module that captures global context at multiple scales for scene parsing"
+
+  - name: "DeepLab v3"
+    paper: "Rethinking Atrous Convolution for Semantic Image Segmentation"
+    arxiv: "1706.05587"
+    year: 2017
+    code: ""
+    stars: 0
+    tags: [semantic, atrous-convolution, aspp]
+    parents:
+      - name: "DeepLab v2"
+        relation: extends
+    description: "Improved ASPP with image-level features and batch normalization, removing CRF post-processing"
+
+  - name: "DeepLab v3+"
+    paper: "Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation"
+    arxiv: "1802.02611"
+    year: 2018
+    code: "google-research/deeplab2"
+    stars: 1000
+    tags: [semantic, encoder-decoder, atrous-convolution, depthwise-separable]
+    parents:
+      - name: "DeepLab v3"
+        relation: extends
+    description: "Adds a simple decoder to DeepLab v3 with depthwise separable convolutions for sharper boundaries"
+
+  - name: "HRNet"
+    paper: "Deep High-Resolution Representation Learning for Visual Recognition"
+    arxiv: "1908.07919"
+    year: 2019
+    code: "HRNet/HRNet-Semantic-Segmentation"
+    stars: 3100
+    tags: [semantic, high-resolution, multi-scale, backbone]
+    parents:
+      - name: "U-Net"
+        relation: inspires
+    description: "Maintains high-resolution representations throughout the network via parallel multi-resolution branches"
+
+  - name: "OCRNet"
+    paper: "Object-Contextual Representations for Semantic Segmentation"
+    arxiv: "2001.04074"
+    year: 2020
+    code: "openseg-group/OCNet.pytorch"
+    stars: 1300
+    tags: [semantic, object-context, attention]
+    parents:
+      - name: "HRNet"
+        relation: extends
+    description: "Aggregates object-region context representations to augment per-pixel features"
+
+  - name: "SegFormer"
+    paper: "SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers"
+    arxiv: "2105.15203"
+    year: 2021
+    code: "NVlabs/SegFormer"
+    stars: 2600
+    tags: [semantic, transformer, lightweight, efficient]
+    parents:
+      - name: "DeepLab v3+"
+        relation: replaces
+    description: "Hierarchical vision transformer encoder with lightweight MLP decoder for efficient segmentation"
+
+  - name: "SegNeXt"
+    paper: "SegNeXt: Rethinking Convolutional Attention Design for Semantic Segmentation"
+    arxiv: "2209.08575"
+    year: 2022
+    code: "Visual-Attention-Network/SegNeXt"
+    stars: 700
+    tags: [semantic, convolutional-attention, efficient]
+    parents:
+      - name: "SegFormer"
+        relation: extends
+    description: "Multi-scale convolutional attention outperforming transformers for semantic segmentation"
+
+  # ========================================
+  # Instance Segmentation
+  # ========================================
+  - name: "Mask R-CNN"
+    paper: "Mask R-CNN"
+    arxiv: "1703.06870"
+    year: 2017
+    code: "facebookresearch/detectron2"
+    stars: 30000
+    tags: [instance, two-stage, roi-align, foundation]
+    parents:
+      - name: "FCN"
+        relation: combines
+    description: "Extends Faster R-CNN with a parallel mask branch for per-instance segmentation"
+
+  - name: "SOLO"
+    paper: "SOLO: Segmenting Objects by Locations"
+    arxiv: "1912.04488"
+    year: 2020
+    code: "WXinlong/SOLO"
+    stars: 1600
+    tags: [instance, single-stage, location-based]
+    parents:
+      - name: "Mask R-CNN"
+        relation: replaces
+    description: "Box-free instance segmentation by predicting category and mask at each spatial location"
+
+  - name: "SOLOv2"
+    paper: "SOLOv2: Dynamic and Fast Instance Segmentation"
+    arxiv: "2003.10152"
+    year: 2020
+    code: "WXinlong/SOLO"
+    stars: 1600
+    tags: [instance, single-stage, dynamic-convolution]
+    parents:
+      - name: "SOLO"
+        relation: extends
+    description: "Dynamic mask heads and matrix NMS for faster and more accurate instance segmentation"
+
+  - name: "CondInst"
+    paper: "Conditional Convolutions for Instance Segmentation"
+    arxiv: "2003.05664"
+    year: 2020
+    code: "aim-uofa/AdelaiDet"
+    stars: 3200
+    tags: [instance, conditional-convolution, single-stage]
+    parents:
+      - name: "Mask R-CNN"
+        relation: replaces
+    description: "Instance-aware conditional convolution filters for dynamic mask generation"
+
+  # ========================================
+  # Panoptic Segmentation
+  # ========================================
+  - name: "Panoptic-FPN"
+    paper: "Panoptic Feature Pyramid Networks"
+    arxiv: "1901.02446"
+    year: 2019
+    code: "facebookresearch/detectron2"
+    stars: 30000
+    tags: [panoptic, fpn, unified]
+    parents:
+      - name: "Mask R-CNN"
+        relation: extends
+    description: "Adds a semantic segmentation branch to Mask R-CNN FPN for unified panoptic segmentation"
+
+  - name: "MaskFormer"
+    paper: "Per-Pixel Classification is Not All You Need for Semantic Segmentation"
+    arxiv: "2107.06278"
+    year: 2021
+    code: "facebookresearch/MaskFormer"
+    stars: 1800
+    tags: [panoptic, semantic, transformer, mask-classification]
+    parents:
+      - name: "Panoptic-FPN"
+        relation: replaces
+    description: "Unifies semantic and panoptic segmentation via mask classification with transformer decoder"
+
+  - name: "Mask2Former"
+    paper: "Masked-attention Mask Transformer for Universal Image Segmentation"
+    arxiv: "2112.01527"
+    year: 2022
+    code: "facebookresearch/Mask2Former"
+    stars: 2500
+    tags: [panoptic, instance, semantic, universal, transformer]
+    parents:
+      - name: "MaskFormer"
+        relation: extends
+    description: "Masked attention and multi-scale features for state-of-the-art universal segmentation"
+
+  - name: "OneFormer"
+    paper: "OneFormer: One Transformer to Rule Universal Image Segmentation"
+    arxiv: "2211.06220"
+    year: 2022
+    code: "SHI-Labs/OneFormer"
+    stars: 1200
+    tags: [panoptic, instance, semantic, universal, task-conditioned]
+    parents:
+      - name: "Mask2Former"
+        relation: extends
+    description: "Task-conditioned joint training for all three segmentation tasks with a single model"
+
+  - name: "kMaX-DeepLab"
+    paper: "k-means Mask Transformer"
+    arxiv: "2207.04044"
+    year: 2022
+    code: "google-research/deeplab2"
+    stars: 1000
+    tags: [panoptic, transformer, clustering]
+    parents:
+      - name: "Mask2Former"
+        relation: extends
+    description: "Reformulates cross-attention as k-means clustering for panoptic segmentation"
+
+  # ========================================
+  # Foundation / Promptable Segmentation
+  # ========================================
+  - name: "SAM"
+    paper: "Segment Anything"
+    arxiv: "2304.02643"
+    year: 2023
+    code: "facebookresearch/segment-anything"
+    stars: 48000
+    tags: [foundation, promptable, zero-shot, interactive]
+    parents:
+      - name: "Mask2Former"
+        relation: inspires
+    description: "Foundation model for promptable segmentation trained on 1B+ masks with zero-shot transfer"
+
+  - name: "SAM 2"
+    paper: "SAM 2: Segment Anything in Images and Videos"
+    arxiv: "2408.00714"
+    year: 2024
+    code: "facebookresearch/sam2"
+    stars: 12000
+    tags: [foundation, promptable, video, streaming]
+    parents:
+      - name: "SAM"
+        relation: extends
+    description: "Extends SAM to video with streaming memory for real-time promptable video segmentation"
+
+  - name: "SegGPT"
+    paper: "SegGPT: Segmenting Everything In Context"
+    arxiv: "2304.03284"
+    year: 2023
+    code: "baaivision/Painter"
+    stars: 2200
+    tags: [foundation, in-context, generalist]
+    parents:
+      - name: "SAM"
+        relation: inspires
+    description: "In-context learning framework that segments everything by treating segmentation as coloring"
+
+  - name: "Grounded SAM"
+    paper: "Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection"
+    arxiv: "2303.05499"
+    year: 2023
+    code: "IDEA-Research/Grounded-Segment-Anything"
+    stars: 15000
+    tags: [foundation, open-vocabulary, grounding, text-prompted]
+    parents:
+      - name: "SAM"
+        relation: combines
+    description: "Combines Grounding DINO open-set detection with SAM for text-prompted segmentation"
+
+  - name: "SEEM"
+    paper: "Segment Everything Everywhere All at Once"
+    arxiv: "2304.06718"
+    year: 2023
+    code: "UX-Decoder/Segment-Everything-Everywhere-All-At-Once"
+    stars: 2000
+    tags: [foundation, multi-modal, interactive, universal]
+    parents:
+      - name: "SAM"
+        relation: extends
+    description: "Universal interface supporting visual, textual, and referring prompts for interactive segmentation"
+
+  - name: "EfficientSAM"
+    paper: "EfficientSAM: Leveraged Masked Image Pretraining for Efficient Segment Anything"
+    arxiv: "2312.00863"
+    year: 2024
+    code: "yformer/EfficientSAM"
+    stars: 1400
+    tags: [foundation, efficient, distillation, lightweight]
+    parents:
+      - name: "SAM"
+        relation: extends
+    description: "Lightweight SAM via masked image pretraining distillation for efficient segment anything"
+
+  - name: "FastSAM"
+    paper: "Fast Segment Anything"
+    arxiv: "2306.12156"
+    year: 2023
+    code: "CASIA-IVA-Lab/FastSAM"
+    stars: 7500
+    tags: [foundation, real-time, yolo-based]
+    parents:
+      - name: "SAM"
+        relation: replaces
+    description: "Real-time segment anything using YOLOv8-based architecture at 50x speed of SAM"
+
+  - name: "MobileSAM"
+    paper: "Faster Segment Anything: Towards Lightweight SAM for Mobile Applications"
+    arxiv: "2306.14289"
+    year: 2023
+    code: "ChaoningZhang/MobileSAM"
+    stars: 4800
+    tags: [foundation, mobile, lightweight, distillation]
+    parents:
+      - name: "SAM"
+        relation: extends
+    description: "Distilled lightweight SAM image encoder for mobile and edge deployment"
+
+  - name: "HQ-SAM"
+    paper: "Segment Anything in High Quality"
+    arxiv: "2306.01567"
+    year: 2023
+    code: "SysCV/SAM-HQ"
+    stars: 3500
+    tags: [foundation, high-quality, fine-grained]
+    parents:
+      - name: "SAM"
+        relation: extends
+    description: "High-quality token and global-local feature fusion for accurate fine-grained mask prediction"
+
+  # ========================================
+  # 3D Point Cloud Segmentation
+  # ========================================
+  - name: "MinkowskiNet"
+    paper: "4D Spatio-Temporal ConvNets: Minkowski Convolutional Neural Networks"
+    arxiv: "1904.08755"
+    year: 2019
+    code: "NVIDIA/MinkowskiEngine"
+    stars: 2400
+    tags: [3d, sparse-convolution, point-cloud, spatio-temporal]
+    parents: []
+    description: "Generalized sparse convolutions on high-dimensional point clouds for 3D semantic segmentation"
+
+  - name: "RandLA-Net"
+    paper: "RandLA-Net: Efficient Semantic Segmentation of Large-Scale Point Clouds"
+    arxiv: "1911.11236"
+    year: 2020
+    code: "QingyongHu/RandLA-Net"
+    stars: 1300
+    tags: [3d, point-cloud, random-sampling, large-scale]
+    parents:
+      - name: "MinkowskiNet"
+        relation: inspires
+    description: "Random sampling with local feature aggregation for efficient large-scale point cloud segmentation"
+
+  - name: "Cylinder3D"
+    paper: "Cylindrical and Asymmetrical 3D Convolution Networks for LiDAR Segmentation"
+    arxiv: "2011.10033"
+    year: 2021
+    code: "xinge008/Cylinder3D"
+    stars: 1200
+    tags: [3d, point-cloud, lidar, cylindrical-partition]
+    parents:
+      - name: "MinkowskiNet"
+        relation: extends
+    description: "Cylindrical partition and asymmetrical 3D convolutions tailored for outdoor LiDAR segmentation"
+
+  - name: "Point Transformer v2"
+    paper: "Point Transformer V2: Grouped Vector Attention and Partition-based Pooling"
+    arxiv: "2210.05666"
+    year: 2022
+    code: "Pointcept/Pointcept"
+    stars: 1900
+    tags: [3d, point-cloud, transformer, attention]
+    parents:
+      - name: "MinkowskiNet"
+        relation: inspires
+    description: "Grouped vector attention with partition-based pooling for efficient 3D point cloud understanding"
+
+  - name: "Point Transformer v3"
+    paper: "Point Transformer V3: Simpler, Faster, Stronger"
+    arxiv: "2312.10035"
+    year: 2024
+    code: "Pointcept/Pointcept"
+    stars: 1900
+    tags: [3d, point-cloud, transformer, serialization]
+    parents:
+      - name: "Point Transformer v2"
+        relation: extends
+    description: "Serialization-based attention replacing KNN for scalable and faster 3D point cloud processing"
+
+  # ========================================
+  # Video Object Segmentation
+  # ========================================
+  - name: "XMem"
+    paper: "XMem: Long-Term Video Object Segmentation with an Atkinson-Shiffrin Memory Model"
+    arxiv: "2207.07115"
+    year: 2022
+    code: "hkchengrex/XMem"
+    stars: 2100
+    tags: [video, memory, long-term, semi-supervised]
+    parents:
+      - name: "Mask R-CNN"
+        relation: inspires
+    description: "Multi-tiered memory architecture inspired by Atkinson-Shiffrin model for long-term video segmentation"
+
+  - name: "Cutie"
+    paper: "Putting the Object Back into Video Object Segmentation"
+    arxiv: "2310.12982"
+    year: 2024
+    code: "hkchengrex/Cutie"
+    stars: 1400
+    tags: [video, object-centric, memory, semi-supervised]
+    parents:
+      - name: "XMem"
+        relation: extends
+    description: "Object-level memory reading with foreground-background separation for robust video segmentation"
+
+  # ========================================
+  # Open-Vocabulary Segmentation
+  # ========================================
+  - name: "LSeg"
+    paper: "Language-driven Semantic Segmentation"
+    arxiv: "2201.03546"
+    year: 2022
+    code: "isl-org/lang-seg"
+    stars: 700
+    tags: [semantic, open-vocabulary, language-driven, clip]
+    parents:
+      - name: "DeepLab v3+"
+        relation: extends
+    description: "Aligns pixel embeddings with CLIP text embeddings for language-driven open-vocabulary segmentation"
+
+  - name: "OpenSeg"
+    paper: "Scaling Open-Vocabulary Image Segmentation with Image-Level Labels"
+    arxiv: "2112.12143"
+    year: 2022
+    code: ""
+    stars: 0
+    tags: [semantic, open-vocabulary, scaling, clip]
+    parents:
+      - name: "LSeg"
+        relation: extends
+    description: "Scales open-vocabulary segmentation by learning region-word grounding from image-level labels"
+
+  - name: "SAN"
+    paper: "Side Adapter Network for Open-Vocabulary Semantic Segmentation"
+    arxiv: "2302.12242"
+    year: 2023
+    code: "MendelXu/SAN"
+    stars: 500
+    tags: [semantic, open-vocabulary, side-adapter, clip]
+    parents:
+      - name: "OpenSeg"
+        relation: extends
+    description: "Side adapter attached to frozen CLIP for efficient open-vocabulary semantic segmentation"
