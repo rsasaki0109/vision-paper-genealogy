@@ -8,7 +8,20 @@ from pathlib import Path
 
 from robotics_paper_genealogy.graph.builder import build_graph, build_graph_from_domains
 from robotics_paper_genealogy.models import Domain, RelationType, load_all_domains
-from robotics_paper_genealogy.viz.web import RELATION_COLORS, RELATION_DASHES
+
+RELATION_COLORS = {
+    RelationType.extends: "#22c55e",
+    RelationType.combines: "#06b6d4",
+    RelationType.replaces: "#ef4444",
+    RelationType.inspires: "#eab308",
+}
+
+RELATION_DASHES = {
+    RelationType.extends: False,
+    RelationType.combines: False,
+    RelationType.replaces: False,
+    RelationType.inspires: True,
+}
 
 DOMAINS_DIR = Path(__file__).parent.parent / "domains"
 OUTPUT_DIR = Path(__file__).parent.parent / "docs"
