@@ -524,3 +524,54 @@ methods:
     relation: inspires
   description: Compact VLA model from HuggingFace LeRobot enabling efficient robot
     policy training on consumer hardware
+- name: FANUC Robot Controller
+  year: 1990
+  open_source: closed
+  tags:
+  - industrial
+  - proprietary
+  - manufacturing
+  - commercial
+  parents:
+  - name: PID
+    relation: extends
+  description: FANUC's proprietary industrial robot controller dominating factory automation
+- name: KUKA Sunrise.OS
+  year: 2014
+  open_source: closed
+  tags:
+  - industrial
+  - proprietary
+  - collaborative
+  - commercial
+  parents:
+  - name: PID
+    relation: extends
+  description: KUKA's robot OS for collaborative robots with impedance-controlled
+    LBR iiwa
+- name: Universal Robots PolyScope
+  year: 2008
+  open_source: closed
+  tags:
+  - industrial
+  - collaborative
+  - cobot
+  - commercial
+  - easy-programming
+  parents:
+  - name: PID
+    relation: extends
+  description: Universal Robots' intuitive programming interface that popularized cobots
+- name: ABB RobotStudio
+  year: 2005
+  open_source: closed
+  tags:
+  - industrial
+  - simulation
+  - offline-programming
+  - commercial
+  parents:
+  - name: PID
+    relation: extends
+  description: ABB's offline programming and simulation environment for industrial
+    robots

@@ -239,3 +239,38 @@ methods:
     relation: combines
   description: Using vision-language foundation models for high-level surgical task
     planning and autonomous execution
+- name: Medtronic Hugo RAS
+  year: 2021
+  open_source: closed
+  tags:
+  - surgical
+  - robotic-assisted
+  - commercial
+  - modular
+  parents:
+  - name: da Vinci System
+    relation: inspires
+  description: Medtronic's modular robotic-assisted surgery system competing with da
+    Vinci
+- name: CMR Versius
+  year: 2019
+  open_source: closed
+  tags:
+  - surgical
+  - robotic-assisted
+  - commercial
+  - portable
+  parents:
+  - name: da Vinci System
+    relation: inspires
+  description: CMR Surgical's portable modular surgical robot with small footprint
+- name: Stryker Mako
+  year: 2006
+  open_source: closed
+  tags:
+  - orthopedic
+  - robotic-assisted
+  - commercial
+  - joint-replacement
+  parents: []
+  description: Robotic-arm assisted orthopedic surgery system for knee and hip replacements

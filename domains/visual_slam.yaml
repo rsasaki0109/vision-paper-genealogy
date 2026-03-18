@@ -693,3 +693,51 @@ methods:
     relation: extends
   description: SLAM in dynamic environments using deep learning-based segmentation
     to filter moving objects
+# === Commercial SLAM Solutions ===
+- name: Kudan SLAM
+  year: 2014
+  open_source: closed
+  license: Commercial
+  tags:
+  - slam
+  - visual
+  - lidar
+  - sdk
+  - commercial
+  parents: []
+  description: Commercial visual and LiDAR SLAM SDK for AR, robotics, and autonomous vehicles
+- name: SLAMcore
+  year: 2016
+  open_source: closed
+  license: Commercial
+  tags:
+  - slam
+  - visual-inertial
+  - spatial-ai
+  - commercial
+  - arm
+  parents: []
+  description: ARM-acquired spatial AI company providing dense visual-inertial SLAM for robots
+- name: NavVis VLX
+  year: 2017
+  open_source: closed
+  license: Commercial
+  tags:
+  - slam
+  - lidar
+  - indoor-mapping
+  - commercial
+  - digital-twin
+  parents: []
+  description: Indoor LiDAR SLAM and mapping system for large-scale digital twin creation
+- name: Viso.ai SLAM
+  year: 2018
+  open_source: closed
+  license: Commercial
+  tags:
+  - slam
+  - visual
+  - edge
+  - commercial
+  parents: []
+  description: Commercial edge-optimized visual SLAM for robotics and AR applications

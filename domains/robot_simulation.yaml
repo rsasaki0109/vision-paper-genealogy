@@ -415,3 +415,49 @@ methods:
     relation: inspires
   description: JAX-based GPU-accelerated differentiable port of MuJoCo for massively
     parallel simulation
+- name: NVIDIA Omniverse
+  year: 2020
+  open_source: closed
+  tags:
+  - simulation
+  - digital-twin
+  - gpu
+  - nvidia
+  - commercial
+  parents: []
+  description: NVIDIA's platform for 3D simulation, digital twins, and virtual worlds
+- name: Unity Robotics
+  year: 2020
+  open_source: partial
+  tags:
+  - simulation
+  - game-engine
+  - ros
+  - commercial
+  parents: []
+  description: Unity game engine adapted for robotics simulation with ROS integration
+- name: Unreal Engine (Robotics)
+  year: 2019
+  open_source: partial
+  tags:
+  - simulation
+  - game-engine
+  - photorealistic
+  - commercial
+  parents: []
+  description: Epic's Unreal Engine used for photorealistic robotics simulation (AirSim,
+    etc.)
+- name: Webots
+  year: 2004
+  code: cyberbotics/webots
+  stars: 3500
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - simulation
+  - multi-robot
+  - educational
+  - open-source
+  parents: []
+  description: Open-source robot simulator with wide robot model library, formerly
+    commercial

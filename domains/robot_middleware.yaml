@@ -390,3 +390,135 @@ methods:
     relation: combines
   description: Web-based robotics visualization and debugging platform supporting
     ROS 2 and MCAP
+- name: Apex.OS
+  year: 2020
+  open_source: closed
+  license: Commercial
+  tags:
+  - ad-stack
+  - ros2
+  - safety-certified
+  - commercial
+  - apex-ai
+  parents:
+  - name: ROS 2
+    relation: extends
+  description: Safety-certified ROS 2-based real-time OS for autonomous vehicles by
+    Apex.AI
+- name: NVIDIA DRIVE
+  year: 2015
+  open_source: closed
+  license: Commercial
+  tags:
+  - ad-stack
+  - gpu
+  - commercial
+  - nvidia
+  - full-stack
+  parents: []
+  description: NVIDIA's end-to-end autonomous driving platform with hardware and software
+    stack
+- name: Waymo Driver
+  year: 2017
+  open_source: closed
+  license: Commercial
+  tags:
+  - ad-stack
+  - l4
+  - commercial
+  - waymo
+  - google
+  parents: []
+  description: Waymo's proprietary L4 autonomous driving system (formerly Google Self-Driving
+    Car)
+- name: Cruise AV Stack
+  year: 2018
+  open_source: closed
+  license: Commercial
+  tags:
+  - ad-stack
+  - l4
+  - commercial
+  - gm
+  parents: []
+  description: GM Cruise's proprietary autonomous vehicle software stack
+- name: Mobileye EyeQ / SuperVision
+  year: 2014
+  open_source: closed
+  license: Commercial
+  tags:
+  - ad-stack
+  - adas
+  - chip
+  - commercial
+  - intel
+  parents: []
+  description: Mobileye's ADAS/AD platform combining proprietary chips with driving
+    policy
+- name: Tesla FSD
+  year: 2019
+  open_source: closed
+  license: Commercial
+  tags:
+  - ad-stack
+  - end-to-end
+  - commercial
+  - tesla
+  - vision-only
+  parents: []
+  description: Tesla's Full Self-Driving system using vision-only end-to-end neural
+    networks
+- name: Momenta
+  year: 2019
+  open_source: closed
+  license: Commercial
+  tags:
+  - ad-stack
+  - commercial
+  - china
+  - l2-l4
+  parents: []
+  description: Chinese AD company's proprietary autonomous driving stack for mass
+    production
+- name: Boston Dynamics Spot SDK
+  year: 2020
+  code: boston-dynamics/spot-sdk
+  stars: 2000
+  open_source: partial
+  license: Commercial (SDK open)
+  tags:
+  - robot-platform
+  - quadruped
+  - sdk
+  - commercial
+  parents: []
+  description: SDK for Boston Dynamics Spot robot with open API but proprietary control
+    stack
+- name: Unitree SDK
+  year: 2022
+  code: unitreerobotics/unitree_ros2
+  open_source: partial
+  license: Commercial (SDK open)
+  tags:
+  - robot-platform
+  - quadruped
+  - sdk
+  - ros2
+  parents:
+  - name: ROS 2
+    relation: extends
+  description: Unitree robotics SDK/ROS 2 interface for Go2, B2, H1 robots
+- name: NVIDIA Isaac ROS
+  year: 2023
+  code: NVIDIA-ISAAC-ROS
+  open_source: partial
+  license: Apache-2.0 (GPU libs proprietary)
+  tags:
+  - robot-platform
+  - gpu-accelerated
+  - ros2
+  - nvidia
+  parents:
+  - name: ROS 2
+    relation: extends
+  description: GPU-accelerated ROS 2 packages for perception, navigation, and manipulation
