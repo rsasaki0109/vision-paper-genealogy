@@ -1,0 +1,111 @@
+name: Image Matching & Feature Detection
+description: >
+  Evolution of image matching methods — from handcrafted features to
+  transformer-based matchers.
+source_awesome_lists:
+  - https://github.com/shamangary/awesome-local-feature-matching
+
+methods:
+  # === Classical Foundations ===
+  - name: "SIFT"
+    paper: "Distinctive Image Features from Scale-Invariant Keypoints"
+    year: 2004
+    tags: [feature-detection, handcrafted, keypoint]
+    parents: []
+    description: "Scale-invariant feature transform — the foundation of local feature matching"
+
+  - name: "ORB"
+    paper: "ORB: An efficient alternative to SIFT or SURF"
+    year: 2011
+    code: "opencv/opencv"
+    tags: [feature-detection, handcrafted, binary-descriptor, real-time]
+    parents:
+      - name: "SIFT"
+        relation: replaces
+    description: "Fast binary descriptor as an efficient alternative to SIFT"
+
+  # === Learned Features ===
+  - name: "SuperPoint"
+    paper: "SuperPoint: Self-Supervised Interest Point Detection and Description"
+    arxiv: "1712.07629"
+    year: 2018
+    code: "magicleap/SuperPointPretrainedNetwork"
+    stars: 2400
+    tags: [feature-detection, learned, self-supervised]
+    parents:
+      - name: "SIFT"
+        relation: replaces
+    description: "Self-supervised CNN for joint keypoint detection and description"
+
+  - name: "D2-Net"
+    paper: "D2-Net: A Trainable CNN for Joint Description and Detection of Local Features"
+    arxiv: "1905.03561"
+    year: 2019
+    code: "mihaidusmanu/d2-net"
+    stars: 800
+    tags: [feature-detection, learned, dense]
+    parents:
+      - name: "SIFT"
+        relation: replaces
+    description: "Dense feature detection and description in a single forward pass"
+
+  # === Matchers ===
+  - name: "SuperGlue"
+    paper: "SuperGlue: Learning Feature Matching with Graph Neural Networks"
+    arxiv: "1911.11763"
+    year: 2020
+    code: "magicleap/SuperGluePretrainedNetwork"
+    stars: 3500
+    tags: [feature-matching, graph-neural-network, attention]
+    parents:
+      - name: "SuperPoint"
+        relation: extends
+    description: "GNN-based feature matcher with attention mechanism"
+
+  - name: "LoFTR"
+    paper: "LoFTR: Detector-Free Local Feature Matching with Transformers"
+    arxiv: "2104.00680"
+    year: 2021
+    code: "zju3dv/LoFTR"
+    stars: 3200
+    tags: [feature-matching, transformer, detector-free]
+    parents:
+      - name: "SuperGlue"
+        relation: replaces
+    description: "Detector-free matching using transformers on dense features"
+
+  - name: "LightGlue"
+    paper: "LightGlue: Local Feature Matching at Light Speed"
+    arxiv: "2306.13643"
+    year: 2023
+    code: "cvg/LightGlue"
+    stars: 3500
+    tags: [feature-matching, lightweight, adaptive]
+    parents:
+      - name: "SuperGlue"
+        relation: extends
+    description: "Lightweight and adaptive feature matcher, much faster than SuperGlue"
+
+  - name: "DUSt3R"
+    paper: "DUSt3R: Geometric 3D Vision Made Easy"
+    arxiv: "2312.14132"
+    year: 2024
+    code: "naver/dust3r"
+    stars: 5500
+    tags: [3d-reconstruction, dense-matching, transformer, end-to-end]
+    parents:
+      - name: "LoFTR"
+        relation: inspires
+    description: "End-to-end dense stereo from uncalibrated image pairs"
+
+  - name: "MASt3R"
+    paper: "Grounding Image Matching in 3D with MASt3R"
+    arxiv: "2406.09756"
+    year: 2024
+    code: "naver/mast3r"
+    stars: 2500
+    tags: [3d-reconstruction, feature-matching, transformer]
+    parents:
+      - name: "DUSt3R"
+        relation: extends
+    description: "Local feature matching grounded in 3D with DUSt3R backbone"

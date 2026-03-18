@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vision-paper-genealogy"
+version = "0.1.0"
+description = "Interactive genealogy tree visualizer for Computer Vision research methods"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "rsasaki0109" },
+]
+keywords = ["computer-vision", "research", "genealogy", "paper", "visualization"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "typer>=0.9.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.4.0",
+]
+web = [
+    "streamlit>=1.30.0",
+    "pyvis>=0.3.0",
+]
+
+[project.scripts]
+vision-paper-genealogy = "vision_paper_genealogy.cli:app"
+
+[tool.ruff]
+line-length = 100

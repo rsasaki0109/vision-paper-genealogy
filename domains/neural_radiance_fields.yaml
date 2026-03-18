@@ -1,0 +1,185 @@
+name: Neural Radiance Fields & 3D Gaussian Splatting
+description: >
+  From NeRF to 3D Gaussian Splatting — the evolution of neural 3D representation
+  and rendering methods.
+source_awesome_lists:
+  - https://github.com/awesome-NeRF/awesome-NeRF
+  - https://github.com/MrNeRF/awesome-3D-Gaussian-Splatting
+
+methods:
+  # === Foundations ===
+  - name: "NeRF"
+    paper: "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"
+    arxiv: "2003.08934"
+    year: 2020
+    code: "bmild/nerf"
+    stars: 9800
+    tags: [neural-rendering, view-synthesis, implicit-representation]
+    parents: []
+    description: "Seminal work on neural radiance fields for novel view synthesis"
+
+  # === Speed / Efficiency ===
+  - name: "Instant-NGP"
+    paper: "Instant Neural Graphics Primitives with a Multiresolution Hash Encoding"
+    arxiv: "2201.05989"
+    year: 2022
+    code: "NVlabs/instant-ngp"
+    stars: 16000
+    tags: [neural-rendering, real-time, hash-encoding]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Multiresolution hash encoding for instant NeRF training"
+
+  - name: "Plenoxels"
+    paper: "Plenoxels: Radiance Fields without Neural Networks"
+    arxiv: "2112.05131"
+    year: 2022
+    code: "sxyu/svox2"
+    stars: 2800
+    tags: [neural-rendering, voxel, no-mlp]
+    parents:
+      - name: "NeRF"
+        relation: replaces
+    description: "Sparse voxel grid optimization without neural networks"
+
+  - name: "TensoRF"
+    paper: "TensoRF: Tensorial Radiance Fields"
+    arxiv: "2203.09517"
+    year: 2022
+    code: "apchenstu/TensoRF"
+    stars: 1900
+    tags: [neural-rendering, tensor-decomposition]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Tensor decomposition for compact radiance field representation"
+
+  # === Quality ===
+  - name: "Mip-NeRF"
+    paper: "Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields"
+    arxiv: "2103.13415"
+    year: 2021
+    code: "google/mipnerf"
+    stars: 1100
+    tags: [neural-rendering, anti-aliasing, multiscale]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Anti-aliased NeRF using integrated positional encoding"
+
+  - name: "Mip-NeRF 360"
+    paper: "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields"
+    arxiv: "2111.12077"
+    year: 2022
+    code: "google-research/multinerf"
+    stars: 1500
+    tags: [neural-rendering, unbounded-scenes, anti-aliasing]
+    parents:
+      - name: "Mip-NeRF"
+        relation: extends
+    description: "Extension to unbounded 360-degree scenes"
+
+  - name: "Zip-NeRF"
+    paper: "Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields"
+    arxiv: "2304.06706"
+    year: 2023
+    code: "jonbarron/camp_zipnerf"
+    stars: 700
+    tags: [neural-rendering, anti-aliasing, grid-based]
+    parents:
+      - name: "Mip-NeRF 360"
+        relation: extends
+      - name: "Instant-NGP"
+        relation: combines
+    description: "Combines Mip-NeRF 360 quality with Instant-NGP speed"
+
+  # === 3D Gaussian Splatting family ===
+  - name: "3D Gaussian Splatting"
+    paper: "3D Gaussian Splatting for Real-Time Radiance Field Rendering"
+    arxiv: "2308.14737"
+    year: 2023
+    code: "graphdeco-inria/gaussian-splatting"
+    stars: 20000
+    tags: [gaussian-splatting, real-time, explicit-representation]
+    parents:
+      - name: "NeRF"
+        relation: replaces
+    description: "Paradigm shift from implicit to explicit 3D Gaussian representation"
+
+  - name: "SuGaR"
+    paper: "SuGaR: Surface-Aligned Gaussian Splatting for Efficient 3D Mesh Reconstruction"
+    arxiv: "2311.12775"
+    year: 2024
+    code: "Anttwo/SuGaR"
+    stars: 2200
+    tags: [gaussian-splatting, mesh-reconstruction, surface]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Extract meshes from 3D Gaussians via surface alignment"
+
+  - name: "2D Gaussian Splatting"
+    paper: "2D Gaussian Splatting for Geometrically Accurate Radiance Fields"
+    arxiv: "2403.17888"
+    year: 2024
+    code: "hbb1/2d-gaussian-splatting"
+    stars: 2000
+    tags: [gaussian-splatting, geometry, surface-reconstruction]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "2D Gaussians for better geometry and surface reconstruction"
+
+  - name: "GaussianEditor"
+    paper: "GaussianEditor: Swift and Controllable 3D Editing with Gaussian Splatting"
+    arxiv: "2311.14521"
+    year: 2024
+    code: "buaacyw/GaussianEditor"
+    stars: 1500
+    tags: [gaussian-splatting, 3d-editing, controllable]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Text-guided 3D scene editing with Gaussian Splatting"
+
+  - name: "Mip-Splatting"
+    paper: "Mip-Splatting: Alias-free 3D Gaussian Splatting"
+    arxiv: "2311.16493"
+    year: 2024
+    code: "autonomousvision/mip-splatting"
+    stars: 1100
+    tags: [gaussian-splatting, anti-aliasing]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+      - name: "Mip-NeRF"
+        relation: inspires
+    description: "Anti-aliasing techniques applied to 3D Gaussian Splatting"
+
+  # === Generation ===
+  - name: "DreamFusion"
+    paper: "DreamFusion: Text-to-3D using 2D Diffusion"
+    arxiv: "2209.14988"
+    year: 2022
+    code: "ashawkey/stable-dreamfusion"
+    stars: 8200
+    tags: [text-to-3d, diffusion, sds]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Text-to-3D generation using score distillation sampling"
+
+  - name: "DreamGaussian"
+    paper: "DreamGaussian: Generative Gaussian Splatting for Efficient 3D Content Creation"
+    arxiv: "2309.16653"
+    year: 2023
+    code: "dreamgaussian/dreamgaussian"
+    stars: 4200
+    tags: [text-to-3d, gaussian-splatting, generation]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+      - name: "DreamFusion"
+        relation: extends
+    description: "Fast 3D generation combining Gaussians with score distillation"
