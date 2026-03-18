@@ -692,3 +692,117 @@ methods:
   - name: LOAM
     relation: inspires
   description: Low-cost LiDAR-assisted visual SLAM using Livox LiDAR
+# === koide3 OSS & Related ===
+- name: "ndt_omp"
+  paper: "Multi-threaded NDT"
+  year: 2017
+  code: "koide3/ndt_omp"
+  stars: 832
+  tags: [ndt, multi-threaded, sse, registration, library]
+  parents:
+    - name: "NDT"
+      relation: extends
+  description: "Multi-threaded and SSE-friendly NDT algorithm, widely used as registration backend"
+
+- name: "small_gicp"
+  paper: "small_gicp: Efficient and parallel algorithms for point cloud registration"
+  year: 2024
+  code: "koide3/small_gicp"
+  stars: 884
+  tags: [gicp, registration, parallel, header-only, library]
+  parents:
+    - name: "GICP"
+      relation: extends
+    - name: "ndt_omp"
+      relation: inspires
+  description: "Header-only C++ library for efficient parallel GICP/VGICP point cloud registration"
+
+- name: "hdl_localization"
+  paper: "A Portable 3D LIDAR-based System for Long-term and Wide-area People Behavior Measurement"
+  year: 2019
+  code: "koide3/hdl_localization"
+  stars: 969
+  tags: [localization, ndt, ukf, lidar, ros]
+  parents:
+    - name: "ndt_omp"
+      relation: extends
+  description: "Real-time 3D LiDAR localization using NDT with UKF-based pose tracking"
+
+- name: "interactive_slam"
+  paper: "Interactive SLAM"
+  year: 2021
+  code: "koide3/interactive_slam"
+  stars: 940
+  tags: [slam, graph-slam, interactive, map-correction, gui]
+  parents:
+    - name: "hdl_graph_slam"
+      relation: extends
+  description: "Interactive map correction tool for 3D graph SLAM with GUI-based loop closure and editing"
+
+- name: "direct_visual_lidar_calibration"
+  paper: "General, Single-shot, Target-less, and Automatic LiDAR-Camera Extrinsic Calibration Toolbox"
+  year: 2023
+  code: "koide3/direct_visual_lidar_calibration"
+  stars: 1347
+  tags: [calibration, lidar-camera, targetless, automatic, ros]
+  parents: []
+  description: "Target-less LiDAR-camera extrinsic calibration toolbox via direct alignment"
+
+- name: "hdl_people_tracking"
+  year: 2019
+  code: "koide3/hdl_people_tracking"
+  stars: 319
+  tags: [people-tracking, lidar, real-time, detection]
+  parents:
+    - name: "hdl_graph_slam"
+      relation: inspires
+  description: "Real-time people tracking using 3D LiDAR point clouds"
+
+  # === Related Registration & Calibration Methods ===
+- name: "VGICP"
+  paper: "Voxelized GICP for Fast and Accurate 3D Point Cloud Registration"
+  arxiv: "2103.02466"
+  year: 2021
+  code: "SMRT-AIST/fast_gicp"
+  stars: 1200
+  tags: [registration, voxelized, gicp, gpu, fast]
+  parents:
+    - name: "GICP"
+      relation: extends
+  description: "Voxelized GICP enabling fast GPU-accelerated point cloud registration"
+
+- name: "Quatro"
+  paper: "A Robust Global Registration for LiDAR Point Clouds"
+  arxiv: "2210.05508"
+  year: 2022
+  code: "url-kaist/Quatro"
+  stars: 600
+  tags: [registration, global, robust, outlier-rejection]
+  parents:
+    - name: "GICP"
+      relation: inspires
+  description: "Robust global point cloud registration using quasi-SO(3) estimation"
+
+- name: "TEASER++"
+  paper: "TEASER: Fast and Certifiable Point Cloud Registration"
+  arxiv: "2001.07715"
+  year: 2020
+  code: "MIT-SPARK/TEASER-plusplus"
+  stars: 1600
+  tags: [registration, certifiable, robust, global, outlier-robust]
+  parents:
+    - name: "ICP"
+      relation: inspires
+  description: "Fast and certifiably robust point cloud registration even with extreme outlier ratios"
+
+- name: "GeoTransformer"
+  paper: "Geometric Transformer for Fast and Robust Point Cloud Registration"
+  arxiv: "2202.06688"
+  year: 2022
+  code: "qinzheng93/GeoTransformer"
+  stars: 600
+  tags: [registration, transformer, learning-based, geometric]
+  parents:
+    - name: "TEASER++"
+      relation: inspires
+  description: "Transformer-based point cloud registration with geometric structure encoding"
