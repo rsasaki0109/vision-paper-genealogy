@@ -3,6 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Robotics Technology Genealogy">
+<meta property="og:description" content="Interactive genealogy tree of 800+ Robotics & AI technologies across 28 domains">
+<meta property="og:image" content="https://rsasaki0109.github.io/robotics-technology-genealogy/screenshot.png">
+<meta property="og:url" content="https://rsasaki0109.github.io/robotics-technology-genealogy/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Robotics Technology Genealogy">
+<meta name="twitter:description" content="Interactive genealogy tree of 800+ Robotics & AI technologies across 28 domains">
+<meta name="twitter:image" content="https://rsasaki0109.github.io/robotics-technology-genealogy/screenshot.png">
 <title>Robotics Technology Genealogy</title>
 <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 <style>
@@ -78,6 +87,17 @@
   .star-row a { color: #58a6ff; text-decoration: none; }
   .star-row a:hover { text-decoration: underline; }
   .star-row .star-count { color: #eab308; white-space: nowrap; }
+  @media (max-width: 768px) {
+    .header { flex-direction: column; align-items: flex-start; padding: 12px 16px; }
+    .header h1 { font-size: 16px; }
+    .controls { flex-wrap: wrap; gap: 8px; }
+    select, #search { font-size: 12px; padding: 6px 8px; width: 100%; }
+    .filter-btn { font-size: 11px; padding: 4px 8px; }
+    #graph { height: calc(100vh - 120px); }
+    .legend { font-size: 11px; padding: 6px 10px; top: auto; bottom: 12px; right: 12px; }
+    #info-panel { font-size: 13px; }
+    #stats-overlay { width: 95%; left: 2.5%; }
+  }
 </style>
 </head>
 <body>

@@ -510,7 +510,7 @@ methods:
   description: Unitree robotics SDK/ROS 2 interface for Go2, B2, H1 robots
 - name: NVIDIA Isaac ROS
   year: 2023
-  code: NVIDIA-ISAAC-ROS
+  code: NVIDIA-ISAAC-ROS/isaac_ros_common
   open_source: partial
   license: Apache-2.0 (GPU libs proprietary)
   tags:

@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "robotics-technology-genealogy"
-version = "0.1.0"
-description = "Interactive genealogy tree visualizer for Robotics & AI research methods"
+version = "0.2.0"
+description = "Interactive genealogy tree of 800+ Robotics & AI technologies across 28 domains"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
@@ -25,6 +25,12 @@ dependencies = [
     "rich>=13.0.0",
 ]
 
+[project.urls]
+Homepage = "https://rsasaki0109.github.io/robotics-technology-genealogy/"
+Repository = "https://github.com/rsasaki0109/robotics-technology-genealogy"
+Documentation = "https://github.com/rsasaki0109/robotics-technology-genealogy#readme"
+Demo = "https://rsasaki0109.github.io/robotics-technology-genealogy/"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0",
@@ -37,6 +43,9 @@ web = [
 
 [project.scripts]
 robotics-technology-genealogy = "robotics_technology_genealogy.cli:app"
+
+[tool.pytest.ini_options]
+addopts = "-p no:launch_testing -p no:launch_testing_ros2 -p no:ament_copyright -p no:ament_flake8 -p no:ament_pep257 -p no:ament_xmllint -p no:ament_lint"
 
 [tool.ruff]
 line-length = 100
