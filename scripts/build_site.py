@@ -57,6 +57,7 @@ CATEGORY_MAP = {
         "Large Language Models",
         "Vision-Language Models",
         "Diffusion Models",
+            "Vision Backbone & Foundation",
     ],
     "Platforms & Simulation": [
         "Robot Simulation",

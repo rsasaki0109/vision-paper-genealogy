@@ -1,0 +1,258 @@
+name: Vision Backbone & Foundation
+description: >
+  Evolution of vision backbone architectures — from AlexNet to Vision Transformers
+  and self-supervised foundation models that power modern CV systems.
+source_awesome_lists: []
+
+methods:
+# === CNN Era ===
+- name: AlexNet
+  paper: "ImageNet Classification with Deep Convolutional Neural Networks"
+  year: 2012
+  tags: [cnn, classification, imagenet, gpu]
+  parents: []
+  description: "First deep CNN to win ImageNet, sparking the deep learning revolution"
+
+- name: VGGNet
+  paper: "Very Deep Convolutional Networks for Large-Scale Image Recognition"
+  arxiv: "1409.1556"
+  year: 2014
+  tags: [cnn, classification, deep, simple-architecture]
+  parents:
+  - name: AlexNet
+    relation: extends
+  description: "Demonstrated that depth (16-19 layers) with small 3x3 filters improves accuracy"
+
+- name: GoogLeNet / Inception
+  paper: "Going Deeper with Convolutions"
+  arxiv: "1409.4842"
+  year: 2014
+  tags: [cnn, classification, inception-module, efficient]
+  parents:
+  - name: AlexNet
+    relation: extends
+  description: "Inception modules with multi-scale parallel convolutions for efficient deep networks"
+
+- name: ResNet
+  paper: "Deep Residual Learning for Image Recognition"
+  arxiv: "1512.03385"
+  year: 2015
+  code: "pytorch/vision"
+  stars: 16000
+  tags: [cnn, classification, residual-connection, foundation]
+  parents:
+  - name: VGGNet
+    relation: extends
+  description: "Skip connections enabling training of 100+ layer networks, backbone for most CV tasks"
+
+- name: ResNeXt
+  paper: "Aggregated Residual Transformations for Deep Neural Networks"
+  arxiv: "1611.05431"
+  year: 2017
+  tags: [cnn, classification, grouped-convolution]
+  parents:
+  - name: ResNet
+    relation: extends
+  description: "Grouped convolutions with cardinality dimension for improved ResNet performance"
+
+- name: DenseNet
+  paper: "Densely Connected Convolutional Networks"
+  arxiv: "1608.06993"
+  year: 2017
+  tags: [cnn, classification, dense-connection, feature-reuse]
+  parents:
+  - name: ResNet
+    relation: extends
+  description: "Dense connections between all layers for feature reuse and gradient flow"
+
+- name: MobileNet
+  paper: "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"
+  arxiv: "1704.04861"
+  year: 2017
+  tags: [cnn, lightweight, mobile, depthwise-separable]
+  parents:
+  - name: ResNet
+    relation: inspires
+  description: "Depthwise separable convolutions for efficient on-device inference"
+
+- name: MobileNetV2
+  paper: "MobileNetV2: Inverted Residuals and Linear Bottlenecks"
+  arxiv: "1801.04381"
+  year: 2018
+  tags: [cnn, lightweight, mobile, inverted-residual]
+  parents:
+  - name: MobileNet
+    relation: extends
+  description: "Inverted residual blocks with linear bottlenecks for improved mobile efficiency"
+
+- name: EfficientNet
+  paper: "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks"
+  arxiv: "1905.11946"
+  year: 2019
+  code: "google/automl"
+  tags: [cnn, classification, nas, compound-scaling]
+  parents:
+  - name: MobileNetV2
+    relation: extends
+  description: "Compound scaling of depth, width, and resolution via neural architecture search"
+
+- name: ConvNeXt
+  paper: "A ConvNet for the 2020s"
+  arxiv: "2201.03545"
+  year: 2022
+  code: "facebookresearch/ConvNeXt"
+  stars: 5800
+  tags: [cnn, modernized, competitive-with-vit]
+  parents:
+  - name: ResNet
+    relation: extends
+  description: "Modernized ResNet with transformer-inspired design choices matching ViT performance"
+
+- name: ConvNeXt V2
+  paper: "ConvNeXt V2: Co-designing and Scaling ConvNets with Masked Autoencoders"
+  arxiv: "2301.00808"
+  year: 2023
+  code: "facebookresearch/ConvNeXt-V2"
+  stars: 700
+  tags: [cnn, self-supervised, masked-autoencoder]
+  parents:
+  - name: ConvNeXt
+    relation: extends
+  - name: MAE
+    relation: combines
+  description: "ConvNeXt with masked autoencoder self-supervised pretraining"
+
+# === Vision Transformer Era ===
+- name: ViT
+  paper: "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
+  arxiv: "2010.11929"
+  year: 2021
+  code: "google-research/vision_transformer"
+  stars: 10000
+  tags: [transformer, classification, patch-embedding, foundation]
+  parents:
+  - name: ResNet
+    relation: inspires
+  description: "Pure transformer applied to image patches, demonstrating transformers can match CNNs at scale"
+
+- name: DeiT
+  paper: "Training data-efficient image transformers & distillation through attention"
+  arxiv: "2012.12877"
+  year: 2021
+  code: "facebookresearch/deit"
+  stars: 4000
+  tags: [transformer, classification, distillation, data-efficient]
+  parents:
+  - name: ViT
+    relation: extends
+  description: "Data-efficient ViT training with distillation token and strong augmentations"
+
+- name: Swin Transformer
+  paper: "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows"
+  arxiv: "2103.14030"
+  year: 2021
+  code: "microsoft/Swin-Transformer"
+  stars: 14000
+  tags: [transformer, hierarchical, shifted-window, general-purpose]
+  parents:
+  - name: ViT
+    relation: extends
+  description: "Hierarchical vision transformer with shifted window attention for multi-scale features"
+
+- name: Swin Transformer V2
+  paper: "Swin Transformer V2: Scaling Up Capacity and Resolution"
+  arxiv: "2111.09883"
+  year: 2022
+  code: "microsoft/Swin-Transformer"
+  stars: 14000
+  tags: [transformer, hierarchical, large-scale, high-resolution]
+  parents:
+  - name: Swin Transformer
+    relation: extends
+  description: "Scaled Swin with 3B parameters and up to 1536x1536 resolution via log-space attention"
+
+- name: BEiT
+  paper: "BEiT: BERT Pre-Training of Image Transformers"
+  arxiv: "2106.08254"
+  year: 2022
+  code: "microsoft/unilm"
+  tags: [transformer, self-supervised, masked-image-modeling]
+  parents:
+  - name: ViT
+    relation: extends
+  description: "BERT-style masked image modeling pretraining for vision transformers"
+
+# === Self-Supervised & Foundation ===
+- name: MAE
+  paper: "Masked Autoencoders Are Scalable Vision Learners"
+  arxiv: "2111.06377"
+  year: 2022
+  code: "facebookresearch/mae"
+  stars: 7000
+  tags: [self-supervised, masked-autoencoder, pretraining, foundation]
+  parents:
+  - name: ViT
+    relation: extends
+  - name: BEiT
+    relation: inspires
+  description: "Simple masked autoencoder that learns rich visual representations by reconstructing masked patches"
+
+- name: DINO
+  paper: "Emerging Properties in Self-Supervised Vision Transformers"
+  arxiv: "2104.14294"
+  year: 2021
+  code: "facebookresearch/dino"
+  stars: 6500
+  tags: [self-supervised, self-distillation, emerging-properties]
+  parents:
+  - name: ViT
+    relation: extends
+  description: "Self-distillation with no labels produces ViTs with emergent segmentation properties"
+
+- name: DINOv2
+  paper: "DINOv2: Learning Robust Visual Features without Supervision"
+  arxiv: "2304.07193"
+  year: 2023
+  code: "facebookresearch/dinov2"
+  stars: 9500
+  tags: [self-supervised, foundation, universal-features, large-scale]
+  parents:
+  - name: DINO
+    relation: extends
+  - name: MAE
+    relation: combines
+  description: "Universal visual features trained at scale, widely used as frozen backbone for robotics and CV"
+
+- name: EVA-CLIP
+  paper: "EVA-CLIP: Improved Training Techniques for CLIP at Scale"
+  arxiv: "2303.15389"
+  year: 2023
+  code: "baaivision/EVA"
+  stars: 2000
+  tags: [contrastive, clip, large-scale, foundation]
+  parents:
+  - name: DINOv2
+    relation: inspires
+  description: "Improved CLIP training leveraging EVA vision encoder for stronger multimodal alignment"
+
+- name: SigLIP
+  paper: "Sigmoid Loss for Language Image Pre-Training"
+  arxiv: "2303.15343"
+  year: 2023
+  tags: [contrastive, sigmoid-loss, efficient, foundation]
+  parents:
+  - name: ViT
+    relation: extends
+  description: "Sigmoid contrastive loss replacing softmax for simpler and more scalable CLIP-style training"
+
+- name: InternImage
+  paper: "InternImage: Exploring Large-Scale Vision Foundation Models with Deformable Convolutions v3"
+  arxiv: "2211.05778"
+  year: 2023
+  code: "OpenGVLab/InternImage"
+  stars: 2800
+  tags: [cnn, deformable-convolution, large-scale, foundation]
+  parents:
+  - name: ConvNeXt
+    relation: extends
+  description: "Large-scale CNN foundation model using deformable convolutions competing with ViT"
