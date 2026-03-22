@@ -255,7 +255,7 @@ methods:
     relation: inspires
   description: Simple masked autoencoder that learns rich visual representations by
     reconstructing masked patches
-- name: DINO
+- name: DINO (Self-Supervised)
   paper: Emerging Properties in Self-Supervised Vision Transformers
   arxiv: '2104.14294'
   year: 2021
@@ -282,7 +282,7 @@ methods:
   - universal-features
   - large-scale
   parents:
-  - name: DINO
+  - name: DINO (Self-Supervised)
     relation: extends
   - name: MAE
     relation: combines

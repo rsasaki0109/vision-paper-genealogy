@@ -375,7 +375,7 @@ methods:
     relation: extends
   description: Dynamic anchor box queries provide better positional priors for transformer
     detection
-- name: DINO
+- name: DINO (Detection)
   paper: 'DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection'
   arxiv: '2203.03605'
   year: 2023
@@ -405,7 +405,7 @@ methods:
   - collaborative
   - encoder-enhancement
   parents:
-  - name: DINO
+  - name: DINO (Detection)
     relation: extends
   - name: Deformable DETR
     relation: extends
@@ -423,7 +423,7 @@ methods:
   - efficient
   - hybrid-encoder
   parents:
-  - name: DINO
+  - name: DINO (Detection)
     relation: inspires
   - name: DETR
     relation: extends
@@ -475,7 +475,7 @@ methods:
   - vision-language
   - foundation
   parents:
-  - name: DINO
+  - name: DINO (Detection)
     relation: extends
   description: Fuses language and vision features for open-set detection with text-guided
     queries
