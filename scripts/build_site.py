@@ -246,15 +246,21 @@ def build_site_data(domains: list[Domain]) -> dict:
     recent.sort(key=lambda m: m.stars or 0, reverse=True)
     hot_2025 = []
     seen_names: set[str] = set()
+    domain_count: dict[str, int] = {}
+    MAX_PER_DOMAIN = 2
     for m in recent:
         if m.name in seen_names:
             continue
+        domain_name = next((d.name for d in domains if m in d.methods), "")
+        if domain_count.get(domain_name, 0) >= MAX_PER_DOMAIN:
+            continue
         seen_names.add(m.name)
+        domain_count[domain_name] = domain_count.get(domain_name, 0) + 1
         hot_2025.append({
             "name": m.name,
             "year": m.year,
             "stars": m.stars or 0,
-            "domain": next((d.name for d in domains if m in d.methods), ""),
+            "domain": domain_name,
             "code": m.code or "",
             "arxiv": m.arxiv or "",
         })
