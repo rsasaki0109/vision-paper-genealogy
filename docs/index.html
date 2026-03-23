@@ -30,13 +30,21 @@
   .filter-btn.active { color: #fff; border-color: #22c55e; background: #1a2e1a; }
   .filter-btn:hover { border-color: #666; }
   .stats { color: #888; font-size: 13px; white-space: nowrap; }
-  .ticker {
-    background: linear-gradient(90deg, #1a1d23 0%, #0e1117 50%, #1a1d23 100%);
-    padding: 8px 24px; text-align: center; font-size: 14px; color: #eab308;
-    border-bottom: 1px solid #333; overflow: hidden; white-space: nowrap;
-    animation: ticker-fade 8s ease-in-out infinite;
+  #stories {
+    display: flex; gap: 0; border-bottom: 1px solid #333; overflow-x: auto;
+    scrollbar-width: none;
   }
-  @keyframes ticker-fade { 0%,100% { opacity: 0.3; } 15%,85% { opacity: 1; } }
+  #stories::-webkit-scrollbar { display: none; }
+  .story-card {
+    flex: 1; min-width: 180px; padding: 12px 16px; cursor: pointer;
+    display: flex; gap: 10px; align-items: center;
+    border-right: 1px solid #222; transition: background 0.2s;
+  }
+  .story-card:hover { background: #1a2e1a; }
+  .story-card:last-child { border-right: none; }
+  .story-icon { font-size: 24px; flex-shrink: 0; }
+  .story-text { font-size: 12px; line-height: 1.4; color: #aaa; }
+  .story-text b { color: #fff; font-size: 13px; }
   .next-link { color: #22c55e; cursor: pointer; text-decoration: underline; }
   .next-link:hover { color: #4ade80; }
   #domain-banner {
@@ -119,6 +127,9 @@
   .star-row a:hover { text-decoration: underline; }
   .star-row .star-count { color: #eab308; white-space: nowrap; }
   @media (max-width: 768px) {
+    .story-card { min-width: 160px; padding: 8px 12px; }
+    .story-icon { font-size: 18px; }
+    .story-text { font-size: 11px; }
     .header { flex-direction: column; align-items: flex-start; padding: 12px 16px; }
     .header h1 { font-size: 16px; }
     .controls { flex-wrap: wrap; gap: 8px; }
@@ -133,11 +144,31 @@
 </head>
 <body>
 
-<div id="ticker" class="ticker"><span id="ticker-text"></span></div>
+<div id="stories">
+  <div class="story-card" onclick="jumpToStory('Neural Radiance Fields & 3D Gaussian Splatting','NeRF')">
+    <div class="story-icon">🔥</div>
+    <div class="story-text"><b>NeRF → 3DGS</b><br>2 years, 22 descendants — the paradigm shift in 3D</div>
+  </div>
+  <div class="story-card" onclick="jumpToStory('Image Matching & Feature Detection','SIFT')">
+    <div class="story-icon">🔗</div>
+    <div class="story-text"><b>SIFT → DUSt3R → VGGT</b><br>20 years of image matching evolution</div>
+  </div>
+  <div class="story-card" onclick="jumpToStory('Robot Control','PID')">
+    <div class="story-icon">🤖</div>
+    <div class="story-text"><b>PID (1922) → Diffusion Policy</b><br>100 years of robot control</div>
+  </div>
+  <div class="story-card" onclick="jumpToStory('LiDAR Odometry & SLAM','ICP')">
+    <div class="story-icon">📡</div>
+    <div class="story-text"><b>ICP → LOAM → KISS-ICP</b><br>30 years of LiDAR SLAM</div>
+  </div>
+  <div class="story-card" onclick="jumpToStory('Large Language Models','Transformer')">
+    <div class="story-icon">🧠</div>
+    <div class="story-text"><b>Transformer → GPT-4 / DeepSeek</b><br>The LLM explosion from 2017</div>
+  </div>
+</div>
 
 <div class="header">
   <h1>Robotics Technology Genealogy</h1>
-  <span style="color:#888; font-size:12px">Explore how 800+ technologies evolved. Click nodes for details.</span>
   <div class="controls">
     <select id="category"></select>
     <select id="domain"></select>
@@ -370,16 +401,25 @@ function toggleFilter(key, btnId) {
   if (currentGraphData) renderGraph(currentGraphData, false);
 }
 
-let tickerIdx = 0;
-function startTicker() {
-  if (!DATA.facts || !DATA.facts.length) return;
-  const el = document.getElementById("ticker-text");
-  function update() {
-    el.textContent = DATA.facts[tickerIdx % DATA.facts.length];
-    tickerIdx++;
+function jumpToStory(domainName, methodName) {
+  // Find category
+  for (const [catName, catData] of Object.entries(DATA.categories)) {
+    if (catData.domain_names.includes(domainName)) {
+      document.getElementById("category").value = catName;
+      populateDomains(catName);
+      document.getElementById("domain").value = domainName;
+      renderGraph(DATA.domains[domainName].graph);
+      showBanner(domainName);
+      // Focus on the method
+      setTimeout(() => {
+        if (network) {
+          network.selectNodes([methodName]);
+          network.focus(methodName, { scale: 1.0, animation: { duration: 600 } });
+        }
+      }, 400);
+      break;
+    }
   }
-  update();
-  setInterval(update, 8000);
 }
 
 function buildSearchIndex() {
@@ -638,7 +678,6 @@ fetch("data.json")
     searchInput.addEventListener("change", (e) => { searchMethod(e.target.value); e.target.value = ""; });
     searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") { searchMethod(e.target.value); e.target.value = ""; } });
     buildSearchIndex();
-    startTicker();
     renderHotPanel();
     onCategoryChange();
   });
