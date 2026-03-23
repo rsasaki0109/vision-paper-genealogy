@@ -230,7 +230,9 @@ def build_site_data(domains: list[Domain]) -> dict:
     oss_count = sum(1 for m in all_methods if m.inferred_open_source.value == "open")
     facts.append(f"Open source ratio: {oss_count}/{total} ({100*oss_count//total}%) methods have public code")
 
-    facts.append(f"{len(domains)} domains: from LiDAR SLAM to LLMs, from surgical robots to diffusion models")
+    # Count methods with children (influential)
+    methods_with_children = sum(1 for v in child_count.values() if v >= 3)
+    facts.append(f"{methods_with_children} methods spawned 3+ descendants — click any ⭐ node to start exploring")
 
     # Domain-specific highlights
     for d in domains:
@@ -417,7 +419,7 @@ INDEX_HTML = """\
     <select id="domain"></select>
     <input type="text" id="search" placeholder="Try: NeRF, SLAM, GPT-4, YOLO..." autocomplete="off" list="search-list">
     <datalist id="search-list"></datalist>
-    <button class="filter-btn" id="btn-play" title="Watch technologies emerge year by year">&#9654; Play Timeline</button>
+    <button class="filter-btn" id="btn-play" title="Watch technologies emerge year by year">&#9654; 1992→2026</button>
     <button class="filter-btn" id="btn-hot" title="Top trending methods in 2024-2025">&#128293; Hot</button>
     <button class="filter-btn" id="btn-oss" title="Show only open source methods">OSS Only</button>
     <button class="filter-btn" id="btn-stats" title="Show statistics">Stats</button>
