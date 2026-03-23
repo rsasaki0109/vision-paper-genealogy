@@ -104,7 +104,7 @@ methods:
 - name: Learning to Walk in Minutes
   paper: Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning
   arxiv: '2109.11978'
-  year: 2022
+  year: 2021
   code: leggedrobotics/rsl_rl
   stars: 2386
   tags:

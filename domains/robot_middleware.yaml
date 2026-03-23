@@ -33,7 +33,7 @@ methods:
   description: Zero-overhead pub/sub protocol for edge-to-cloud robotics with minimal
     footprint
 - name: MCAP
-  year: 2022
+  year: 2021
   code: foxglove/mcap
   stars: 876
   tags:
@@ -91,7 +91,7 @@ methods:
     package ecosystem
 - name: ROS 2
   paper: 'Robot Operating System 2: Design, architecture, and uses in the wild'
-  year: 2022
+  year: 2017
   code: ros2/ros2
   stars: 5235
   tags:
