@@ -47,8 +47,8 @@ methods:
   paper: Deep Residual Learning for Image Recognition
   arxiv: '1512.03385'
   year: 2015
-  code: pytorch/vision
-  stars: 17584
+  code: null
+  stars: null
   tags:
   - cnn
   - classification
@@ -117,7 +117,7 @@ methods:
   paper: 'EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks'
   arxiv: '1905.11946'
   year: 2019
-  code: google/automl
+  code: null
   tags:
   - cnn
   - classification
@@ -128,7 +128,7 @@ methods:
     relation: extends
   description: Compound scaling of depth, width, and resolution via neural architecture
     search
-  stars: 6462
+  stars: null
 - name: ConvNeXt
   paper: A ConvNet for the 2020s
   arxiv: '2201.03545'
@@ -227,7 +227,7 @@ methods:
   paper: 'BEiT: BERT Pre-Training of Image Transformers'
   arxiv: '2106.08254'
   year: 2022
-  code: microsoft/unilm
+  code: null
   tags:
   - transformer
   - self-supervised
@@ -236,7 +236,7 @@ methods:
   - name: ViT
     relation: extends
   description: BERT-style masked image modeling pretraining for vision transformers
-  stars: 22061
+  stars: null
 - name: MAE
   paper: Masked Autoencoders Are Scalable Vision Learners
   arxiv: '2111.06377'

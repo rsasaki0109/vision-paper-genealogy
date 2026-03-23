@@ -256,8 +256,8 @@ methods:
   paper: What matters when building vision-language models?
   arxiv: '2405.02246'
   year: 2024
-  code: huggingface/transformers
-  stars: 158284
+  code: null
+  stars: null
   open_source: open
   license: Apache-2.0
   tags:

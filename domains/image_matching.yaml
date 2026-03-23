@@ -19,7 +19,7 @@ methods:
 - name: ORB
   paper: 'ORB: An efficient alternative to SIFT or SURF'
   year: 2011
-  code: opencv/opencv
+  code: null
   tags:
   - feature-detection
   - handcrafted
@@ -29,7 +29,7 @@ methods:
   - name: SIFT
     relation: extends
   description: Fast binary descriptor as an efficient alternative to SIFT
-  stars: 86741
+  stars: null
 - name: SuperPoint
   paper: 'SuperPoint: Self-Supervised Interest Point Detection and Description'
   arxiv: '1712.07629'

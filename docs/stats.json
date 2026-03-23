@@ -286,19 +286,13 @@
     }
   ],
   "oss_breakdown": {
-    "open": 575,
+    "open": 570,
     "research": 1,
     "partial": 6,
     "closed": 69,
-    "unknown": 165
+    "unknown": 170
   },
   "top_by_stars": [
-    {
-      "name": "Idefics2",
-      "stars": 158284,
-      "code": "huggingface/transformers",
-      "year": 2024
-    },
     {
       "name": "DeepSeek-V3",
       "stars": 102319,
@@ -310,12 +304,6 @@
       "stars": 91980,
       "code": "deepseek-ai/DeepSeek-R1",
       "year": 2025
-    },
-    {
-      "name": "ORB",
-      "stars": 86741,
-      "code": "opencv/opencv",
-      "year": 2011
     },
     {
       "name": "OpenPilot",
@@ -412,6 +400,18 @@
       "stars": 32910,
       "code": "openai/CLIP",
       "year": 2021
+    },
+    {
+      "name": "LLaMA 3",
+      "stars": 29291,
+      "code": "meta-llama/llama3",
+      "year": 2024
+    },
+    {
+      "name": "Genesis",
+      "stars": 28319,
+      "code": "Genesis-Embodied-AI/Genesis",
+      "year": 2024
     }
   ]
 }

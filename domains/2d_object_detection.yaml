@@ -215,8 +215,8 @@ methods:
   paper: 'EfficientDet: Scalable and Efficient Object Detection'
   arxiv: '1911.09070'
   year: 2020
-  code: google/automl
-  stars: 6462
+  code: null
+  stars: null
   tags:
   - single-stage
   - efficient
