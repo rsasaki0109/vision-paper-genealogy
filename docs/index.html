@@ -30,6 +30,23 @@
   .filter-btn.active { color: #fff; border-color: #22c55e; background: #1a2e1a; }
   .filter-btn:hover { border-color: #666; }
   .stats { color: #888; font-size: 13px; white-space: nowrap; }
+  .next-link { color: #22c55e; cursor: pointer; text-decoration: underline; }
+  .next-link:hover { color: #4ade80; }
+  #domain-banner {
+    display: none; padding: 10px 24px; background: #161b22; border-bottom: 1px solid #333;
+    font-size: 13px; color: #aaa; gap: 24px; align-items: center; flex-wrap: wrap;
+  }
+  #domain-banner.visible { display: flex; }
+  #domain-banner .desc { flex: 1; min-width: 200px; color: #ccc; }
+  #domain-banner .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  #domain-banner .chip {
+    background: #1a1d23; border: 1px solid #444; border-radius: 12px;
+    padding: 3px 10px; font-size: 12px; white-space: nowrap;
+  }
+  #domain-banner .chip b { color: #fff; }
+  #domain-banner .chip.star { border-color: #eab308; color: #eab308; }
+  #domain-banner .chip.latest { border-color: #22c55e; color: #22c55e; }
+  #domain-banner .chip.oss { border-color: #3b82f6; color: #3b82f6; }
   #graph { width: 100%; height: calc(100vh - 70px); }
   #info-panel {
     display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000;
@@ -118,6 +135,11 @@
   <a href="https://github.com/rsasaki0109/robotics-technology-genealogy" target="_blank">GitHub</a>
 </div>
 
+<div id="domain-banner">
+  <div class="desc" id="banner-desc"></div>
+  <div class="chips" id="banner-chips"></div>
+</div>
+
 <div id="graph"></div>
 
 <div id="info-panel">
@@ -129,6 +151,7 @@
     <div class="info-links" id="info-links"></div>
     <div class="info-meta" id="info-meta"></div>
     <div id="info-tags" style="margin-top:6px"></div>
+    <div id="info-next" style="margin-top:8px; display:none; color:#22c55e; font-size:13px"></div>
   </div>
 </div>
 
@@ -274,7 +297,40 @@ function showInfoPanel(nodeData) {
     });
   }
 
+  // "Read next" - find children (methods that extend this one)
+  const nextEl = document.getElementById("info-next");
+  if (nextEl && currentGraphData) {
+    const children = currentGraphData.edges
+      .filter(e => e.from === nodeData.id)
+      .map(e => {
+        const child = currentGraphData.nodes.find(n => n.id === e.to);
+        return child ? { name: child.id, year: child.year, relation: e.title } : null;
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.year - b.year);
+
+    if (children.length > 0) {
+      nextEl.innerHTML = "<b>Read next:</b> " + children.map(c =>
+        '<span class="next-link" onclick="searchAndFocus('' + c.name.replace(/'/g, "\'") + '')">' +
+        c.name + " [" + c.year + "]</span>"
+      ).join(", ");
+      nextEl.style.display = "block";
+    } else {
+      nextEl.innerHTML = "<b>Leaf node</b> — no known descendants yet";
+      nextEl.style.display = "block";
+    }
+  }
+
   panel.classList.add("visible");
+}
+
+function searchAndFocus(name) {
+  if (network) {
+    network.selectNodes([name]);
+    network.focus(name, { scale: 1.2, animation: { duration: 500 } });
+    const nodeData = currentGraphData.nodes.find(n => n.id === name);
+    if (nodeData) showInfoPanel(nodeData);
+  }
 }
 
 function toggleFilter(key, btnId) {
@@ -340,10 +396,43 @@ function populateDomains(catName) {
   }
 }
 
+function showBanner(domainName) {
+  const banner = document.getElementById("domain-banner");
+  const desc = document.getElementById("banner-desc");
+  const chips = document.getElementById("banner-chips");
+
+  if (!domainName || domainName === "__category__") {
+    banner.classList.remove("visible");
+    document.getElementById("graph").style.height = "calc(100vh - 70px)";
+    return;
+  }
+
+  const d = DATA.domains[domainName];
+  if (!d || !d.highlights) {
+    banner.classList.remove("visible");
+    return;
+  }
+
+  const h = d.highlights;
+  desc.textContent = d.description ? d.description.trim().split("
+")[0] : "";
+
+  chips.innerHTML =
+    '<span class="chip">' + h.year_range + '</span>' +
+    '<span class="chip star"><b>' + h.top_star.name + '</b> ★' + h.top_star.stars.toLocaleString() + '</span>' +
+    '<span class="chip latest"><b>' + h.latest.name + '</b> [' + h.latest.year + '] newest</span>' +
+    '<span class="chip oss">OSS ' + h.oss_ratio + '</span>' +
+    (h.roots.length ? '<span class="chip">Roots: ' + h.roots.join(", ") + '</span>' : '');
+
+  banner.classList.add("visible");
+  document.getElementById("graph").style.height = "calc(100vh - 110px)";
+}
+
 function onCategoryChange() {
   const catName = document.getElementById("category").value;
   populateDomains(catName);
   renderGraph(DATA.categories[catName].graph);
+  showBanner(null);
 }
 
 function onDomainChange() {
@@ -351,8 +440,10 @@ function onDomainChange() {
   const domainName = document.getElementById("domain").value;
   if (domainName === "__category__") {
     renderGraph(DATA.categories[catName].graph);
+    showBanner(null);
   } else {
     renderGraph(DATA.domains[domainName].graph);
+    showBanner(domainName);
   }
 }
 
