@@ -245,7 +245,11 @@ def build_site_data(domains: list[Domain]) -> dict:
     recent = [m for m in all_methods if m.year >= 2024]
     recent.sort(key=lambda m: m.stars or 0, reverse=True)
     hot_2025 = []
-    for m in recent[:15]:
+    seen_names: set[str] = set()
+    for m in recent:
+        if m.name in seen_names:
+            continue
+        seen_names.add(m.name)
         hot_2025.append({
             "name": m.name,
             "year": m.year,
@@ -254,6 +258,8 @@ def build_site_data(domains: list[Domain]) -> dict:
             "code": m.code or "",
             "arxiv": m.arxiv or "",
         })
+        if len(hot_2025) >= 15:
+            break
     site_data["hot_2025"] = hot_2025
 
     return site_data
