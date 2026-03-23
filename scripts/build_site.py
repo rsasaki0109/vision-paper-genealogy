@@ -321,6 +321,14 @@ INDEX_HTML = """\
   .story-icon { font-size: 24px; flex-shrink: 0; }
   .story-text { font-size: 12px; line-height: 1.4; color: #aaa; }
   .story-text b { color: #fff; font-size: 13px; }
+  #guide-toast {
+    position: fixed; bottom: 240px; left: 50%; transform: translateX(-50%);
+    background: #22c55e; color: #000; padding: 10px 20px; border-radius: 8px;
+    font-size: 14px; font-weight: 600; z-index: 10001;
+    opacity: 0; transition: opacity 0.3s; pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  #guide-toast.visible { opacity: 1; }
   .next-link { color: #22c55e; cursor: pointer; text-decoration: underline; }
   .next-link:hover { color: #4ade80; }
   #domain-banner {
@@ -678,7 +686,6 @@ function toggleFilter(key, btnId) {
 }
 
 function jumpToStory(domainName, methodName) {
-  // Find category
   for (const [catName, catData] of Object.entries(DATA.categories)) {
     if (catData.domain_names.includes(domainName)) {
       document.getElementById("category").value = catName;
@@ -686,16 +693,34 @@ function jumpToStory(domainName, methodName) {
       document.getElementById("domain").value = domainName;
       renderGraph(DATA.domains[domainName].graph);
       showBanner(domainName);
-      // Focus on the method
       setTimeout(() => {
         if (network) {
           network.selectNodes([methodName]);
           network.focus(methodName, { scale: 1.0, animation: { duration: 600 } });
+          // Auto-open info panel for the selected node
+          const nodeData = currentGraphData.nodes.find(n => n.id === methodName);
+          if (nodeData) showInfoPanel(nodeData);
+          // Show guide toast
+          showGuide("Click the green \\"Read next\\" links below to follow the genealogy. Or click any node in the graph.");
         }
-      }, 400);
+      }, 500);
       break;
     }
   }
+}
+
+let guideTimer = null;
+function showGuide(text) {
+  let el = document.getElementById("guide-toast");
+  if (!el) {
+    el = document.createElement("div");
+    el.id = "guide-toast";
+    document.body.appendChild(el);
+  }
+  el.textContent = text;
+  el.classList.add("visible");
+  if (guideTimer) clearTimeout(guideTimer);
+  guideTimer = setTimeout(() => el.classList.remove("visible"), 6000);
 }
 
 function buildSearchIndex() {
