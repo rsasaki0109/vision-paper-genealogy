@@ -604,9 +604,11 @@ function showInfoPanel(nodeData) {
       .sort((a, b) => a.year - b.year);
 
     if (children.length > 0) {
-      nextEl.innerHTML = "<b>Read next:</b> " + children.map(c =>
-        '<span class="next-link" onclick="searchAndFocus(\'' + c.name.replace(/'/g, "\\'") + '\')">' +
-        c.name + " [" + c.year + "]</span>"
+      nextEl.innerHTML = "<b>Read next:</b> " + children.map(c => {
+        const safeName = c.name.replace(/"/g, "&quot;");
+        return '<span class="next-link" onclick="searchAndFocus(&quot;' + safeName + '&quot;)">' +
+        c.name + " [" + c.year + "]</span>";
+      }
       ).join(", ");
       nextEl.style.display = "block";
     } else {
@@ -718,7 +720,7 @@ function showBanner(domainName) {
   }
 
   const h = d.highlights;
-  desc.textContent = d.description ? d.description.trim().split("\n")[0] : "";
+  desc.textContent = d.description ? d.description.trim().split("\\n")[0] : "";
 
   chips.innerHTML =
     '<span class="chip">' + h.year_range + '</span>' +
