@@ -21,7 +21,7 @@ methods:
 - name: Zenoh
   year: 2020
   code: eclipse-zenoh/zenoh
-  stars: 2565
+  stars: 2585
   tags:
   - protocol
   - pub-sub
@@ -35,7 +35,7 @@ methods:
 - name: MCAP
   year: 2021
   code: foxglove/mcap
-  stars: 876
+  stars: 887
   tags:
   - data-format
   - recording
@@ -66,7 +66,7 @@ methods:
   paper: 'YARP: Yet Another Robot Platform'
   year: 2006
   code: robotology/yarp
-  stars: 589
+  stars: 588
   tags:
   - middleware
   - humanoid
@@ -78,7 +78,7 @@ methods:
   paper: 'ROS: an open-source Robot Operating System'
   year: 2009
   code: ros/ros
-  stars: 3216
+  stars: 3221
   tags:
   - middleware
   - open-source
@@ -93,7 +93,7 @@ methods:
   paper: 'Robot Operating System 2: Design, architecture, and uses in the wild'
   year: 2017
   code: ros2/ros2
-  stars: 5235
+  stars: 5266
   tags:
   - middleware
   - dds
@@ -111,7 +111,7 @@ methods:
 - name: micro-ROS
   year: 2020
   code: micro-ROS/micro_ros_setup
-  stars: 483
+  stars: 482
   tags:
   - middleware
   - embedded
@@ -125,7 +125,7 @@ methods:
 - name: ROS 2 with Zenoh
   year: 2023
   code: eclipse-zenoh/zenoh-plugin-ros2dds
-  stars: 250
+  stars: 252
   tags:
   - middleware
   - cloud
@@ -152,12 +152,12 @@ methods:
     relation: extends
   description: Distributed coordinate transform library tracking multiple frames over
     time
-  stars: 198
+  stars: 199
 - name: Navigation Stack (ROS)
   paper: 'The Office Marathon: Robust Navigation in an Indoor Office Environment'
   year: 2010
   code: ros-planning/navigation
-  stars: 2621
+  stars: 2624
   tags:
   - framework
   - navigation
@@ -172,7 +172,7 @@ methods:
   paper: MoveIt! An Introduction to Motion Planning
   year: 2014
   code: moveit/moveit
-  stars: 2023
+  stars: 2022
   tags:
   - framework
   - motion-planning
@@ -186,7 +186,7 @@ methods:
 - name: rosbridge
   year: 2012
   code: RobotWebTools/rosbridge_suite
-  stars: 1181
+  stars: 1183
   tags:
   - framework
   - web
@@ -201,7 +201,7 @@ methods:
   paper: 'Nav2: The Navigation Stack for ROS 2'
   year: 2020
   code: ros-navigation/navigation2
-  stars: 4050
+  stars: 4077
   tags:
   - framework
   - navigation
@@ -218,7 +218,7 @@ methods:
 - name: MoveIt 2
   year: 2021
   code: moveit/moveit2
-  stars: 1723
+  stars: 1734
   tags:
   - framework
   - motion-planning
@@ -233,7 +233,7 @@ methods:
 - name: ros2_control
   year: 2021
   code: ros-controls/ros2_control
-  stars: 847
+  stars: 849
   tags:
   - framework
   - control
@@ -247,7 +247,7 @@ methods:
 - name: OpenPilot
   year: 2016
   code: commaai/openpilot
-  stars: 60406
+  stars: 60457
   tags:
   - ad-stack
   - adas
@@ -258,7 +258,7 @@ methods:
 - name: Apollo
   year: 2017
   code: ApolloAuto/apollo
-  stars: 26500
+  stars: 26516
   tags:
   - ad-stack
   - full-stack
@@ -273,7 +273,7 @@ methods:
     Stack'
   year: 2015
   code: autowarefoundation/autoware
-  stars: 11286
+  stars: 11309
   tags:
   - ad-stack
   - full-stack
@@ -288,7 +288,7 @@ methods:
 - name: Autoware.Universe
   year: 2022
   code: autowarefoundation/autoware.universe
-  stars: 1550
+  stars: 1553
   tags:
   - ad-stack
   - full-stack
@@ -355,7 +355,7 @@ methods:
   - name: ROS 2
     relation: extends
   description: ROS 2 recording system with pluggable storage backends (SQLite, MCAP)
-  stars: 402
+  stars: 403
 - name: colcon
   year: 2018
   code: colcon/colcon-core
@@ -368,7 +368,7 @@ methods:
   - name: ROS 2
     relation: extends
   description: Collective construction build tool for ROS 2 workspaces
-  stars: 123
+  stars: 125
 - name: ament
   year: 2017
   tags:
@@ -383,7 +383,7 @@ methods:
 - name: Foxglove
   year: 2021
   code: foxglove/studio
-  stars: 70
+  stars: 73
   tags:
   - tool
   - visualization
@@ -490,7 +490,7 @@ methods:
 - name: Boston Dynamics Spot SDK
   year: 2020
   code: boston-dynamics/spot-sdk
-  stars: 2480
+  stars: 2481
   open_source: partial
   license: Commercial (SDK open)
   tags:
@@ -515,7 +515,7 @@ methods:
   - name: ROS 2
     relation: extends
   description: Unitree robotics SDK/ROS 2 interface for Go2, B2, H1 robots
-  stars: 625
+  stars: 636
 - name: NVIDIA Isaac ROS
   year: 2023
   code: NVIDIA-ISAAC-ROS/isaac_ros_common
@@ -530,4 +530,4 @@ methods:
   - name: ROS 2
     relation: extends
   description: GPU-accelerated ROS 2 packages for perception, navigation, and manipulation
-  stars: 294
+  stars: 296

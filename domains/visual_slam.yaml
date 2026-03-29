@@ -42,7 +42,7 @@ methods:
   arxiv: '1502.00956'
   year: 2015
   code: raulmur/ORB_SLAM2
-  stars: 10131
+  stars: 10136
   tags:
   - monocular
   - feature-based
@@ -57,7 +57,7 @@ methods:
   arxiv: '1610.06475'
   year: 2017
   code: raulmur/ORB_SLAM2
-  stars: 10131
+  stars: 10136
   tags:
   - monocular
   - stereo
@@ -74,7 +74,7 @@ methods:
   arxiv: '2007.11898'
   year: 2021
   code: UZ-SLAMLab/ORB_SLAM3
-  stars: 8411
+  stars: 8441
   tags:
   - monocular
   - stereo
@@ -94,7 +94,7 @@ methods:
   arxiv: '1910.01122'
   year: 2019
   code: stella-cv/stella_vslam
-  stars: 1168
+  stars: 1173
   tags:
   - monocular
   - stereo
@@ -111,7 +111,7 @@ methods:
   arxiv: '1407.4760'
   year: 2014
   code: tum-vision/lsd_slam
-  stars: 2707
+  stars: 2710
   tags:
   - monocular
   - direct
@@ -145,7 +145,7 @@ methods:
   arxiv: '1607.02565'
   year: 2017
   code: JakobEngel/dso
-  stars: 2436
+  stars: 2438
   tags:
   - monocular
   - direct
@@ -162,7 +162,7 @@ methods:
   arxiv: '1708.03852'
   year: 2018
   code: HKUST-Aerial-Robotics/VINS-Mono
-  stars: 5812
+  stars: 5824
   tags:
   - monocular
   - visual-inertial
@@ -178,7 +178,7 @@ methods:
   arxiv: ''
   year: 2019
   code: HKUST-Aerial-Robotics/VINS-Fusion
-  stars: 4438
+  stars: 4454
   tags:
   - stereo
   - visual-inertial
@@ -195,7 +195,7 @@ methods:
   arxiv: '1910.02490'
   year: 2020
   code: MIT-SPARK/Kimera
-  stars: 2047
+  stars: 2050
   tags:
   - metric-semantic
   - mesh
@@ -213,7 +213,7 @@ methods:
   arxiv: '1906.02985'
   year: 2019
   code: introlab/rtabmap
-  stars: 3686
+  stars: 3697
   tags:
   - rgbd
   - lidar
@@ -231,7 +231,7 @@ methods:
   arxiv: '2108.10869'
   year: 2021
   code: princeton-vl/DROID-SLAM
-  stars: 2485
+  stars: 2492
   tags:
   - deep-learning
   - end-to-end
@@ -251,7 +251,7 @@ methods:
   arxiv: '2208.04726'
   year: 2023
   code: princeton-vl/DPVO
-  stars: 957
+  stars: 961
   tags:
   - deep-learning
   - visual-odometry
@@ -283,7 +283,7 @@ methods:
   arxiv: '2112.12130'
   year: 2022
   code: cvg/nice-slam
-  stars: 1570
+  stars: 1572
   tags:
   - implicit
   - neural
@@ -318,7 +318,7 @@ methods:
   arxiv: '2304.04278'
   year: 2023
   code: eriksandstroem/Point-SLAM
-  stars: 475
+  stars: 474
   tags:
   - implicit
   - neural
@@ -335,7 +335,7 @@ methods:
   arxiv: '2312.02126'
   year: 2024
   code: spla-tam/SplaTAM
-  stars: 2069
+  stars: 2074
   tags:
   - gaussian-splatting
   - rgbd
@@ -354,7 +354,7 @@ methods:
   arxiv: '2312.06741'
   year: 2024
   code: muskie82/MonoGS
-  stars: 2020
+  stars: 2023
   tags:
   - gaussian-splatting
   - monocular
@@ -373,7 +373,7 @@ methods:
   arxiv: '2311.16728'
   year: 2024
   code: HuajianUP/Photo-SLAM
-  stars: 710
+  stars: 715
   tags:
   - gaussian-splatting
   - photorealistic
@@ -409,7 +409,7 @@ methods:
   arxiv: '2308.14737'
   year: 2023
   code: graphdeco-inria/gaussian-splatting
-  stars: 21099
+  stars: 21173
   tags:
   - gaussian-splatting
   - real-time
@@ -423,7 +423,7 @@ methods:
   arxiv: '2312.14132'
   year: 2024
   code: naver/dust3r
-  stars: 7032
+  stars: 7045
   tags:
   - dense-stereo
   - transformer
@@ -437,7 +437,7 @@ methods:
   arxiv: '2406.09756'
   year: 2024
   code: naver/mast3r
-  stars: 2803
+  stars: 2814
   tags:
   - dense-matching
   - stereo
@@ -452,7 +452,7 @@ methods:
   arxiv: '2409.09479'
   year: 2025
   code: MAC-VO/MAC-VO
-  stars: 882
+  stars: 884
   tags:
   - deep-learning
   - stereo
@@ -471,7 +471,7 @@ methods:
   arxiv: '2412.12392'
   year: 2025
   code: rmurai0610/MASt3R-SLAM
-  stars: 800
+  stars: 2846
   tags:
   - dense-slam
   - transformer
@@ -489,7 +489,7 @@ methods:
   arxiv: '2412.09401'
   year: 2025
   code: PKU-VCL-3DV/SLAM3R
-  stars: 1113
+  stars: 1117
   tags:
   - dense-slam
   - transformer
@@ -526,7 +526,7 @@ methods:
   arxiv: '2410.00486'
   year: 2025
   code: DapengFeng/cartgs
-  stars: 200
+  stars: 76
   tags:
   - gaussian-splatting
   - real-time
@@ -544,7 +544,7 @@ methods:
   arxiv: '2409.19152'
   year: 2025
   code: naver/mast3r
-  stars: 2803
+  stars: 2814
   tags:
   - structure-from-motion
   - dense
@@ -560,7 +560,7 @@ methods:
   arxiv: ''
   year: 2025
   code: UZ-SLAMLab/ORB_SLAM3
-  stars: 8411
+  stars: 8441
   tags:
   - stereo
   - visual-inertial
@@ -589,7 +589,7 @@ methods:
   arxiv: '1511.04463'
   year: 2015
   code: mp3guy/ElasticFusion
-  stars: 1908
+  stars: 1909
   tags:
   - rgbd
   - dense-reconstruction
@@ -635,7 +635,7 @@ methods:
   arxiv: '1403.2286'
   year: 2015
   code: ethz-asl/okvis
-  stars: 1344
+  stars: 1348
   tags:
   - visual-inertial
   - keyframe
@@ -651,7 +651,7 @@ methods:
   arxiv: '1904.06504'
   year: 2019
   code: VladyslavUsenko/basalt-mirror
-  stars: 858
+  stars: 861
   tags:
   - visual-inertial
   - vio
@@ -669,7 +669,7 @@ methods:
   arxiv: '2011.00359'
   year: 2021
   code: castacks/tartanvo
-  stars: 276
+  stars: 277
   tags:
   - deep-learning
   - visual-odometry

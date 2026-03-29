@@ -54,7 +54,7 @@ methods:
   arxiv: '2103.01486'
   year: 2021
   code: QVPR/Patch-NetVLAD
-  stars: 585
+  stars: 587
   tags:
   - deep-learning
   - vlad
@@ -70,7 +70,7 @@ methods:
   arxiv: '2204.02287'
   year: 2022
   code: gmberton/CosPlace
-  stars: 384
+  stars: 385
   tags:
   - deep-learning
   - global-descriptor
@@ -100,7 +100,7 @@ methods:
   arxiv: '2303.02190'
   year: 2023
   code: amaralibey/MixVPR
-  stars: 311
+  stars: 312
   tags:
   - deep-learning
   - feature-mixing
@@ -118,7 +118,7 @@ methods:
   arxiv: '2308.00688'
   year: 2024
   code: AnyLoc/AnyLoc
-  stars: 596
+  stars: 599
   tags:
   - deep-learning
   - foundation-model
@@ -135,7 +135,7 @@ methods:
     3D Point Cloud Map'
   year: 2018
   code: gisbi-kim/scancontext
-  stars: 800
+  stars: 97
   tags:
   - lidar
   - handcrafted
@@ -210,7 +210,7 @@ methods:
   arxiv: '2209.12435'
   year: 2023
   code: hku-mars/STD
-  stars: 704
+  stars: 705
   tags:
   - lidar
   - handcrafted
@@ -226,7 +226,7 @@ methods:
   arxiv: '2208.07473'
   year: 2023
   code: YungeCui/BoW3D
-  stars: 312
+  stars: 313
   tags:
   - lidar
   - bag-of-words
@@ -243,7 +243,7 @@ methods:
   arxiv: '2304.07480'
   year: 2023
   code: hku-mars/btc_descriptor
-  stars: 200
+  stars: 317
   tags:
   - lidar
   - binary-descriptor
@@ -293,7 +293,7 @@ methods:
   arxiv: '2502.15691'
   year: 2025
   code: AnyLoc/AnyLoc
-  stars: 250
+  stars: 599
   tags:
   - deep-learning
   - foundation-model
@@ -348,6 +348,7 @@ methods:
     relation: extends
   description: First learned 3D point cloud descriptor for large-scale place recognition
     combining PointNet with VLAD
+  stars: 396
 - name: MinkLoc3D
   paper: 'MinkLoc3D: Point Cloud Based Large-Scale Place Recognition'
   arxiv: '2011.04530'
@@ -386,7 +387,7 @@ methods:
   arxiv: '2310.10023'
   year: 2023
   code: KOKIAOKI/3d_bbs
-  stars: 363
+  stars: 370
   tags:
   - lidar
   - global-localization

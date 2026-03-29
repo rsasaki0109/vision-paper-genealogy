@@ -14,7 +14,7 @@ methods:
   arxiv: ''
   year: 2004
   code: gazebosim/gz-sim
-  stars: 1257
+  stars: 1271
   tags:
   - simulator
   - physics-engine
@@ -30,7 +30,7 @@ methods:
   arxiv: ''
   year: 2012
   code: google-deepmind/mujoco
-  stars: 12453
+  stars: 12601
   tags:
   - physics-engine
   - contact-dynamics
@@ -45,7 +45,7 @@ methods:
   arxiv: '1606.01540'
   year: 2016
   code: Farama-Foundation/Gymnasium
-  stars: 11572
+  stars: 11610
   tags:
   - benchmark
   - api
@@ -62,7 +62,7 @@ methods:
   arxiv: ''
   year: 2016
   code: bulletphysics/bullet3
-  stars: 14331
+  stars: 14348
   tags:
   - physics-engine
   - python
@@ -79,7 +79,7 @@ methods:
   arxiv: '1801.00690'
   year: 2018
   code: google-deepmind/dm_control
-  stars: 4506
+  stars: 4517
   tags:
   - benchmark
   - continuous-control
@@ -97,7 +97,7 @@ methods:
   arxiv: '1712.05474'
   year: 2017
   code: allenai/ai2thor
-  stars: 1695
+  stars: 1698
   tags:
   - embodied-ai
   - indoor
@@ -112,7 +112,7 @@ methods:
   arxiv: '1711.03938'
   year: 2017
   code: carla-simulator/carla
-  stars: 13720
+  stars: 13765
   tags:
   - autonomous-driving
   - urban
@@ -128,7 +128,7 @@ methods:
   arxiv: '1904.01201'
   year: 2019
   code: facebookresearch/habitat-sim
-  stars: 3576
+  stars: 3585
   tags:
   - embodied-ai
   - navigation
@@ -144,7 +144,7 @@ methods:
   arxiv: '2009.12293'
   year: 2020
   code: ARISE-Initiative/robosuite
-  stars: 2295
+  stars: 2312
   tags:
   - manipulation
   - benchmark
@@ -164,7 +164,7 @@ methods:
   arxiv: '1910.10897'
   year: 2020
   code: Farama-Foundation/Metaworld
-  stars: 1772
+  stars: 1776
   tags:
   - meta-learning
   - multi-task
@@ -183,7 +183,7 @@ methods:
   arxiv: '2003.08515'
   year: 2020
   code: haosulab/SAPIEN
-  stars: 739
+  stars: 740
   tags:
   - manipulation
   - articulated-objects
@@ -217,7 +217,7 @@ methods:
   arxiv: '2106.13281'
   year: 2021
   code: google/brax
-  stars: 3101
+  stars: 3105
   tags:
   - differentiable
   - jax
@@ -255,7 +255,7 @@ methods:
   arxiv: '2107.14483'
   year: 2022
   code: haosulab/ManiSkill
-  stars: 2691
+  stars: 2710
   tags:
   - manipulation
   - benchmark
@@ -272,7 +272,7 @@ methods:
   arxiv: '2403.09227'
   year: 2023
   code: StanfordVL/OmniGibson
-  stars: 1379
+  stars: 1390
   tags:
   - embodied-ai
   - benchmark
@@ -310,7 +310,7 @@ methods:
   arxiv: ''
   year: 2024
   code: isaac-sim/IsaacLab
-  stars: 6700
+  stars: 6774
   tags:
   - gpu
   - modular
@@ -328,7 +328,7 @@ methods:
   arxiv: '2410.00425'
   year: 2024
   code: haosulab/ManiSkill
-  stars: 2691
+  stars: 2710
   tags:
   - gpu
   - manipulation
@@ -347,7 +347,7 @@ methods:
   arxiv: '2406.02523'
   year: 2024
   code: robocasa/robocasa
-  stars: 1274
+  stars: 1292
   tags:
   - household
   - manipulation
@@ -366,7 +366,7 @@ methods:
   arxiv: '2409.18964'
   year: 2024
   code: Genesis-Embodied-AI/Genesis
-  stars: 28319
+  stars: 28378
   tags:
   - physics-engine
   - generative
@@ -385,7 +385,7 @@ methods:
   arxiv: ''
   year: 2024
   code: autowarefoundation/AWSIM
-  stars: 43
+  stars: 44
   tags:
   - autonomous-driving
   - autoware
@@ -404,7 +404,7 @@ methods:
   arxiv: ''
   year: 2025
   code: google-deepmind/mujoco
-  stars: 12453
+  stars: 12601
   tags:
   - gpu
   - differentiable
@@ -453,7 +453,7 @@ methods:
 - name: Webots
   year: 2004
   code: cyberbotics/webots
-  stars: 4216
+  stars: 4230
   open_source: open
   license: Apache-2.0
   tags:

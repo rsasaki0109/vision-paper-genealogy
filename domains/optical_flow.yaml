@@ -68,7 +68,7 @@ methods:
   arxiv: '1612.01925'
   year: 2017
   code: NVIDIA/flownet2-pytorch
-  stars: 3276
+  stars: 3278
   tags:
   - deep-learning
   - stacking
@@ -83,7 +83,7 @@ methods:
   arxiv: '1709.02371'
   year: 2018
   code: NVlabs/PWC-Net
-  stars: 1720
+  stars: 1721
   tags:
   - deep-learning
   - cost-volume
@@ -101,7 +101,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 3984
+  stars: 3991
   tags:
   - deep-learning
   - recurrent
@@ -133,7 +133,7 @@ methods:
   arxiv: '2111.13680'
   year: 2022
   code: haofeixu/gmflow
-  stars: 778
+  stars: 780
   tags:
   - deep-learning
   - transformer
@@ -147,7 +147,7 @@ methods:
   arxiv: '2203.16194'
   year: 2022
   code: drinkingcoder/FlowFormer-Official
-  stars: 478
+  stars: 481
   tags:
   - deep-learning
   - transformer
@@ -200,7 +200,7 @@ methods:
   arxiv: '2303.08340'
   year: 2023
   code: XiaoyuShi97/VideoFlow
-  stars: 321
+  stars: 322
   tags:
   - deep-learning
   - multi-frame
@@ -233,7 +233,7 @@ methods:
   arxiv: '2404.04808'
   year: 2024
   code: DQiaole/MemFlow
-  stars: 225
+  stars: 226
   tags:
   - deep-learning
   - memory

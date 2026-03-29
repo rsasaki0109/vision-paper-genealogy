@@ -24,7 +24,7 @@ methods:
   arxiv: '1602.00763'
   year: 2016
   code: abewley/sort
-  stars: 4348
+  stars: 4350
   tags:
   - MOT
   - online
@@ -38,7 +38,7 @@ methods:
   arxiv: '1703.07402'
   year: 2017
   code: nwojke/deep_sort
-  stars: 6101
+  stars: 6103
   tags:
   - MOT
   - online
@@ -54,7 +54,7 @@ methods:
   arxiv: '1812.11703'
   year: 2019
   code: STVIR/pysot
-  stars: 4588
+  stars: 4590
   tags:
   - SOT
   - siamese
@@ -84,7 +84,7 @@ methods:
   arxiv: '2101.02702'
   year: 2022
   code: timmeinhardt/trackformer
-  stars: 627
+  stars: 634
   tags:
   - MOT
   - transformer
@@ -115,7 +115,7 @@ methods:
   arxiv: '2110.06864'
   year: 2022
   code: ifzhang/ByteTrack
-  stars: 6177
+  stars: 6194
   tags:
   - MOT
   - online
@@ -132,7 +132,7 @@ methods:
   arxiv: '2206.14651'
   year: 2022
   code: NirAharon/BoT-SORT
-  stars: 1379
+  stars: 1384
   tags:
   - MOT
   - online
@@ -180,7 +180,7 @@ methods:
   arxiv: '2203.14360'
   year: 2023
   code: noahcao/OC_SORT
-  stars: 1048
+  stars: 1055
   tags:
   - MOT
   - online
@@ -197,7 +197,7 @@ methods:
   arxiv: '2202.13514'
   year: 2023
   code: dyhBUPT/StrongSORT
-  stars: 500
+  stars: 926
   tags:
   - MOT
   - online
@@ -215,7 +215,7 @@ methods:
   arxiv: '2211.09791'
   year: 2023
   code: megvii-research/MOTRv2
-  stars: 475
+  stars: 476
   tags:
   - MOT
   - transformer
@@ -230,7 +230,7 @@ methods:
   arxiv: '2306.08637'
   year: 2023
   code: google-deepmind/tapnet
-  stars: 1820
+  stars: 1826
   tags:
   - point-tracking
   - any-point
@@ -245,7 +245,7 @@ methods:
   arxiv: '2305.06558'
   year: 2023
   code: z-x-yang/Segment-and-Track-Anything
-  stars: 3116
+  stars: 3119
   tags:
   - MOT
   - segmentation
@@ -261,7 +261,7 @@ methods:
   arxiv: '2307.07635'
   year: 2024
   code: facebookresearch/co-tracker
-  stars: 4879
+  stars: 4887
   tags:
   - point-tracking
   - joint-tracking
@@ -292,7 +292,7 @@ methods:
   arxiv: '2410.11831'
   year: 2025
   code: facebookresearch/co-tracker
-  stars: 4879
+  stars: 4887
   tags:
   - point-tracking
   - pseudo-labeling

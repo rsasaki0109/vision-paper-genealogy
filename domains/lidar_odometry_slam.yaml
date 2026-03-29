@@ -33,7 +33,7 @@ methods:
   paper: 'LOAM: Lidar Odometry and Mapping in Real-time'
   year: 2014
   code: laboshinl/loam_velodyne
-  stars: 1750
+  stars: 1751
   tags:
   - lidar-odometry
   - real-time
@@ -48,7 +48,7 @@ methods:
     Variable Terrain'
   year: 2018
   code: RobustFieldAutonomyLab/LeGO-LOAM
-  stars: 2705
+  stars: 2708
   tags:
   - lidar-odometry
   - lightweight
@@ -61,7 +61,7 @@ methods:
   paper: Advanced implementation of LOAM
   year: 2018
   code: HKUST-Aerial-Robotics/A-LOAM
-  stars: 2372
+  stars: 2377
   tags:
   - lidar-odometry
   - ceres-solver
@@ -75,7 +75,7 @@ methods:
   arxiv: '2107.00822'
   year: 2021
   code: wh200720041/floam
-  stars: 1140
+  stars: 1142
   tags:
   - lidar-odometry
   - fast
@@ -131,7 +131,7 @@ methods:
   arxiv: '2007.00258'
   year: 2020
   code: TixiaoShan/LIO-SAM
-  stars: 4631
+  stars: 4644
   tags:
   - lidar-inertial
   - factor-graph
@@ -162,7 +162,7 @@ methods:
   arxiv: '2010.08196'
   year: 2021
   code: hku-mars/FAST_LIO
-  stars: 4446
+  stars: 4483
   tags:
   - lidar-inertial
   - kalman-filter
@@ -177,7 +177,7 @@ methods:
   arxiv: '2107.06829'
   year: 2022
   code: hku-mars/FAST_LIO
-  stars: 4446
+  stars: 4483
   tags:
   - lidar-inertial
   - ikd-tree
@@ -194,7 +194,7 @@ methods:
   arxiv: '2112.11514'
   year: 2022
   code: gaoxiang12/faster-lio
-  stars: 1488
+  stars: 1493
   tags:
   - lidar-inertial
   - voxel
@@ -209,7 +209,7 @@ methods:
   arxiv: '2306.10310'
   year: 2023
   code: hku-mars/Point-LIO
-  stars: 1150
+  stars: 1159
   tags:
   - lidar-inertial
   - point-by-point
@@ -238,7 +238,7 @@ methods:
   arxiv: '2209.15397'
   year: 2023
   code: PRBonn/kiss-icp
-  stars: 2115
+  stars: 2126
   tags:
   - lidar-odometry
   - simple
@@ -267,7 +267,7 @@ methods:
   arxiv: '2110.00605'
   year: 2022
   code: vectr-ucla/direct_lidar_odometry
-  stars: 1023
+  stars: 1024
   tags:
   - lidar-odometry
   - direct
@@ -285,7 +285,7 @@ methods:
   arxiv: '2203.03749'
   year: 2023
   code: vectr-ucla/direct_lidar_inertial_odometry
-  stars: 944
+  stars: 948
   tags:
   - lidar-inertial
   - direct
@@ -301,7 +301,7 @@ methods:
   arxiv: '2010.08215'
   year: 2021
   code: hku-mars/BALM
-  stars: 892
+  stars: 895
   tags:
   - lidar-mapping
   - bundle-adjustment
@@ -330,7 +330,7 @@ methods:
   arxiv: '2310.01235'
   year: 2024
   code: ethz-asl/COIN-LIO
-  stars: 462
+  stars: 463
   tags:
   - lidar-inertial
   - intensity
@@ -362,7 +362,7 @@ methods:
   arxiv: '2405.01316'
   year: 2024
   code: tiev-tongji/LOG-LIO2
-  stars: 189
+  stars: 190
   tags:
   - lidar-inertial
   - uncertainty
@@ -417,7 +417,7 @@ methods:
   arxiv: '2407.10344'
   year: 2025
   code: koide3/glim
-  stars: 1501
+  stars: 1520
   tags:
   - lidar-inertial
   - gpu
@@ -437,7 +437,7 @@ methods:
   arxiv: '2410.10277'
   year: 2025
   code: PRBonn/kinematic-icp
-  stars: 316
+  stars: 317
   tags:
   - lidar-odometry
   - kinematic
@@ -453,7 +453,7 @@ methods:
   arxiv: '2209.15397'
   year: 2025
   code: PRBonn/kiss-icp
-  stars: 2115
+  stars: 2126
   tags:
   - lidar-odometry
   - simple
@@ -488,7 +488,7 @@ methods:
   arxiv: '2307.02251'
   year: 2025
   code: tiev-tongji/LOG-LIO
-  stars: 176
+  stars: 178
   tags:
   - lidar-inertial
   - local-geometry
@@ -503,7 +503,7 @@ methods:
   arxiv: '2301.05206'
   year: 2025
   code: hku-mars/ImMesh
-  stars: 731
+  stars: 734
   tags:
   - lidar-inertial
   - mesh
@@ -519,7 +519,7 @@ methods:
   arxiv: '2308.11709'
   year: 2025
   code: hku-mars/HBA
-  stars: 570
+  stars: 574
   tags:
   - lidar-mapping
   - bundle-adjustment
@@ -536,7 +536,7 @@ methods:
   paper: Real-Time Loop Closure in 2D LIDAR SLAM
   year: 2016
   code: googlecartographer/cartographer
-  stars: 7806
+  stars: 7814
   tags:
   - lidar-slam
   - graph-based
@@ -567,7 +567,7 @@ methods:
   arxiv: '2109.07982'
   year: 2022
   code: hku-mars/r3live
-  stars: 2367
+  stars: 2369
   tags:
   - lidar-inertial-visual
   - tightly-coupled
@@ -593,7 +593,7 @@ methods:
     relation: extends
   description: Precursor to R3LIVE combining LiDAR-inertial-visual tightly-coupled
     state estimation
-  stars: 773
+  stars: 775
 - name: LIO-Mapping
   paper: 'LIO-Mapping: A Tightly Coupled 3D Lidar Inertial Odometry and Mapping Approach'
   year: 2019
@@ -640,7 +640,7 @@ methods:
   arxiv: '2104.10831'
   year: 2021
   code: TixiaoShan/LVI-SAM
-  stars: 1800
+  stars: 1804
   tags:
   - lidar-visual-inertial
   - tightly-coupled
@@ -656,7 +656,7 @@ methods:
   arxiv: '2203.00893'
   year: 2022
   code: hku-mars/FAST-LIVO
-  stars: 1557
+  stars: 1560
   tags:
   - lidar-visual-inertial
   - tightly-coupled
@@ -670,7 +670,7 @@ methods:
   arxiv: '2408.01916'
   year: 2024
   code: hku-mars/FAST-LIVO2
-  stars: 3785
+  stars: 3836
   tags:
   - lidar-visual-inertial
   - tightly-coupled
@@ -699,7 +699,7 @@ methods:
   paper: Multi-threaded NDT
   year: 2017
   code: koide3/ndt_omp
-  stars: 832
+  stars: 834
   tags:
   - ndt
   - multi-threaded
@@ -715,7 +715,7 @@ methods:
   paper: 'small_gicp: Efficient and parallel algorithms for point cloud registration'
   year: 2024
   code: koide3/small_gicp
-  stars: 886
+  stars: 897
   tags:
   - gicp
   - registration
@@ -734,7 +734,7 @@ methods:
     Measurement
   year: 2019
   code: koide3/hdl_localization
-  stars: 969
+  stars: 971
   tags:
   - localization
   - ndt
@@ -766,7 +766,7 @@ methods:
     Toolbox
   year: 2023
   code: koide3/direct_visual_lidar_calibration
-  stars: 1348
+  stars: 1355
   tags:
   - calibration
   - lidar-camera
@@ -793,7 +793,7 @@ methods:
   arxiv: '2103.02466'
   year: 2021
   code: SMRT-AIST/fast_gicp
-  stars: 1607
+  stars: 1612
   tags:
   - registration
   - voxelized
@@ -809,7 +809,7 @@ methods:
   arxiv: '2210.05508'
   year: 2022
   code: url-kaist/Quatro
-  stars: 386
+  stars: 388
   tags:
   - registration
   - global
@@ -824,7 +824,7 @@ methods:
   arxiv: '2001.07715'
   year: 2020
   code: MIT-SPARK/TEASER-plusplus
-  stars: 2234
+  stars: 2239
   tags:
   - registration
   - certifiable
@@ -841,7 +841,7 @@ methods:
   arxiv: '2202.06688'
   year: 2022
   code: qinzheng93/GeoTransformer
-  stars: 931
+  stars: 935
   tags:
   - registration
   - transformer

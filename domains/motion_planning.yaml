@@ -275,7 +275,7 @@ methods:
   arxiv: ''
   year: 2013
   code: rst-tu-dortmund/teb_local_planner
-  stars: 1287
+  stars: 1293
   tags:
   - local-planner
   - trajectory-optimization
@@ -308,7 +308,7 @@ methods:
   arxiv: '2409.07563'
   year: 2024
   code: ACDSLab/MPPI-Generic
-  stars: 263
+  stars: 264
   tags:
   - sampling-based
   - mpc
@@ -369,7 +369,7 @@ methods:
   arxiv: '2303.05760'
   year: 2023
   code: MCZhi/GameFormer
-  stars: 339
+  stars: 340
   tags:
   - game-theory
   - transformer
@@ -384,7 +384,7 @@ methods:
   arxiv: '2306.07962'
   year: 2023
   code: autonomousvision/tuplan_garage
-  stars: 300
+  stars: 695
   tags:
   - rule-based
   - planning
@@ -399,7 +399,7 @@ methods:
   arxiv: ''
   year: 2024
   code: autonomousvision/tuplan_garage
-  stars: 300
+  stars: 695
   tags:
   - hybrid
   - learning
@@ -416,7 +416,7 @@ methods:
   arxiv: '2310.05018'
   year: 2024
   code: jchengai/planTF
-  stars: 358
+  stars: 359
   tags:
   - transformer
   - planning

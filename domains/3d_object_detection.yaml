@@ -13,7 +13,7 @@ methods:
   arxiv: '1612.00593'
   year: 2017
   code: charlesq34/pointnet
-  stars: 5373
+  stars: 5381
   tags:
   - point-cloud
   - classification
@@ -28,7 +28,7 @@ methods:
   arxiv: '1706.02413'
   year: 2017
   code: charlesq34/pointnet2
-  stars: 3622
+  stars: 3627
   tags:
   - point-cloud
   - hierarchical
@@ -57,7 +57,7 @@ methods:
   arxiv: '1801.05373'
   year: 2018
   code: traveller59/second.pytorch
-  stars: 1781
+  stars: 1780
   tags:
   - point-cloud
   - voxel
@@ -72,7 +72,7 @@ methods:
   arxiv: '1812.05784'
   year: 2019
   code: nutonomy/second.pytorch
-  stars: 1023
+  stars: 1024
   tags:
   - point-cloud
   - pillar
@@ -91,7 +91,7 @@ methods:
   arxiv: '1907.03670'
   year: 2020
   code: open-mmlab/OpenPCDet
-  stars: 5504
+  stars: 5515
   tags:
   - point-cloud
   - part-aware
@@ -109,7 +109,7 @@ methods:
   arxiv: '1912.13192'
   year: 2020
   code: open-mmlab/OpenPCDet
-  stars: 5504
+  stars: 5515
   tags:
   - point-cloud
   - point-voxel
@@ -127,7 +127,7 @@ methods:
   arxiv: '2012.15712'
   year: 2021
   code: open-mmlab/OpenPCDet
-  stars: 5504
+  stars: 5515
   tags:
   - point-cloud
   - voxel
@@ -144,7 +144,7 @@ methods:
   arxiv: '2006.11275'
   year: 2021
   code: tianweiy/CenterPoint
-  stars: 2130
+  stars: 2133
   tags:
   - point-cloud
   - center-based
@@ -211,7 +211,7 @@ methods:
   arxiv: '2301.06051'
   year: 2023
   code: Haiyang-W/DSVT
-  stars: 452
+  stars: 450
   tags:
   - point-cloud
   - transformer
@@ -243,7 +243,7 @@ methods:
   arxiv: '2112.11790'
   year: 2022
   code: HuangJunJie2017/BEVDet
-  stars: 1756
+  stars: 1762
   tags:
   - camera
   - bev
@@ -258,7 +258,7 @@ methods:
   arxiv: '2203.05625'
   year: 2022
   code: megvii-research/PETR
-  stars: 1044
+  stars: 1047
   tags:
   - camera
   - multi-view
@@ -275,7 +275,7 @@ methods:
   arxiv: '2203.17270'
   year: 2022
   code: fundamentalvision/BEVFormer
-  stars: 4378
+  stars: 4393
   tags:
   - camera
   - bev
@@ -296,7 +296,7 @@ methods:
   arxiv: '2303.11926'
   year: 2023
   code: exiawsh/StreamPETR
-  stars: 782
+  stars: 785
   tags:
   - camera
   - multi-view
@@ -350,7 +350,7 @@ methods:
   arxiv: '2205.13542'
   year: 2022
   code: mit-han-lab/bevfusion
-  stars: 3055
+  stars: 3067
   tags:
   - multi-modal
   - bev
@@ -386,7 +386,7 @@ methods:
   arxiv: '2301.01283'
   year: 2023
   code: junjie18/CMT
-  stars: 410
+  stars: 409
   tags:
   - multi-modal
   - transformer
@@ -425,7 +425,7 @@ methods:
   arxiv: '2403.15241'
   year: 2024
   code: yinjunbo/IS-Fusion
-  stars: 204
+  stars: 206
   tags:
   - multi-modal
   - instance-scene
@@ -460,7 +460,7 @@ methods:
   arxiv: '2304.14340'
   year: 2025
   code: yichen928/SparseFusion
-  stars: 261
+  stars: 262
   tags:
   - multi-modal
   - sparse
@@ -515,7 +515,7 @@ methods:
   arxiv: '2308.04556'
   year: 2025
   code: NVlabs/FocalFormer3D
-  stars: 207
+  stars: 205
   tags:
   - multi-modal
   - transformer
@@ -533,7 +533,7 @@ methods:
   arxiv: '2311.11722'
   year: 2025
   code: linxuewu/Sparse4D
-  stars: 501
+  stars: 502
   tags:
   - camera
   - multi-view
@@ -554,7 +554,7 @@ methods:
   arxiv: '2008.05711'
   year: 2020
   code: nv-tlabs/lift-splat-shoot
-  stars: 1321
+  stars: 1324
   tags:
   - camera
   - bev
@@ -577,7 +577,7 @@ methods:
     relation: extends
   description: First two-stage 3D object detector generating proposals directly from
     raw point clouds
-  stars: 1819
+  stars: 1820
 - name: FCOS3D
   paper: 'FCOS3D: Fully Convolutional One-Stage Monocular 3D Object Detection'
   arxiv: '2104.10956'
@@ -595,7 +595,7 @@ methods:
   arxiv: '1904.07850'
   year: 2019
   code: xingyizhou/CenterNet
-  stars: 7551
+  stars: 7552
   tags:
   - anchor-free
   - center-based
@@ -608,7 +608,7 @@ methods:
   arxiv: '2005.12872'
   year: 2020
   code: facebookresearch/detr
-  stars: 15174
+  stars: 15185
   tags:
   - transformer
   - end-to-end
@@ -658,7 +658,7 @@ methods:
   arxiv: '2102.00463'
   year: 2022
   code: open-mmlab/OpenPCDet
-  stars: 5504
+  stars: 5515
   tags:
   - point-cloud
   - point-voxel

@@ -12,7 +12,7 @@ methods:
   arxiv: '2103.00020'
   year: 2021
   code: openai/CLIP
-  stars: 32910
+  stars: 32998
   open_source: open
   license: MIT
   tags:
@@ -28,7 +28,7 @@ methods:
   arxiv: '2212.07143'
   year: 2022
   code: mlfoundations/open_clip
-  stars: 13551
+  stars: 13608
   open_source: open
   license: MIT
   tags:
@@ -46,7 +46,7 @@ methods:
   arxiv: '2303.15343'
   year: 2023
   code: google-research/big_vision
-  stars: 3388
+  stars: 3396
   open_source: open
   license: Apache-2.0
   tags:
@@ -82,7 +82,7 @@ methods:
   arxiv: '2201.12086'
   year: 2022
   code: salesforce/BLIP
-  stars: 5695
+  stars: 5698
   open_source: open
   license: BSD-3
   tags:
@@ -298,7 +298,7 @@ methods:
   arxiv: '2410.07073'
   year: 2024
   code: mistralai/mistral-inference
-  stars: 10732
+  stars: 10743
   open_source: open
   license: Apache-2.0
   tags:
@@ -318,7 +318,7 @@ methods:
   arxiv: '2304.08485'
   year: 2023
   code: haotian-liu/LLaVA
-  stars: 24602
+  stars: 24624
   open_source: open
   license: Apache-2.0
   tags:
@@ -339,7 +339,7 @@ methods:
   arxiv: '2310.03744'
   year: 2023
   code: haotian-liu/LLaVA
-  stars: 24602
+  stars: 24624
   open_source: open
   license: Apache-2.0
   tags:
@@ -356,7 +356,7 @@ methods:
   arxiv: null
   year: 2024
   code: haotian-liu/LLaVA
-  stars: 24602
+  stars: 24624
   open_source: open
   license: Apache-2.0
   tags:
@@ -374,7 +374,7 @@ methods:
   arxiv: '2304.10592'
   year: 2023
   code: Vision-CAIR/MiniGPT-4
-  stars: 25749
+  stars: 25755
   open_source: open
   license: BSD-3
   tags:
@@ -392,7 +392,7 @@ methods:
   arxiv: '2311.03079'
   year: 2023
   code: THUDM/CogVLM
-  stars: 6734
+  stars: 6736
   open_source: open
   license: Apache-2.0
   tags:
@@ -412,7 +412,7 @@ methods:
   arxiv: '2408.16500'
   year: 2024
   code: THUDM/CogVLM2
-  stars: 2435
+  stars: 2437
   open_source: open
   license: Apache-2.0
   tags:
@@ -430,7 +430,7 @@ methods:
   arxiv: '2308.12966'
   year: 2023
   code: QwenLM/Qwen-VL
-  stars: 6584
+  stars: 6600
   open_source: open
   license: Tongyi Qianwen License
   tags:
@@ -450,7 +450,7 @@ methods:
   arxiv: '2409.12191'
   year: 2024
   code: QwenLM/Qwen2-VL
-  stars: 18743
+  stars: 18811
   open_source: open
   license: Apache-2.0
   tags:
@@ -469,7 +469,7 @@ methods:
   arxiv: '2502.13923'
   year: 2025
   code: QwenLM/Qwen2.5-VL
-  stars: 18743
+  stars: 18811
   open_source: open
   license: Apache-2.0
   tags:
@@ -488,7 +488,7 @@ methods:
   arxiv: '2312.14238'
   year: 2024
   code: OpenGVLab/InternVL
-  stars: 9908
+  stars: 9931
   open_source: open
   license: MIT
   tags:
@@ -509,7 +509,7 @@ methods:
   arxiv: '2407.21783'
   year: 2024
   code: OpenGVLab/InternVL
-  stars: 9908
+  stars: 9931
   open_source: open
   license: MIT
   tags:
@@ -527,7 +527,7 @@ methods:
   arxiv: '2504.10479'
   year: 2025
   code: OpenGVLab/InternVL
-  stars: 1500
+  stars: 9931
   open_source: open
   license: MIT
   tags:
@@ -564,7 +564,7 @@ methods:
   arxiv: '2409.17146'
   year: 2024
   code: allenai/Molmo
-  stars: 883
+  stars: 894
   open_source: open
   license: Apache-2.0
   tags:

@@ -12,7 +12,7 @@ methods:
   arxiv: '1706.03762'
   year: 2017
   code: tensorflow/tensor2tensor
-  stars: 17090
+  stars: 17115
   open_source: open
   license: Apache-2.0
   tags:
@@ -27,7 +27,7 @@ methods:
   arxiv: '1810.04805'
   year: 2018
   code: google-research/bert
-  stars: 39931
+  stars: 39942
   open_source: open
   license: Apache-2.0
   tags:
@@ -43,7 +43,7 @@ methods:
   arxiv: '1910.10683'
   year: 2020
   code: google-research/text-to-text-transfer-transformer
-  stars: 6494
+  stars: 6496
   open_source: open
   license: Apache-2.0
   tags:
@@ -79,7 +79,7 @@ methods:
   arxiv: null
   year: 2019
   code: openai/gpt-2
-  stars: 24706
+  stars: 24716
   open_source: open
   license: MIT
   tags:
@@ -221,7 +221,7 @@ methods:
   arxiv: '2302.13971'
   year: 2023
   code: meta-llama/llama
-  stars: 59250
+  stars: 59276
   open_source: research
   license: LLaMA Community License
   tags:
@@ -239,7 +239,7 @@ methods:
   arxiv: '2307.09288'
   year: 2023
   code: meta-llama/llama
-  stars: 59250
+  stars: 59276
   open_source: open
   license: LLaMA 2 Community License
   tags:
@@ -256,7 +256,7 @@ methods:
   arxiv: '2407.21783'
   year: 2024
   code: meta-llama/llama3
-  stars: 29291
+  stars: 29297
   open_source: open
   license: Llama 3 Community License
   tags:
@@ -274,7 +274,7 @@ methods:
   arxiv: null
   year: 2025
   code: meta-llama/llama-models
-  stars: 5000
+  stars: 7540
   open_source: open
   license: Llama 4 Community License
   tags:
@@ -291,7 +291,7 @@ methods:
   arxiv: '2308.12950'
   year: 2023
   code: meta-llama/codellama
-  stars: 16338
+  stars: 16333
   open_source: open
   license: LLaMA 2 Community License
   tags:
@@ -309,7 +309,7 @@ methods:
   arxiv: '2403.17297'
   year: 2024
   code: InternLM/InternLM
-  stars: 7174
+  stars: 7175
   open_source: open
   license: Apache-2.0
   tags:
@@ -329,7 +329,7 @@ methods:
   arxiv: '2402.00838'
   year: 2024
   code: allenai/OLMo
-  stars: 6414
+  stars: 6440
   open_source: open
   license: Apache-2.0
   tags:
@@ -347,7 +347,7 @@ methods:
   arxiv: '2310.06825'
   year: 2023
   code: mistralai/mistral-src
-  stars: 10732
+  stars: 10743
   open_source: open
   license: Apache-2.0
   tags:
@@ -364,7 +364,7 @@ methods:
   arxiv: '2401.04088'
   year: 2024
   code: mistralai/mistral-src
-  stars: 10732
+  stars: 10743
   open_source: open
   license: Apache-2.0
   tags:
@@ -417,7 +417,7 @@ methods:
   arxiv: '2403.08295'
   year: 2024
   code: google-deepmind/gemma
-  stars: 600
+  stars: 4126
   open_source: open
   license: Gemma License
   tags:
@@ -433,7 +433,7 @@ methods:
   arxiv: '2309.16609'
   year: 2023
   code: QwenLM/Qwen
-  stars: 20800
+  stars: 20874
   open_source: open
   license: Tongyi Qianwen License
   tags:
@@ -451,7 +451,7 @@ methods:
   arxiv: '2407.10671'
   year: 2024
   code: QwenLM/Qwen2
-  stars: 26985
+  stars: 27013
   open_source: open
   license: Apache-2.0
   tags:
@@ -468,7 +468,7 @@ methods:
   arxiv: '2412.15115'
   year: 2025
   code: QwenLM/Qwen2.5
-  stars: 26985
+  stars: 27013
   open_source: open
   license: Apache-2.0
   tags:
@@ -486,7 +486,7 @@ methods:
   arxiv: '2405.04434'
   year: 2024
   code: deepseek-ai/DeepSeek-V2
-  stars: 5002
+  stars: 5001
   open_source: open
   license: DeepSeek License
   tags:
@@ -505,7 +505,7 @@ methods:
   arxiv: '2412.19437'
   year: 2025
   code: deepseek-ai/DeepSeek-V3
-  stars: 102319
+  stars: 102414
   open_source: open
   license: DeepSeek License
   tags:
@@ -523,7 +523,7 @@ methods:
   arxiv: '2501.12948'
   year: 2025
   code: deepseek-ai/DeepSeek-R1
-  stars: 91980
+  stars: 91979
   open_source: open
   license: MIT
   tags:
@@ -543,7 +543,7 @@ methods:
   arxiv: '2311.16867'
   year: 2023
   code: tiiuae/Falcon-H1
-  stars: 900
+  stars: 110
   open_source: open
   license: Apache-2.0
   tags:
@@ -561,7 +561,7 @@ methods:
   arxiv: '2305.13048'
   year: 2023
   code: BlinkDL/RWKV-LM
-  stars: 14428
+  stars: 14447
   open_source: open
   license: Apache-2.0
   tags:
@@ -578,7 +578,7 @@ methods:
   arxiv: '2312.00752'
   year: 2024
   code: state-spaces/mamba
-  stars: 17650
+  stars: 17787
   open_source: open
   license: Apache-2.0
   tags:
@@ -736,7 +736,7 @@ methods:
 - name: Grok-1
   year: 2024
   code: xai-org/grok-1
-  stars: 51528
+  stars: 51513
   open_source: open
   license: Apache-2.0
   tags:
@@ -881,7 +881,7 @@ methods:
 - name: Qwen3
   year: 2025
   code: QwenLM/Qwen3
-  stars: 26985
+  stars: 27013
   open_source: open
   license: Apache-2.0
   tags:
@@ -912,7 +912,7 @@ methods:
 - name: Baichuan 2
   year: 2023
   code: baichuan-inc/Baichuan2
-  stars: 4117
+  stars: 4115
   open_source: open
   license: Baichuan License
   tags:
@@ -940,7 +940,7 @@ methods:
 - name: Gemma 2
   year: 2024
   code: google-deepmind/gemma
-  stars: 600
+  stars: 4126
   open_source: open
   license: Gemma License
   tags:
@@ -969,7 +969,7 @@ methods:
 - name: LLaMA 3.1
   year: 2024
   code: meta-llama/llama-models
-  stars: 7533
+  stars: 7540
   open_source: open
   license: Llama 3.1 Community License
   tags:
