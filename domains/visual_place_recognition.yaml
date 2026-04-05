@@ -22,7 +22,7 @@ methods:
   paper: Bags of Binary Words for Fast Place Recognition in Image Sequences
   year: 2012
   code: dorian3d/DBoW2
-  stars: 939
+  stars: 940
   tags:
   - classical
   - bag-of-words
@@ -37,7 +37,7 @@ methods:
   arxiv: '1511.07247'
   year: 2016
   code: Relja/netvlad
-  stars: 597
+  stars: 598
   tags:
   - deep-learning
   - vlad
@@ -70,7 +70,7 @@ methods:
   arxiv: '2204.02287'
   year: 2022
   code: gmberton/CosPlace
-  stars: 385
+  stars: 386
   tags:
   - deep-learning
   - global-descriptor
@@ -85,7 +85,7 @@ methods:
   arxiv: '2308.10832'
   year: 2023
   code: gmberton/EigenPlaces
-  stars: 147
+  stars: 148
   tags:
   - deep-learning
   - global-descriptor
@@ -100,7 +100,7 @@ methods:
   arxiv: '2303.02190'
   year: 2023
   code: amaralibey/MixVPR
-  stars: 312
+  stars: 313
   tags:
   - deep-learning
   - feature-mixing
@@ -118,7 +118,7 @@ methods:
   arxiv: '2308.00688'
   year: 2024
   code: AnyLoc/AnyLoc
-  stars: 599
+  stars: 600
   tags:
   - deep-learning
   - foundation-model
@@ -135,7 +135,7 @@ methods:
     3D Point Cloud Map'
   year: 2018
   code: gisbi-kim/scancontext
-  stars: 97
+  stars: 100
   tags:
   - lidar
   - handcrafted
@@ -161,7 +161,7 @@ methods:
   arxiv: '2105.11344'
   year: 2020
   code: PRBonn/OverlapNet
-  stars: 721
+  stars: 724
   tags:
   - lidar
   - deep-learning
@@ -194,7 +194,7 @@ methods:
   arxiv: '2109.08336'
   year: 2022
   code: csiro-robotics/LoGG3D-Net
-  stars: 109
+  stars: 110
   tags:
   - lidar
   - deep-learning
@@ -210,7 +210,7 @@ methods:
   arxiv: '2209.12435'
   year: 2023
   code: hku-mars/STD
-  stars: 705
+  stars: 708
   tags:
   - lidar
   - handcrafted
@@ -243,7 +243,7 @@ methods:
   arxiv: '2304.07480'
   year: 2023
   code: hku-mars/btc_descriptor
-  stars: 317
+  stars: 318
   tags:
   - lidar
   - binary-descriptor
@@ -293,7 +293,7 @@ methods:
   arxiv: '2502.15691'
   year: 2025
   code: AnyLoc/AnyLoc
-  stars: 599
+  stars: 600
   tags:
   - deep-learning
   - foundation-model
@@ -309,7 +309,7 @@ methods:
   arxiv: '2407.02230'
   year: 2025
   code: Lu-Feng/SelaVPR
-  stars: 260
+  stars: 262
   tags:
   - deep-learning
   - self-supervised
@@ -348,7 +348,7 @@ methods:
     relation: extends
   description: First learned 3D point cloud descriptor for large-scale place recognition
     combining PointNet with VLAD
-  stars: 396
+  stars: 397
 - name: MinkLoc3D
   paper: 'MinkLoc3D: Point Cloud Based Large-Scale Place Recognition'
   arxiv: '2011.04530'
@@ -387,7 +387,7 @@ methods:
   arxiv: '2310.10023'
   year: 2023
   code: KOKIAOKI/3d_bbs
-  stars: 370
+  stars: 371
   tags:
   - lidar
   - global-localization

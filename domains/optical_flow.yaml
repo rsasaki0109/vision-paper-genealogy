@@ -68,7 +68,7 @@ methods:
   arxiv: '1612.01925'
   year: 2017
   code: NVIDIA/flownet2-pytorch
-  stars: 3278
+  stars: 3280
   tags:
   - deep-learning
   - stacking
@@ -83,7 +83,7 @@ methods:
   arxiv: '1709.02371'
   year: 2018
   code: NVlabs/PWC-Net
-  stars: 1721
+  stars: 1722
   tags:
   - deep-learning
   - cost-volume
@@ -101,7 +101,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 3991
+  stars: 3995
   tags:
   - deep-learning
   - recurrent
@@ -165,7 +165,7 @@ methods:
   arxiv: '2211.05783'
   year: 2023
   code: autonomousvision/unimatch
-  stars: 1360
+  stars: 1364
   tags:
   - deep-learning
   - unified
@@ -217,7 +217,7 @@ methods:
   arxiv: '2405.14793'
   year: 2024
   code: princeton-vl/SEA-RAFT
-  stars: 631
+  stars: 633
   tags:
   - deep-learning
   - efficient
@@ -233,7 +233,7 @@ methods:
   arxiv: '2404.04808'
   year: 2024
   code: DQiaole/MemFlow
-  stars: 226
+  stars: 227
   tags:
   - deep-learning
   - memory

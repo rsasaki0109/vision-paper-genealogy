@@ -124,7 +124,7 @@ methods:
   arxiv: '2106.01345'
   year: 2021
   code: kzl/decision-transformer
-  stars: 2781
+  stars: 2784
   open_source: open
   license: MIT
   tags:
@@ -141,7 +141,7 @@ methods:
   arxiv: '2401.02117'
   year: 2024
   code: MarkFzp/mobile-aloha
-  stars: 4389
+  stars: 4396
   open_source: open
   license: ''
   tags:
@@ -158,7 +158,7 @@ methods:
   arxiv: '2303.04137'
   year: 2023
   code: real-stanford/diffusion_policy
-  stars: 3937
+  stars: 3970
   open_source: open
   license: MIT
   tags:

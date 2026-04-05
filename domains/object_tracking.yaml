@@ -24,7 +24,7 @@ methods:
   arxiv: '1602.00763'
   year: 2016
   code: abewley/sort
-  stars: 4350
+  stars: 4352
   tags:
   - MOT
   - online
@@ -38,7 +38,7 @@ methods:
   arxiv: '1703.07402'
   year: 2017
   code: nwojke/deep_sort
-  stars: 6103
+  stars: 6105
   tags:
   - MOT
   - online
@@ -54,7 +54,7 @@ methods:
   arxiv: '1812.11703'
   year: 2019
   code: STVIR/pysot
-  stars: 4590
+  stars: 4589
   tags:
   - SOT
   - siamese
@@ -100,7 +100,7 @@ methods:
   arxiv: '2105.03247'
   year: 2022
   code: megvii-research/MOTR
-  stars: 791
+  stars: 792
   tags:
   - MOT
   - transformer
@@ -115,7 +115,7 @@ methods:
   arxiv: '2110.06864'
   year: 2022
   code: ifzhang/ByteTrack
-  stars: 6194
+  stars: 6216
   tags:
   - MOT
   - online
@@ -132,7 +132,7 @@ methods:
   arxiv: '2206.14651'
   year: 2022
   code: NirAharon/BoT-SORT
-  stars: 1384
+  stars: 1388
   tags:
   - MOT
   - online
@@ -150,7 +150,7 @@ methods:
   arxiv: '2203.13250'
   year: 2022
   code: xingyizhou/GTR
-  stars: 380
+  stars: 379
   tags:
   - MOT
   - transformer
@@ -180,7 +180,7 @@ methods:
   arxiv: '2203.14360'
   year: 2023
   code: noahcao/OC_SORT
-  stars: 1055
+  stars: 1060
   tags:
   - MOT
   - online
@@ -197,7 +197,7 @@ methods:
   arxiv: '2202.13514'
   year: 2023
   code: dyhBUPT/StrongSORT
-  stars: 926
+  stars: 928
   tags:
   - MOT
   - online
@@ -215,7 +215,7 @@ methods:
   arxiv: '2211.09791'
   year: 2023
   code: megvii-research/MOTRv2
-  stars: 476
+  stars: 481
   tags:
   - MOT
   - transformer
@@ -230,7 +230,7 @@ methods:
   arxiv: '2306.08637'
   year: 2023
   code: google-deepmind/tapnet
-  stars: 1826
+  stars: 1830
   tags:
   - point-tracking
   - any-point
@@ -261,7 +261,7 @@ methods:
   arxiv: '2307.07635'
   year: 2024
   code: facebookresearch/co-tracker
-  stars: 4887
+  stars: 4889
   tags:
   - point-tracking
   - joint-tracking
@@ -292,7 +292,7 @@ methods:
   arxiv: '2410.11831'
   year: 2025
   code: facebookresearch/co-tracker
-  stars: 4887
+  stars: 4889
   tags:
   - point-tracking
   - pseudo-labeling

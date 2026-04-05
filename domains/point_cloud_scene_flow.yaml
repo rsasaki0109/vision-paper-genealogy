@@ -70,7 +70,7 @@ methods:
   arxiv: '2111.01253'
   year: 2021
   code: Lilac-Lee/Neural_Scene_Flow_Prior
-  stars: 138
+  stars: 137
   tags:
   - optimization
   - neural-prior
@@ -183,7 +183,7 @@ methods:
   arxiv: '2401.16122'
   year: 2024
   code: KTH-RPL/DeFlow
-  stars: 131
+  stars: 132
   tags:
   - deep-learning
   - decoder
@@ -321,7 +321,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 3991
+  stars: 3995
   tags:
   - deep-learning
   - optical-flow

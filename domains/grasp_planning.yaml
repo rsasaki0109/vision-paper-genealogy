@@ -28,7 +28,7 @@ methods:
   arxiv: '1706.09911'
   year: 2017
   code: atenpas/gpd
-  stars: 739
+  stars: 738
   tags:
   - point-cloud
   - grasp-detection
@@ -44,7 +44,7 @@ methods:
   arxiv: '1905.10520'
   year: 2019
   code: NVlabs/6dof-graspnet
-  stars: 277
+  stars: 276
   tags:
   - 6dof
   - variational
@@ -60,7 +60,7 @@ methods:
   arxiv: '1912.13470'
   year: 2020
   code: graspnet/graspnet-baseline
-  stars: 908
+  stars: 913
   tags:
   - benchmark
   - large-scale
@@ -94,7 +94,7 @@ methods:
   arxiv: '2212.08333'
   year: 2023
   code: graspnet/anygrasp_sdk
-  stars: 795
+  stars: 799
   tags:
   - real-time
   - robust
@@ -164,7 +164,7 @@ methods:
   arxiv: '2303.00938'
   year: 2023
   code: PKU-MARL/DexterousHands
-  stars: 995
+  stars: 1001
   tags:
   - dexterous
   - universal
@@ -180,7 +180,7 @@ methods:
   arxiv: '2210.02697'
   year: 2023
   code: PKU-EPIC/DexGraspNet
-  stars: 401
+  stars: 405
   tags:
   - dexterous
   - dataset
@@ -198,7 +198,7 @@ methods:
   arxiv: '2210.04887'
   year: 2022
   code: HaozhiQi/Hora
-  stars: 218
+  stars: 221
   tags:
   - in-hand
   - rotation
@@ -230,7 +230,7 @@ methods:
   arxiv: '2211.15459'
   year: 2023
   code: yzqin/dexpoint-release
-  stars: 100
+  stars: 101
   tags:
   - dexterous
   - point-cloud
