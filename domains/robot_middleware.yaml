@@ -21,7 +21,7 @@ methods:
 - name: Zenoh
   year: 2020
   code: eclipse-zenoh/zenoh
-  stars: 2605
+  stars: 2634
   tags:
   - protocol
   - pub-sub
@@ -35,7 +35,7 @@ methods:
 - name: MCAP
   year: 2021
   code: foxglove/mcap
-  stars: 890
+  stars: 895
   tags:
   - data-format
   - recording
@@ -78,7 +78,7 @@ methods:
   paper: 'ROS: an open-source Robot Operating System'
   year: 2009
   code: ros/ros
-  stars: 3220
+  stars: 3223
   tags:
   - middleware
   - open-source
@@ -93,7 +93,7 @@ methods:
   paper: 'Robot Operating System 2: Design, architecture, and uses in the wild'
   year: 2017
   code: ros2/ros2
-  stars: 5301
+  stars: 5345
   tags:
   - middleware
   - dds
@@ -172,7 +172,7 @@ methods:
   paper: MoveIt! An Introduction to Motion Planning
   year: 2014
   code: moveit/moveit
-  stars: 2023
+  stars: 2027
   tags:
   - framework
   - motion-planning
@@ -186,7 +186,7 @@ methods:
 - name: rosbridge
   year: 2012
   code: RobotWebTools/rosbridge_suite
-  stars: 1186
+  stars: 1190
   tags:
   - framework
   - web
@@ -201,7 +201,7 @@ methods:
   paper: 'Nav2: The Navigation Stack for ROS 2'
   year: 2020
   code: ros-navigation/navigation2
-  stars: 4111
+  stars: 4138
   tags:
   - framework
   - navigation
@@ -218,7 +218,7 @@ methods:
 - name: MoveIt 2
   year: 2021
   code: moveit/moveit2
-  stars: 1746
+  stars: 1757
   tags:
   - framework
   - motion-planning
@@ -233,7 +233,7 @@ methods:
 - name: ros2_control
   year: 2021
   code: ros-controls/ros2_control
-  stars: 853
+  stars: 858
   tags:
   - framework
   - control
@@ -247,7 +247,7 @@ methods:
 - name: OpenPilot
   year: 2016
   code: commaai/openpilot
-  stars: 60529
+  stars: 60593
   tags:
   - ad-stack
   - adas
@@ -258,7 +258,7 @@ methods:
 - name: Apollo
   year: 2017
   code: ApolloAuto/apollo
-  stars: 26529
+  stars: 26542
   tags:
   - ad-stack
   - full-stack
@@ -273,7 +273,7 @@ methods:
     Stack'
   year: 2015
   code: autowarefoundation/autoware
-  stars: 11332
+  stars: 11363
   tags:
   - ad-stack
   - full-stack
@@ -288,7 +288,7 @@ methods:
 - name: Autoware.Universe
   year: 2022
   code: autowarefoundation/autoware.universe
-  stars: 1566
+  stars: 1578
   tags:
   - ad-stack
   - full-stack
@@ -328,7 +328,7 @@ methods:
   - name: Autoware (Original)
     relation: extends
   description: Legacy ROS 1 based Autoware maintained for backward compatibility
-  stars: 48
+  stars: 50
 - name: rosbag
   year: 2010
   tags:
@@ -355,7 +355,7 @@ methods:
   - name: ROS 2
     relation: extends
   description: ROS 2 recording system with pluggable storage backends (SQLite, MCAP)
-  stars: 404
+  stars: 403
 - name: colcon
   year: 2018
   code: colcon/colcon-core
@@ -490,7 +490,7 @@ methods:
 - name: Boston Dynamics Spot SDK
   year: 2020
   code: boston-dynamics/spot-sdk
-  stars: 2482
+  stars: 2484
   open_source: partial
   license: Commercial (SDK open)
   tags:
@@ -515,7 +515,7 @@ methods:
   - name: ROS 2
     relation: extends
   description: Unitree robotics SDK/ROS 2 interface for Go2, B2, H1 robots
-  stars: 650
+  stars: 656
 - name: NVIDIA Isaac ROS
   year: 2023
   code: NVIDIA-ISAAC-ROS/isaac_ros_common
@@ -530,4 +530,4 @@ methods:
   - name: ROS 2
     relation: extends
   description: GPU-accelerated ROS 2 packages for perception, navigation, and manipulation
-  stars: 297
+  stars: 301

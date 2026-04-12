@@ -38,7 +38,7 @@ methods:
   arxiv: '1908.01238'
   year: 2020
   code: kakaxi314/GuideNet
-  stars: 168
+  stars: 169
   tags:
   - guided-conv
   - image-guided
@@ -122,7 +122,7 @@ methods:
   arxiv: '2406.09414'
   year: 2025
   code: DepthAnything/Depth-Anything-V2
-  stars: 7857
+  stars: 7893
   tags:
   - foundation-model
   - monocular-depth
@@ -137,7 +137,7 @@ methods:
   arxiv: '2404.15506'
   year: 2025
   code: YvanYin/Metric3D
-  stars: 2150
+  stars: 2162
   tags:
   - foundation-model
   - metric-depth
@@ -171,7 +171,7 @@ methods:
   arxiv: '2501.09898'
   year: 2025
   code: NVlabs/FoundationStereo
-  stars: 2622
+  stars: 2634
   tags:
   - foundation-model
   - stereo-matching
@@ -188,7 +188,7 @@ methods:
   arxiv: '1907.01341'
   year: 2020
   code: isl-org/MiDaS
-  stars: 5360
+  stars: 5361
   tags:
   - monocular-depth
   - zero-shot
@@ -218,7 +218,7 @@ methods:
   arxiv: '2401.10891'
   year: 2024
   code: LiheYoung/Depth-Anything
-  stars: 8057
+  stars: 8061
   tags:
   - monocular-depth
   - foundation-model
@@ -237,7 +237,7 @@ methods:
   arxiv: '2302.12288'
   year: 2023
   code: isl-org/ZoeDepth
-  stars: 2810
+  stars: 2813
   tags:
   - monocular-depth
   - metric-depth
@@ -253,7 +253,7 @@ methods:
   arxiv: '2312.02145'
   year: 2024
   code: prs-eth/Marigold
-  stars: 3112
+  stars: 3116
   tags:
   - monocular-depth
   - diffusion
@@ -270,7 +270,7 @@ methods:
   arxiv: '2109.07547'
   year: 2021
   code: princeton-vl/RAFT-Stereo
-  stars: 1048
+  stars: 1052
   tags:
   - stereo-matching
   - recurrent

@@ -99,7 +99,7 @@ methods:
   arxiv: '2108.13035'
   year: 2021
   code: med-air/SurRoL
-  stars: 246
+  stars: 248
   tags:
   - reinforcement-learning
   - surgical-robot
