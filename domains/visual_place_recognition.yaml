@@ -22,7 +22,7 @@ methods:
   paper: Bags of Binary Words for Fast Place Recognition in Image Sequences
   year: 2012
   code: dorian3d/DBoW2
-  stars: 942
+  stars: 943
   tags:
   - classical
   - bag-of-words
@@ -54,7 +54,7 @@ methods:
   arxiv: '2103.01486'
   year: 2021
   code: QVPR/Patch-NetVLAD
-  stars: 586
+  stars: 587
   tags:
   - deep-learning
   - vlad
@@ -70,7 +70,7 @@ methods:
   arxiv: '2204.02287'
   year: 2022
   code: gmberton/CosPlace
-  stars: 387
+  stars: 389
   tags:
   - deep-learning
   - global-descriptor
@@ -118,7 +118,7 @@ methods:
   arxiv: '2308.00688'
   year: 2024
   code: AnyLoc/AnyLoc
-  stars: 601
+  stars: 603
   tags:
   - deep-learning
   - foundation-model
@@ -135,7 +135,7 @@ methods:
     3D Point Cloud Map'
   year: 2018
   code: gisbi-kim/scancontext
-  stars: 101
+  stars: 103
   tags:
   - lidar
   - handcrafted
@@ -210,7 +210,7 @@ methods:
   arxiv: '2209.12435'
   year: 2023
   code: hku-mars/STD
-  stars: 710
+  stars: 711
   tags:
   - lidar
   - handcrafted
@@ -243,7 +243,7 @@ methods:
   arxiv: '2304.07480'
   year: 2023
   code: hku-mars/btc_descriptor
-  stars: 324
+  stars: 326
   tags:
   - lidar
   - binary-descriptor
@@ -293,7 +293,7 @@ methods:
   arxiv: '2502.15691'
   year: 2025
   code: AnyLoc/AnyLoc
-  stars: 601
+  stars: 603
   tags:
   - deep-learning
   - foundation-model
@@ -387,7 +387,7 @@ methods:
   arxiv: '2310.10023'
   year: 2023
   code: KOKIAOKI/3d_bbs
-  stars: 378
+  stars: 383
   tags:
   - lidar
   - global-localization

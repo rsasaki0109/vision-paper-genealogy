@@ -13,7 +13,7 @@ methods:
   arxiv: '1311.2524'
   year: 2014
   code: rbgirshick/rcnn
-  stars: 2412
+  stars: 2413
   tags:
   - two-stage
   - region-based
@@ -42,7 +42,7 @@ methods:
   arxiv: '1504.08083'
   year: 2015
   code: rbgirshick/fast-rcnn
-  stars: 3461
+  stars: 3458
   tags:
   - two-stage
   - region-based
@@ -58,7 +58,7 @@ methods:
   arxiv: '1506.01497'
   year: 2015
   code: facebookresearch/detectron2
-  stars: 34331
+  stars: 34422
   tags:
   - two-stage
   - region-based
@@ -75,7 +75,7 @@ methods:
   arxiv: '1506.02640'
   year: 2016
   code: pjreddie/darknet
-  stars: 26451
+  stars: 26449
   tags:
   - single-stage
   - real-time
@@ -88,7 +88,7 @@ methods:
   arxiv: '1512.02325'
   year: 2016
   code: weiliu89/caffe
-  stars: 4807
+  stars: 4806
   tags:
   - single-stage
   - multi-scale
@@ -105,7 +105,7 @@ methods:
   arxiv: '1612.08242'
   year: 2017
   code: pjreddie/darknet
-  stars: 26451
+  stars: 26449
   tags:
   - single-stage
   - real-time
@@ -121,7 +121,7 @@ methods:
   arxiv: '1612.03144'
   year: 2017
   code: facebookresearch/detectron2
-  stars: 34331
+  stars: 34422
   tags:
   - multi-scale
   - feature-pyramid
@@ -137,7 +137,7 @@ methods:
   arxiv: '1708.02002'
   year: 2017
   code: facebookresearch/detectron2
-  stars: 34331
+  stars: 34422
   tags:
   - single-stage
   - focal-loss
@@ -154,7 +154,7 @@ methods:
   arxiv: '1804.02767'
   year: 2018
   code: pjreddie/darknet
-  stars: 26451
+  stars: 26449
   tags:
   - single-stage
   - real-time
@@ -186,7 +186,7 @@ methods:
   arxiv: '1904.07850'
   year: 2019
   code: xingyizhou/CenterNet
-  stars: 7557
+  stars: 7560
   tags:
   - anchor-free
   - keypoint-based
@@ -201,7 +201,7 @@ methods:
   arxiv: '1904.01355'
   year: 2019
   code: tianzhi0549/FCOS
-  stars: 3345
+  stars: 3346
   tags:
   - anchor-free
   - fully-convolutional
@@ -235,7 +235,7 @@ methods:
   arxiv: '2004.10934'
   year: 2020
   code: AlexeyAB/darknet
-  stars: 22182
+  stars: 22181
   tags:
   - single-stage
   - real-time
@@ -251,7 +251,7 @@ methods:
   arxiv: ''
   year: 2020
   code: ultralytics/yolov5
-  stars: 57246
+  stars: 57303
   tags:
   - single-stage
   - real-time
@@ -268,7 +268,7 @@ methods:
   arxiv: '2207.02696'
   year: 2022
   code: WongKinYiu/yolov7
-  stars: 14109
+  stars: 14103
   tags:
   - single-stage
   - real-time
@@ -286,7 +286,7 @@ methods:
   arxiv: ''
   year: 2023
   code: ultralytics/ultralytics
-  stars: 56186
+  stars: 56473
   tags:
   - single-stage
   - real-time
@@ -303,7 +303,7 @@ methods:
   arxiv: '2402.13616'
   year: 2024
   code: WongKinYiu/yolov9
-  stars: 9516
+  stars: 9524
   tags:
   - single-stage
   - real-time
@@ -319,7 +319,7 @@ methods:
   arxiv: ''
   year: 2024
   code: ultralytics/ultralytics
-  stars: 56186
+  stars: 56473
   tags:
   - single-stage
   - real-time
@@ -335,7 +335,7 @@ methods:
   arxiv: '2005.12872'
   year: 2020
   code: facebookresearch/detr
-  stars: 15221
+  stars: 15240
   tags:
   - transformer
   - end-to-end
@@ -352,7 +352,7 @@ methods:
   arxiv: '2010.04159'
   year: 2021
   code: fundamentalvision/Deformable-DETR
-  stars: 3948
+  stars: 3951
   tags:
   - transformer
   - deformable-attention
@@ -383,7 +383,7 @@ methods:
   arxiv: '2203.03605'
   year: 2023
   code: IDEA-Research/DINO
-  stars: 2788
+  stars: 2789
   tags:
   - transformer
   - denoising
@@ -401,7 +401,7 @@ methods:
   arxiv: '2211.12860'
   year: 2023
   code: Sense-X/Co-DETR
-  stars: 1339
+  stars: 1341
   tags:
   - transformer
   - hybrid-assignment
@@ -419,7 +419,7 @@ methods:
   arxiv: '2304.08069'
   year: 2023
   code: lyuwenyu/RT-DETR
-  stars: 5111
+  stars: 5135
   tags:
   - transformer
   - real-time
@@ -437,7 +437,7 @@ methods:
   arxiv: '2205.06230'
   year: 2022
   code: google-research/scenic
-  stars: 3794
+  stars: 3793
   tags:
   - open-vocabulary
   - vision-transformer
@@ -453,7 +453,7 @@ methods:
   arxiv: '2306.09683'
   year: 2023
   code: google-research/scenic
-  stars: 3794
+  stars: 3793
   tags:
   - open-vocabulary
   - self-training
@@ -470,7 +470,7 @@ methods:
   arxiv: '2303.05499'
   year: 2024
   code: IDEA-Research/GroundingDINO
-  stars: 10022
+  stars: 10049
   tags:
   - open-set
   - grounding
@@ -487,7 +487,7 @@ methods:
   arxiv: '2401.17270'
   year: 2024
   code: AILab-CVC/YOLO-World
-  stars: 6311
+  stars: 6321
   tags:
   - open-vocabulary
   - real-time

@@ -45,7 +45,7 @@ methods:
   arxiv: ''
   year: 2014
   code: jhu-dvrk/sawIntuitiveResearchKit
-  stars: 154
+  stars: 155
   tags:
   - surgical-robot
   - open-source
@@ -99,7 +99,7 @@ methods:
   arxiv: '2108.13035'
   year: 2021
   code: med-air/SurRoL
-  stars: 250
+  stars: 252
   tags:
   - reinforcement-learning
   - surgical-robot

@@ -12,7 +12,7 @@ methods:
   arxiv: '1606.09549'
   year: 2016
   code: bertinetto/siamese-fc
-  stars: 628
+  stars: 629
   tags:
   - SOT
   - siamese
@@ -24,7 +24,7 @@ methods:
   arxiv: '1602.00763'
   year: 2016
   code: abewley/sort
-  stars: 4355
+  stars: 4359
   tags:
   - MOT
   - online
@@ -38,7 +38,7 @@ methods:
   arxiv: '1703.07402'
   year: 2017
   code: nwojke/deep_sort
-  stars: 6118
+  stars: 6123
   tags:
   - MOT
   - online
@@ -54,7 +54,7 @@ methods:
   arxiv: '1812.11703'
   year: 2019
   code: STVIR/pysot
-  stars: 4594
+  stars: 4598
   tags:
   - SOT
   - siamese
@@ -100,7 +100,7 @@ methods:
   arxiv: '2105.03247'
   year: 2022
   code: megvii-research/MOTR
-  stars: 795
+  stars: 796
   tags:
   - MOT
   - transformer
@@ -115,7 +115,7 @@ methods:
   arxiv: '2110.06864'
   year: 2022
   code: ifzhang/ByteTrack
-  stars: 6297
+  stars: 6328
   tags:
   - MOT
   - online
@@ -132,7 +132,7 @@ methods:
   arxiv: '2206.14651'
   year: 2022
   code: NirAharon/BoT-SORT
-  stars: 1405
+  stars: 1411
   tags:
   - MOT
   - online
@@ -180,7 +180,7 @@ methods:
   arxiv: '2203.14360'
   year: 2023
   code: noahcao/OC_SORT
-  stars: 1076
+  stars: 1085
   tags:
   - MOT
   - online
@@ -230,7 +230,7 @@ methods:
   arxiv: '2306.08637'
   year: 2023
   code: google-deepmind/tapnet
-  stars: 1851
+  stars: 1866
   tags:
   - point-tracking
   - any-point
@@ -245,7 +245,7 @@ methods:
   arxiv: '2305.06558'
   year: 2023
   code: z-x-yang/Segment-and-Track-Anything
-  stars: 3120
+  stars: 3122
   tags:
   - MOT
   - segmentation
@@ -261,7 +261,7 @@ methods:
   arxiv: '2307.07635'
   year: 2024
   code: facebookresearch/co-tracker
-  stars: 4908
+  stars: 4923
   tags:
   - point-tracking
   - joint-tracking
@@ -292,7 +292,7 @@ methods:
   arxiv: '2410.11831'
   year: 2025
   code: facebookresearch/co-tracker
-  stars: 4908
+  stars: 4923
   tags:
   - point-tracking
   - pseudo-labeling

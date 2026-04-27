@@ -41,7 +41,7 @@ methods:
   arxiv: '1911.12408'
   year: 2020
   code: DylanWusee/PointPWC
-  stars: 159
+  stars: 160
   tags:
   - deep-learning
   - cost-volume
@@ -321,7 +321,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 4018
+  stars: 4024
   tags:
   - deep-learning
   - optical-flow

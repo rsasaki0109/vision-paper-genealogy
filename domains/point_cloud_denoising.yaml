@@ -29,7 +29,7 @@ methods:
   arxiv: '1901.01060'
   year: 2019
   code: mrakotosaon/pointcleannet
-  stars: 286
+  stars: 287
   tags:
   - deep-learning
   - outlier-removal
@@ -55,7 +55,7 @@ methods:
   arxiv: '2107.10981'
   year: 2021
   code: luost26/score-denoise
-  stars: 210
+  stars: 209
   tags:
   - score-based
   - gradient-field

@@ -15,7 +15,7 @@ methods:
   arxiv: '2006.11239'
   year: 2020
   code: hojonathanho/diffusion
-  stars: 5162
+  stars: 5173
   tags:
   - generative
   - denoising
@@ -30,7 +30,7 @@ methods:
   arxiv: '2011.13456'
   year: 2021
   code: yang-song/score_sde
-  stars: 1818
+  stars: 1820
   tags:
   - score-matching
   - sde
@@ -78,7 +78,7 @@ methods:
   arxiv: '2112.10752'
   year: 2022
   code: CompVis/latent-diffusion
-  stars: 13978
+  stars: 13998
   tags:
   - latent-space
   - vae
@@ -96,7 +96,7 @@ methods:
   arxiv: '2112.10752'
   year: 2022
   code: CompVis/stable-diffusion
-  stars: 72912
+  stars: 72943
   tags:
   - text-to-image
   - open-source
@@ -113,7 +113,7 @@ methods:
   arxiv: '2307.01952'
   year: 2023
   code: Stability-AI/generative-models
-  stars: 27112
+  stars: 27121
   tags:
   - text-to-image
   - high-resolution
@@ -184,7 +184,7 @@ methods:
   arxiv: '2212.09748'
   year: 2023
   code: facebookresearch/DiT
-  stars: 8511
+  stars: 8534
   tags:
   - transformer
   - scalable
@@ -204,7 +204,7 @@ methods:
   arxiv: '2401.08740'
   year: 2024
   code: willisma/SiT
-  stars: 1155
+  stars: 1159
   tags:
   - transformer
   - interpolant
@@ -222,7 +222,7 @@ methods:
   arxiv: '2403.03206'
   year: 2024
   code: Stability-AI/sd3.5
-  stars: 1487
+  stars: 1493
   tags:
   - rectified-flow
   - mmdit
@@ -242,7 +242,7 @@ methods:
   arxiv: ''
   year: 2024
   code: black-forest-labs/flux
-  stars: 25429
+  stars: 25464
   tags:
   - transformer
   - text-to-image
@@ -263,7 +263,7 @@ methods:
   arxiv: '2209.03003'
   year: 2023
   code: gnobitab/RectifiedFlow
-  stars: 1586
+  stars: 1591
   tags:
   - ode
   - straight-paths
@@ -315,7 +315,7 @@ methods:
   arxiv: '2311.15127'
   year: 2024
   code: Stability-AI/generative-models
-  stars: 27112
+  stars: 27121
   tags:
   - video-generation
   - latent-video
