@@ -22,7 +22,7 @@ methods:
   paper: Bags of Binary Words for Fast Place Recognition in Image Sequences
   year: 2012
   code: dorian3d/DBoW2
-  stars: 944
+  stars: 945
   tags:
   - classical
   - bag-of-words
@@ -37,7 +37,7 @@ methods:
   arxiv: '1511.07247'
   year: 2016
   code: Relja/netvlad
-  stars: 610
+  stars: 611
   tags:
   - deep-learning
   - vlad
@@ -70,7 +70,7 @@ methods:
   arxiv: '2204.02287'
   year: 2022
   code: gmberton/CosPlace
-  stars: 398
+  stars: 401
   tags:
   - deep-learning
   - global-descriptor
@@ -100,7 +100,7 @@ methods:
   arxiv: '2303.02190'
   year: 2023
   code: amaralibey/MixVPR
-  stars: 331
+  stars: 333
   tags:
   - deep-learning
   - feature-mixing
@@ -118,7 +118,7 @@ methods:
   arxiv: '2308.00688'
   year: 2024
   code: AnyLoc/AnyLoc
-  stars: 639
+  stars: 640
   tags:
   - deep-learning
   - foundation-model
@@ -243,7 +243,7 @@ methods:
   arxiv: '2304.07480'
   year: 2023
   code: hku-mars/btc_descriptor
-  stars: 357
+  stars: 359
   tags:
   - lidar
   - binary-descriptor
@@ -293,7 +293,7 @@ methods:
   arxiv: '2502.15691'
   year: 2025
   code: AnyLoc/AnyLoc
-  stars: 639
+  stars: 640
   tags:
   - deep-learning
   - foundation-model
@@ -348,7 +348,7 @@ methods:
     relation: extends
   description: First learned 3D point cloud descriptor for large-scale place recognition
     combining PointNet with VLAD
-  stars: 400
+  stars: 401
 - name: MinkLoc3D
   paper: 'MinkLoc3D: Point Cloud Based Large-Scale Place Recognition'
   arxiv: '2011.04530'
@@ -387,7 +387,7 @@ methods:
   arxiv: '2310.10023'
   year: 2023
   code: KOKIAOKI/3d_bbs
-  stars: 431
+  stars: 432
   tags:
   - lidar
   - global-localization

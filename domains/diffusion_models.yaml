@@ -16,7 +16,7 @@ methods:
   arxiv: '2006.11239'
   year: 2020
   code: hojonathanho/diffusion
-  stars: 5307
+  stars: 5311
   tags:
   - generative
   - denoising
@@ -31,7 +31,7 @@ methods:
   arxiv: '2011.13456'
   year: 2021
   code: yang-song/score_sde
-  stars: 1844
+  stars: 1845
   tags:
   - score-matching
   - sde
@@ -79,7 +79,7 @@ methods:
   arxiv: '2112.10752'
   year: 2022
   code: CompVis/latent-diffusion
-  stars: 14133
+  stars: 14141
   tags:
   - latent-space
   - vae
@@ -97,7 +97,7 @@ methods:
   arxiv: '2112.10752'
   year: 2022
   code: CompVis/stable-diffusion
-  stars: 73363
+  stars: 73396
   tags:
   - text-to-image
   - open-source
@@ -114,7 +114,7 @@ methods:
   arxiv: '2307.01952'
   year: 2023
   code: Stability-AI/generative-models
-  stars: 27280
+  stars: 27281
   tags:
   - text-to-image
   - high-resolution
@@ -131,7 +131,7 @@ methods:
   arxiv: '2310.04378'
   year: 2023
   code: luosiallen/latent-consistency-model
-  stars: 4615
+  stars: 4611
   tags:
   - distillation
   - few-step
@@ -185,7 +185,7 @@ methods:
   arxiv: '2212.09748'
   year: 2023
   code: facebookresearch/DiT
-  stars: 8689
+  stars: 8685
   tags:
   - transformer
   - scalable
@@ -205,7 +205,7 @@ methods:
   arxiv: '2401.08740'
   year: 2024
   code: willisma/SiT
-  stars: 1206
+  stars: 1207
   tags:
   - transformer
   - interpolant
@@ -223,7 +223,7 @@ methods:
   arxiv: '2403.03206'
   year: 2024
   code: Stability-AI/sd3.5
-  stars: 1532
+  stars: 1533
   tags:
   - rectified-flow
   - mmdit
@@ -243,7 +243,7 @@ methods:
   arxiv: ''
   year: 2024
   code: black-forest-labs/flux
-  stars: 25933
+  stars: 25944
   tags:
   - transformer
   - text-to-image
@@ -264,7 +264,7 @@ methods:
   arxiv: '2209.03003'
   year: 2023
   code: gnobitab/RectifiedFlow
-  stars: 1645
+  stars: 1644
   tags:
   - ode
   - straight-paths
@@ -316,7 +316,7 @@ methods:
   arxiv: '2311.15127'
   year: 2024
   code: Stability-AI/generative-models
-  stars: 27280
+  stars: 27281
   tags:
   - video-generation
   - latent-video
@@ -334,7 +334,7 @@ methods:
   arxiv: '2205.15868'
   year: 2022
   code: THUDM/CogVideo
-  stars: 12989
+  stars: 13003
   tags:
   - video-generation
   - transformer
@@ -348,7 +348,7 @@ methods:
   arxiv: '2408.06072'
   year: 2024
   code: THUDM/CogVideo
-  stars: 12989
+  stars: 13003
   tags:
   - video-generation
   - dit
@@ -370,7 +370,7 @@ methods:
   arxiv: '2412.03603'
   year: 2024
   code: Tencent-Hunyuan/HunyuanVideo
-  stars: 12491
+  stars: 12500
   tags:
   - video-generation
   - dit
@@ -389,7 +389,7 @@ methods:
   arxiv: '2412.20404'
   year: 2024
   code: hpcaitech/Open-Sora
-  stars: 29330
+  stars: 29513
   tags:
   - video-generation
   - open-source
@@ -408,7 +408,7 @@ methods:
   arxiv: '2503.09642'
   year: 2025
   code: hpcaitech/Open-Sora
-  stars: 29330
+  stars: 29513
   tags:
   - video-generation
   - open-source
@@ -426,7 +426,7 @@ methods:
   arxiv: ''
   year: 2024
   code: genmoai/mochi
-  stars: 3722
+  stars: 3721
   tags:
   - video-generation
   - asymmdit
@@ -444,7 +444,7 @@ methods:
   arxiv: '2501.00103'
   year: 2024
   code: Lightricks/LTX-Video
-  stars: 10923
+  stars: 10937
   tags:
   - video-generation
   - realtime
@@ -462,7 +462,7 @@ methods:
   arxiv: '2503.20314'
   year: 2025
   code: Wan-Video/Wan2.1
-  stars: 16919
+  stars: 16946
   tags:
   - video-generation
   - dit
@@ -484,7 +484,7 @@ methods:
   arxiv: '2601.03233'
   year: 2026
   code: Lightricks/LTX-Video
-  stars: 10923
+  stars: 10937
   tags:
   - video-generation
   - audio-visual

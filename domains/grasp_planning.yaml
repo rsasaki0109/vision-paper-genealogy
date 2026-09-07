@@ -28,7 +28,7 @@ methods:
   arxiv: '1706.09911'
   year: 2017
   code: atenpas/gpd
-  stars: 767
+  stars: 768
   tags:
   - point-cloud
   - grasp-detection
@@ -60,7 +60,7 @@ methods:
   arxiv: '1912.13470'
   year: 2020
   code: graspnet/graspnet-baseline
-  stars: 1010
+  stars: 1016
   tags:
   - benchmark
   - large-scale
@@ -77,7 +77,7 @@ methods:
   arxiv: '2103.12311'
   year: 2021
   code: graspnet/suctionnet-baseline
-  stars: 48
+  stars: 49
   tags:
   - suction
   - benchmark
@@ -94,7 +94,7 @@ methods:
   arxiv: '2212.08333'
   year: 2023
   code: graspnet/anygrasp_sdk
-  stars: 976
+  stars: 990
   tags:
   - real-time
   - robust
@@ -127,7 +127,7 @@ methods:
   arxiv: '2103.14127'
   year: 2021
   code: NVlabs/contact_graspnet
-  stars: 524
+  stars: 528
   tags:
   - contact
   - 6dof
@@ -164,7 +164,7 @@ methods:
   arxiv: '2303.00938'
   year: 2023
   code: PKU-MARL/DexterousHands
-  stars: 1089
+  stars: 1094
   tags:
   - dexterous
   - universal
@@ -180,7 +180,7 @@ methods:
   arxiv: '2210.02697'
   year: 2023
   code: PKU-EPIC/DexGraspNet
-  stars: 467
+  stars: 468
   tags:
   - dexterous
   - dataset
@@ -213,7 +213,7 @@ methods:
   arxiv: '2108.05877'
   year: 2022
   code: yzqin/dexmv-sim
-  stars: 202
+  stars: 203
   tags:
   - dexterous
   - imitation-learning
@@ -230,7 +230,7 @@ methods:
   arxiv: '2211.15459'
   year: 2023
   code: yzqin/dexpoint-release
-  stars: 106
+  stars: 107
   tags:
   - dexterous
   - point-cloud
